@@ -3,6 +3,7 @@
 int
 main()
 {
-	TBD();
+  printf("Hello world\n");
+	//TBD();
 	return 0;
 }

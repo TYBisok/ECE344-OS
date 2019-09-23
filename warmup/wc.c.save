@@ -1,0 +1,72 @@
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include "common.h"
+#include "wc.h"
+
+struct wc {
+	int key;
+  	char word[];
+};
+
+void insert(char* word, int key) {
+	// get index
+	// insert into hash array
+}
+
+int  hash_function(char word[]) {
+	// sum of all ascii characters
+	int len = strlen(word);
+	int sum = 0;
+	
+	for (int i = 0; i < len; i++)
+		sum += word[i] * i; // sum of ascii value * index of char in string
+
+	int index = sum % 2069; // any prime #
+
+	return index;
+}
+
+struct wc * wc_init(char *word_array, long size)
+{
+	word_array="hello bitch how you doing wow lolz hahahahahahhahahahahahhahahahahahahhahahahahah";
+	size = strlen(word_array)-5;
+
+	struct wc *wc;
+
+	wc = (struct wc *)malloc(sizeof(struct wc));
+	char* word = "";
+	printf("ok?");
+
+	for(int i = 0; i < size && &word_array[i] != NULL; i++) {
+		if(isspace(word_array[i])) {
+			// insert(word, key);
+			printf("%s", word);
+			word = "";
+		}
+		else
+			strcat(word, &word_array[i]);
+	}
+		
+
+	assert(wc);
+
+	TBD();
+
+	return wc;
+}
+
+void
+wc_output(struct wc *wc)
+{
+	TBD();
+}
+
+void
+wc_destroy(struct wc *wc)
+{
+	TBD();
+	free(wc);
+}
