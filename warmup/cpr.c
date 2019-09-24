@@ -171,7 +171,7 @@ void copy_dir(char* src, char* des) {
             struct stat statbuf;  
             struct stat* statbuf_ptr;
             statbuf_ptr = &statbuf;
-
+            
             int stat_status = stat(src_path, statbuf_ptr);
 
             int file_mode = statbuf.st_mode;
@@ -217,6 +217,9 @@ void copy_dir(char* src, char* des) {
                 
                 chmod(des_path, file_mode); // do this after copying cause then you can write to it even if read only
             } 
+            
+            free(src_path);
+            free(des_path);
         } // end else of checking ..
         dir_info = readdir(src_dir); // read next element
     }

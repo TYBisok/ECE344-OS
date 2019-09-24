@@ -164,8 +164,11 @@ void wc_output(struct wc *wc) {
 void wc_destroy(struct wc *wc) {
     // free each element of the hash_array 
     for(int i = 0; i < hash_array_size; i++) {
-      if(wc->hash_array[i] != NULL) 
+      if(wc->hash_array[i] != NULL) {
+          if(wc->hash_array[i]->key != NULL)
+              free(wc->hash_array[i]->key);
           free(wc->hash_array[i]);
+      }
     }
 
     free(wc->hash_array);
