@@ -16,7 +16,7 @@ struct thread* 	all_threads[THREAD_MAX_THREADS] = { NULL }; // all threads
 int 			running_threads[THREAD_MAX_THREADS] = { 0 }; // 1 for running, 0 for not
 int 			ready_threads[THREAD_MAX_THREADS] = { 0 };
 struct queue* 	ready_queue;
-struct queue* 	kill_queue;
+struct queue* 	exited_queue;
 
 enum Status{
     RUNNING,
@@ -36,11 +36,21 @@ struct thread {
 
 // done and makes sense
 Tid get_id () {
+	// changed for bug in thread_exit
+	for(Tid i = 0; i < THREAD_MAX_THREADS; i++) {
+        if(all_threads[i] == NULL || (all_threads[i]->status != RUNNING && all_threads[i]->status != READY)) {
+            return i;
+        }
+    }
+
+
+	/*
     for(Tid i = 0; i < THREAD_MAX_THREADS; i++) {
         if(all_threads[i] == NULL) {
             return i;
         }
     }
+    */
     
     return THREAD_NOMORE;
 }
@@ -90,7 +100,7 @@ Tid get_ready(struct queue* queue) {
     if(queue == NULL || queue->next == NULL) 	return THREAD_NONE; 			// no thread in ready queue
     else {
         to_delete = queue->next; // this is the thread to delete (and also return the id of)
-        
+
         //printf("to delete %d\n", to_delete->thread->id);
         Tid ready_id = to_delete->thread->id; // id to return
         
@@ -155,11 +165,10 @@ void print_queue(struct queue* queue) {
     if(curr->next == NULL) {
      	//printf("empty list\n");
  		return; // no list
-     	
      } 				
     
     curr = curr->next;
-    printf("READY Q: ");
+    printf("QUEUE: ");
     //printf("\n----------------READY QUEUE------------------\n");
     while(curr!= NULL && curr->next != NULL) {
        printf("%d -> ", curr->thread->id);
@@ -211,8 +220,8 @@ thread_init(void) {
     ready_queue = (struct queue*)malloc(sizeof(struct queue));
     ready_queue->next = NULL; // head
 
-    kill_queue = (struct queue*)malloc(sizeof(struct queue));
-    kill_queue->next = NULL; // head
+    exited_queue = (struct queue*)malloc(sizeof(struct queue));
+    exited_queue->next = NULL; // head
     //add_queue(thread0);
 
     //add_queue(ready_queue, thread0);
@@ -373,21 +382,88 @@ thread_yield(Tid want_tid){
 void
 thread_exit() {
 	struct thread* exited_thread = all_threads[ thread_id() ]; // get the currently running thread
-	exited_thread->status = EXITED;
+	
+	// get rid of this thread
+	/*
+	all_threads[exited_thread->id] = NULL;
+	free(exited_thread->stack);
+	free(exited_thread);
+	*/
 
+	// look over why above isn't working
+	// for now make status = exited and change how get_id() works
+	exited_thread->status = EXITED;
+	//add_queue(exited_queue, exited_thread);
+	
+	// trying to add it to an exit queue
+
+	// find a thread to run next 
 	Tid ready_id = get_ready(ready_queue); 												  // get first thread in the ready queue and delete it from the queue
 	if(ready_id == THREAD_NONE) 
 		exit(0);							// there are no other threads to run, exit program
-		
+
+
 	struct thread* ready_thread = all_threads[ready_id]; 	// got em!!
 	ready_thread->status = RUNNING;
-	int err = setcontext(&(ready_thread->context));
-	assert(!err);	
+
+	delete_thread(ready_queue, ready_id); // delete this from the ready queue
+
+
+	//printf("i am %d and i am exiting and yielding to %d\n", exited_thread->id, ready_id);
+	
+	// set context to another thread
+	//if(ready_thread->setcontext_called == 0) {
+		//ready_thread->setcontext_called = 1;
+		//free(exited_thread->stack);
+		//free(exited_thread);
+		//all_threads[thread_id()] = NULL;
+		int err = setcontext(&(ready_thread->context));
+		assert(!err);
+	//}
+
+	//else
+		//ready_thread->setcontext_called = 1;	
+}
+
+int clear_queue(struct queue* queue) {
+	if(queue->next == NULL)	{
+		return 0; // queue is empty
+	}
+	
+	struct queue* curr;
+	struct queue* temp;
+
+	curr = queue->next; // first node
+
+	while(curr->next != NULL) {
+		temp = curr;
+		curr = curr->next; 
+		free(temp);
+	}
+
+	free(curr);
+	return 1;
 }
 
 Tid
 thread_kill(Tid tid)
 {
+	//printf("i am %d killing %d\n", thread_id(), tid);
+
+	// lets clear the exit queue here maybe?
+	//printf("exited queue before clear\n");
+	//print_queue(exited_queue);
+	
+	//int clear = clear_queue(exited_queue);
+
+	//if(clear == 0)
+		//printf("queue was empty\n");
+	//else
+		//printf("deleted some stuff\n");
+
+	//printf("print the queue\n");
+	//print_queue(exited_queue);
+	
 	int valid_id = tid >= 0 && tid < THREAD_MAX_THREADS && tid != thread_id() && all_threads[tid] != NULL;
 	if(!valid_id)	return THREAD_INVALID;
 	else {
