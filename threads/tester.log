@@ -1,15 +1,15 @@
 main: setcontext_called = 0
-start = 0x557e79318000
-end = 0x557e79320000
+start = 0x563bbeb6e000
+end = 0x563bbeb76000
 ucontext_t size = 936 bytes
-memory address of main() = 0x557e79318eaf
-memory address of the program counter (RIP) saved in mycontext = 0x557e79318ed1
+memory address of main() = 0x563bbeb6eeaf
+memory address of the program counter (RIP) saved in mycontext = 0x563bbeb6eed1
 argc = 1
-argv = 0x7ffdd0b16a08
-memory address of the variable setcontext_called = 0x7ffdd0b1690c
-memory address of the variable err = 0x7ffdd0b16908
+argv = 0x7ffc6696e1c8
+memory address of the variable setcontext_called = 0x7ffc6696e0cc
+memory address of the variable err = 0x7ffc6696e0c8
 number of bytes pushed to the stack between setcontext_called and err = 4
-stack pointer register (RSP) stored in mycontext = 0x7ffdd0b168f0
+stack pointer register (RSP) stored in mycontext = 0x7ffc6696e0b0
 number of bytes between err and the saved stack in mycontext = 24
 value of uc_stack.ss_sp = 0x0
 main: setcontext_called = 1
@@ -417,4 +417,7 @@ creating  1023 threads
 destroying 512 threads
 testing some destroys even though I'm the only thread
 testing destroy self
-test_basic: test_thread.c:210: test_basic: Assertion `minfo_end.uordblks == minfo_start.uordblks' failed.
+for my grand finale, I will destroy myself
+while my talented assistant prints "basic test done"
+finale running
+basic test done

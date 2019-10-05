@@ -11,10 +11,7 @@
 
 // global variables
 struct thread* 	thread0; // initial thread 
-//struct thread* running_thread;
 struct thread* 	all_threads[THREAD_MAX_THREADS] = { NULL }; // all threads 
-int 			running_threads[THREAD_MAX_THREADS] = { 0 }; //  for running, 0 for not
-int 			ready_threads[THREAD_MAX_THREADS] = { 0 };
 struct queue* 	ready_queue;
 struct queue* 	exited_queue;
 
@@ -31,27 +28,17 @@ struct thread {
     enum Status status;
 	ucontext_t context;
     void * stack;
-   int setcontext_called;
+    volatile int setcontext_called;
 };
 
 // done and makes sense
 Tid get_id () {
-	// changed for bug in thread_exit
 	for(Tid i = 0; i < THREAD_MAX_THREADS; i++) {
         if(all_threads[i] == NULL || (all_threads[i]->status != RUNNING && all_threads[i]->status != READY)) {
             return i;
         }
     }
-
-
-	/*
-    for(Tid i = 0; i < THREAD_MAX_THREADS; i++) {
-        if(all_threads[i] == NULL) {
-            return i;
-        }
-    }
-    */
-    
+        
     return THREAD_NOMORE;
 }
 
@@ -76,41 +63,15 @@ Tid delete_thread(struct queue* queue, Tid id) {
 
 		if(curr->thread->id == id) {
 			prev->next = curr->next;
+			// dont wanna free the thread ptr and the next ptr cause they're still in us
 			free(curr);
 			return id;
 		}
 
 		return THREAD_NONE;
-
-		
-   		/*
-       curr = queue->next;
-
-		if(curr->next == NULL) {
-			queue->next = NULL;
-			//free(curr);
-			return 1;
-		}
-		
-		while(curr->next != NULL && curr->thread->id != id){
-			prev = curr;
-			curr = curr->next;
-		}
-
-		if(curr->thread->id == id) {
-			prev->next = curr->next;
-			//free(curr);
-			return 1;
-		}
-
-		if(curr->next == NULL) {
-			return THREAD_NONE;
-		}
-		*/
    }
-
-   return THREAD_NONE;
 }
+
 Tid get_ready(struct queue* queue) {
     struct queue* to_delete;
     //printf("wtf\n");
@@ -118,21 +79,17 @@ Tid get_ready(struct queue* queue) {
     if(queue == NULL || queue->next == NULL) 	return THREAD_NONE; 			// no thread in ready queue
     else {
         to_delete = queue->next; // this is the thread to delete (and also return the id of)
-
-        //printf("to delete %d\n", to_delete->thread->id);
         Tid ready_id = to_delete->thread->id; // id to return
         
-        if(to_delete->next != NULL)	{
+        if(to_delete->next != NULL)
         	queue->next = to_delete->next;	// head now points to the second thread in the list 
-        	}
-        else {
-        	//printf("deleted from start\n");
+        else 
         	queue->next = NULL;
-        }
+        
             
         //printf("******deleting thread %d from ready queue\n", ready_id);
         // do i need to free the thread too? no right cause its in my array as well?
-        //free(to_delete);
+        free(to_delete);
         return ready_id;
     }
 }
@@ -208,10 +165,10 @@ thread_stub(void (*thread_main)(void *), void *arg){
 }
 
 struct thread* ready_thread() {
-  if(ready_queue->next == NULL)
-    return NULL;    
-  else
-    return ready_queue->next->thread;
+	if(ready_queue->next == NULL)
+	  return NULL;    
+	else
+	  return ready_queue->next->thread;
 };
 
 /* This is the wait queue structure */
@@ -302,7 +259,6 @@ thread_create(void (*fn) (void *), void *parg){
     	
     //print_queue(ready_queue);
     all_threads[thread_id] = thread;
-    ready_threads[thread_id] = 1;
 
     //printf("created %d\n", thread_id);
     return thread_id;
@@ -379,39 +335,17 @@ thread_exit() {
 	// find a thread to run next 
 	Tid ready_id = get_ready(ready_queue); 												  // get first thread in the ready queue and delete it from the queue
 	if(ready_id == THREAD_NONE) {
-		// actually should exit(0) i think
-		//printf("tring to exit the last thread!!\n");
-		return;
+		exit(0);
 	}
-
-	//if(ready_id == 0)	printf("eek ok so i'm %d trying to yield to %d\n", exited_thread->id, ready_id);
 	
 	struct thread* ready_thread = all_threads[ready_id]; 	// got em!!
-	//printf("exiting %d...", exited_thread->id);
-
 	ready_thread->status = RUNNING;
+
+	free(exited_thread->stack);
+	free(exited_thread);
 
 	int err = setcontext(&(ready_thread->context));
 	assert(!err);
-			
-	/*
-	if(ready_thread->setcontext_called == 0) {
-		printf("and yielding to %d\n", ready_id);
-		ready_thread->setcontext_called = 1;
-		int err = setcontext(&(ready_thread->context));
-		assert(!err);
-		
-	}
-	else
-		ready_thread->setcontext_called = 0;
-	*/
-
-	
-	/*
-	all_threads[exited_thread->id] = NULL;
-	free(exited_thread->stack);
-	free(exited_thread);
-	*/
 }
 
 int clear_queue(struct queue* queue) {
