@@ -1,15 +1,15 @@
 main: setcontext_called = 0
-start = 0x55b032e98000
-end = 0x55b032ea0000
+start = 0x557e79318000
+end = 0x557e79320000
 ucontext_t size = 936 bytes
-memory address of main() = 0x55b032e98e5f
-memory address of the program counter (RIP) saved in mycontext = 0x55b032e98e81
+memory address of main() = 0x557e79318eaf
+memory address of the program counter (RIP) saved in mycontext = 0x557e79318ed1
 argc = 1
-argv = 0x7fffff39fa78
-memory address of the variable setcontext_called = 0x7fffff39f97c
-memory address of the variable err = 0x7fffff39f978
+argv = 0x7ffdd0b16a08
+memory address of the variable setcontext_called = 0x7ffdd0b1690c
+memory address of the variable err = 0x7ffdd0b16908
 number of bytes pushed to the stack between setcontext_called and err = 4
-stack pointer register (RSP) stored in mycontext = 0x7fffff39f960
+stack pointer register (RSP) stored in mycontext = 0x7ffdd0b168f0
 number of bytes between err and the saved stack in mycontext = 24
 value of uc_stack.ss_sp = 0x0
 main: setcontext_called = 1
@@ -413,3 +413,8 @@ thread returns from second yield
 destroying all threads
 creating  1023 threads
 running   1023 threads
+creating  1023 threads
+destroying 512 threads
+testing some destroys even though I'm the only thread
+testing destroy self
+test_basic: test_thread.c:210: test_basic: Assertion `minfo_end.uordblks == minfo_start.uordblks' failed.
