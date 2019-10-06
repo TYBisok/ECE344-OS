@@ -14,20 +14,22 @@ struct thread* 	thread0; // initial thread
 struct thread* 	threads[THREAD_MAX_THREADS] = { NULL }; // all threads 
 struct queue* 	ready_queue;
 struct queue* 	exit_queue;
+Tid to_exit = 0;
+int should_free = 0;
 
 // structures
 enum Status{
     RUNNING,
     READY,
     BLOCKED,
-	EXITED
+    EXITED
 };
 
 // thread control block
 struct thread {
     Tid id;
     enum Status status;
-	ucontext_t context;
+    ucontext_t context;
     void * stack;
     volatile int setcontext_called;
 };
@@ -46,18 +48,18 @@ void free_thread(Tid id);
 
 // return id of the running thread
 Tid thread_id(){	
-	for(int i = 0; i < THREAD_MAX_THREADS; i++) 
-		if(threads[i] != NULL && threads[i]->status == RUNNING)
-	    	return i;
-   
-	return THREAD_INVALID; 
+    for(int i = 0; i < THREAD_MAX_THREADS; i++) 
+            if(threads[i] != NULL && threads[i]->status == RUNNING)
+            return i;
+
+    return THREAD_INVALID; 
 }
 
 // get an available id for a new thread being created
 Tid get_id () {
-	for(Tid i = 0; i < THREAD_MAX_THREADS; i++) 
-        if(threads[i] == NULL || (threads[i]->status != RUNNING && threads[i]->status != READY)) 
-            return i;
+    for(Tid i = 0; i < THREAD_MAX_THREADS; i++) 
+    if(threads[i] == NULL || (threads[i]->status != RUNNING && threads[i]->status != READY)) 
+        return i;
         
     return THREAD_NOMORE;
 }
@@ -65,13 +67,13 @@ Tid get_id () {
 // get ID of first thread in list
 Tid get_ready(struct queue* queue) {     
     if(queue == NULL || queue->next == NULL) 	return THREAD_NONE; 			
-    else										return queue->next->thread->id; 
+    else					return queue->next->thread->id; 
 }
 
 void add_to_queue(struct queue* queue, struct thread* thread) {
-	struct queue* head;
-	struct queue* temp;
-	struct queue* new_thread;
+    struct queue* head;
+    struct queue* temp;
+    struct queue* new_thread;
 	
     if(queue == NULL) 		return; 
     
@@ -94,35 +96,23 @@ void add_to_queue(struct queue* queue, struct thread* thread) {
 }
 
 void delete_from_queue(struct queue* queue, Tid id) {
+    struct queue* curr;
+    struct queue* prev; // 
 
-	if(id == -69) { // exit queue 
-		if(queue->next != NULL) {
-			free_thread(queue->next->thread->id);
-			free(queue->next);
-			queue->next = NULL;
-			return;
-		}
-		return;
-	}
+    if(queue == NULL || queue->next == NULL) 	return; 			// no thread in ready queue
 
-	
-	struct queue* curr;
-	struct queue* prev; // 
-	
-   	if(queue == NULL || queue->next == NULL) 	return; 			// no thread in ready queue
-   
- 	prev = queue;
-	curr = queue->next; // first element of the list
+    prev = queue;
+    curr = queue->next; // first element of the list
 
-	while(curr->thread->id != id && curr->next != NULL) {
-		prev = curr;
-		curr = curr->next;
-	}
+    while(curr->thread->id != id && curr->next != NULL) {
+            prev = curr;
+            curr = curr->next;
+    }
 
-	if(curr->thread->id == id) {
-		prev->next = curr->next;
-		free(curr);
-	}
+    if(curr->thread->id == id) {
+            prev->next = curr->next;
+            free(curr);
+    }
 }
 
 void print_queue(struct queue* queue) {
@@ -141,16 +131,18 @@ void print_queue(struct queue* queue) {
 }
 
 void free_thread(Tid id) {
-	free(threads[id]->stack);					
-	free(threads[id]);
-	threads[id] = NULL;
+    free(threads[id]->stack);					
+    free(threads[id]);
+    threads[id] = NULL;
 }
 
 /*-----------------------------------------START THREAD LIBRARY FUNCTIONS----------------------------------------------------------*/
 
 void thread_stub(void (*thread_main)(void *), void *arg) {
-	thread_main(arg); 
-	thread_exit();
+    thread_main(arg); 
+    //printf("i am %d in stub\n", thread_id());
+    
+    thread_exit();
 }
 
 /* This is the wait queue structure */
@@ -159,7 +151,7 @@ struct wait_queue {
 };
 
 void thread_init(void) {
-	thread0 = (struct thread *)malloc(sizeof(struct thread));
+    thread0 = (struct thread *)malloc(sizeof(struct thread));
     thread0->id = 0;
     thread0->status = RUNNING;
     thread0->setcontext_called = 0;
@@ -190,19 +182,19 @@ Tid thread_create(void (*fn) (void *), void *parg){
     }
     
     // initialize control block    
-   	thread->id = get_id();
-   	thread->status = READY;
+    thread->id = get_id();
+    thread->status = READY;
     thread->stack = thread_stack;
-   	thread->setcontext_called = 0;
+    thread->setcontext_called = 0;
 				
     assert( !getcontext(&(thread->context)) );	
     	
     // manually edit general registers
-    thread_stack += (THREAD_MIN_STACK - 8);				
+    thread_stack += (THREAD_MIN_STACK - 8);	
     thread->context.uc_mcontext.gregs[REG_RIP] = (unsigned long)thread_stub;
     thread->context.uc_mcontext.gregs[REG_RDI] = (unsigned long)fn;    
     thread->context.uc_mcontext.gregs[REG_RSI] = (unsigned long)parg; 
-	thread->context.uc_mcontext.gregs[REG_RSP] = (unsigned long)thread_stack;
+    thread->context.uc_mcontext.gregs[REG_RSP] = (unsigned long)thread_stack;
 
     threads[thread->id] = thread;
     add_to_queue(ready_queue, thread);
@@ -211,8 +203,9 @@ Tid thread_create(void (*fn) (void *), void *parg){
 }
 
 Tid thread_yield(Tid want_tid){  
-	//delete_from_queue(exit_queue, -69);
-	  
+    //free_exited();
+    
+    // printf("i am %d in yield\n", thread_id());
     Tid ready_id;
     Tid running_id = thread_id();
     
@@ -230,26 +223,118 @@ Tid thread_yield(Tid want_tid){
 
     if(ready_id == THREAD_NONE)		return THREAD_NONE; // return from get_ready(ready_queue)					 
 
-	struct thread* ready_thread = threads[ready_id];
-	delete_from_queue(ready_queue, ready_id);			// delete thread from ready queue
-	
-	assert( !getcontext(&(threads[running_id]->context)) );
-	
-	if(ready_thread->setcontext_called == 1) { 			// if setcontext has been called, this is the second return of getcontext so exit function
-		ready_thread->setcontext_called = 0;
-		return ready_thread->id;
-	}
-	else {												// else, set context
-		ready_thread->setcontext_called = 1;
-		ready_thread->status = RUNNING;
-		threads[running_id]->status = READY;
-		add_to_queue(ready_queue, threads[running_id]);
-	   	assert( !setcontext(&(ready_thread->context)) );	
-	}
+    struct thread* ready_thread = threads[ready_id];
+    delete_from_queue(ready_queue, ready_id);			// delete thread from ready queue
+
+    assert( !getcontext(&(threads[running_id]->context)) );
+
+    if(should_free) {
+        free_thread(to_exit);
+        should_free = 0;
+    }
+
+    if(ready_thread->setcontext_called == 1) { 			// if setcontext has been called, this is the second return of getcontext so exit function
+            ready_thread->setcontext_called = 0;
+            return ready_thread->id;
+    }
+    else {												// else, set context
+            ready_thread->setcontext_called = 1;
+            ready_thread->status = RUNNING;
+            threads[running_id]->status = READY;
+            add_to_queue(ready_queue, threads[running_id]);
+            assert( !setcontext(&(ready_thread->context)) );	
+    }
        
     return THREAD_NONE;
 }
+/*----------------------------------------------------------------------------------------------*/
+Tid free_exited() {
+    for(Tid i = 0; i < THREAD_MAX_THREADS; i++) 
+        if(threads[i] != NULL && threads[i]->status == EXITED) {
+            printf("free me: %d\n", i);
+            free_thread(i);
+            return i;
+        }
+    return THREAD_NONE;
+}
 
+Tid free_all() {
+    for(Tid i = 0; i < THREAD_MAX_THREADS; i++) 
+    if(threads[i] != NULL) {
+            printf("free all: %d\n", i);
+            delete_from_queue(ready_queue, i);
+            free_thread(i);
+            return i;
+    }
+    return THREAD_NONE;
+}
+
+Tid whats_left() {
+    printf("what's left: ");
+    for(Tid i = 0; i < THREAD_MAX_THREADS; i++) {
+    if(threads[i] != NULL) {
+            printf("%d -> ", i);
+            return i;
+    }
+    }
+    return THREAD_NONE;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+void thread_exit() {
+    if(should_free) {
+        free_thread(to_exit);
+        should_free = 0;
+    }
+    
+    //printf("i am %d and i am exiting\n", thread_id());
+    Tid ready_id = get_ready(ready_queue); 					// get the first thread from ready queue to yield to	
+    if(ready_id == THREAD_NONE)	return exit(0); 			// if the only thread left is the one running, exit the program
+
+    to_exit = thread_id();
+    should_free = 1;
+    threads[to_exit]->status = EXITED;
+
+    threads[ready_id]->status = RUNNING;					// update status of the ready thread to running			
+    delete_from_queue(ready_queue, threads[ready_id]->id);	// delete ready thread form ready queue				
+    assert( !setcontext(&(threads[ready_id]->context)) );	// set context to the ready thread
+}
+
+Tid thread_kill(Tid tid) {	
+    // check that tid is 1) within bounds, 2) matches an existing thread, and 3) is not the running thread
+    int valid_id = (tid >= 0 && tid < THREAD_MAX_THREADS) && (threads[tid] != NULL) && (tid != thread_id());
+    if(!valid_id)	return THREAD_INVALID;
+
+    delete_from_queue(ready_queue, tid);		// delete killed thread from ready queue
+    free_thread(tid);
+
+    return tid;
+}
+
+// Nope
+/*
+void thread_exit() {
+	//printf("i am %d exiting\n", thread_id());
+	//whats_left();
+	
+	Tid ready_id = get_ready(ready_queue); 					// get the first thread from ready queue to yield to	
+	if(ready_id == THREAD_NONE)	{
+		//free_all();
+		exit(0);
+	}
+
+	// mark the current thread as exited and remove it from the ready queue (it actually wouldnt be in the ready queue)
+	//threads[thread_id()]->status = EXITED;
+	to_exit = thread_id();
+	
+	threads[ready_id]->status = RUNNING;					// update status of the ready thread to running			
+	delete_from_queue(ready_queue, threads[ready_id]->id);	// delete ready thread form ready queue				
+	assert( !setcontext(&(threads[ready_id]->context)) );	// set context to the ready thread
+}
+*/
+
+// Working but wrong implementation
+/*
 void thread_exit() {
 	Tid ready_id = get_ready(ready_queue); 					// get the first thread from ready queue to yield to	
 	if(ready_id == THREAD_NONE)	return exit(0); 			// if the only thread left is the one running, exit the program
@@ -263,7 +348,12 @@ void thread_exit() {
 	delete_from_queue(ready_queue, threads[ready_id]->id);	// delete ready thread form ready queue				
 	assert( !setcontext(&(threads[ready_id]->context)) );	// set context to the ready thread
 }
+*/
 
+
+
+// Working but wrong implementation
+/*
 Tid thread_kill(Tid tid) {	
 	// check that tid is 1) within bounds, 2) matches an existing thread, and 3) is not the running thread
 	int valid_id = (tid >= 0 && tid < THREAD_MAX_THREADS) && (threads[tid] != NULL) && (tid != thread_id());
@@ -274,6 +364,7 @@ Tid thread_kill(Tid tid) {
 	
 	return tid;
 }
+*/
 
 /*******************************************************************************************************************************************************************************************************
  * Important: The rest of the code should be implemented in Lab 3. *
