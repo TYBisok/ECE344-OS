@@ -1,15 +1,15 @@
 main: setcontext_called = 0
-start = 0x5586fe452000
-end = 0x5586fe45a000
+start = 0x55fc115c2000
+end = 0x55fc115ca000
 ucontext_t size = 936 bytes
-memory address of main() = 0x5586fe452eaf
-memory address of the program counter (RIP) saved in mycontext = 0x5586fe452ed1
+memory address of main() = 0x55fc115c2eaf
+memory address of the program counter (RIP) saved in mycontext = 0x55fc115c2ed1
 argc = 1
-argv = 0x7fffcc574068
-memory address of the variable setcontext_called = 0x7fffcc573f6c
-memory address of the variable err = 0x7fffcc573f68
+argv = 0x7ffd3c8bd918
+memory address of the variable setcontext_called = 0x7ffd3c8bd81c
+memory address of the variable err = 0x7ffd3c8bd818
 number of bytes pushed to the stack between setcontext_called and err = 4
-stack pointer register (RSP) stored in mycontext = 0x7fffcc573f50
+stack pointer register (RSP) stored in mycontext = 0x7ffd3c8bd800
 number of bytes between err and the saved stack in mycontext = 24
 value of uc_stack.ss_sp = 0x0
 main: setcontext_called = 1
@@ -411,13 +411,4 @@ message: hello from thread 127
 thread returns from  first yield
 thread returns from second yield
 destroying all threads
-creating  1023 threads
-running   1023 threads
-creating  1023 threads
-destroying 512 threads
-testing some destroys even though I'm the only thread
-testing destroy self
-for my grand finale, I will destroy myself
-while my talented assistant prints "basic test done"
-finale running
-basic test done
+test_basic: test_thread.c:107: test_basic: Assertion `ii <= (NTHREADS + 1)' failed.
