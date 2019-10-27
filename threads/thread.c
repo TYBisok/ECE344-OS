@@ -1,3 +1,6 @@
+// git reset --hard cedc856
+// git push --force origin master
+
 #include <assert.h>
 #include <stdlib.h>
 #include <ucontext.h>
@@ -144,9 +147,8 @@ void free_thread(Tid id) {
 /*-----------------------------------------START THREAD LIBRARY FUNCTIONS----------------------------------------------------------*/
 
 void thread_stub(void (*thread_main)(void *), void *arg) {
-    thread_main(arg); 
-    //printf("i am %d in stub\n", thread_id());
-    
+    interrupts_on();
+    thread_main(arg);     
     thread_exit();
 }
 
@@ -172,10 +174,11 @@ void thread_init(void) {
 }
 
 Tid thread_create(void (*fn) (void *), void *parg){	
+    int enabled = interrupts_off();
     void *	thread_stack;
     struct  thread* thread;
 
-    if(get_id() == THREAD_NOMORE)	return THREAD_NOMORE;
+    if(get_id() == THREAD_NOMORE) return THREAD_NOMORE;
     
 	thread_stack = (void*)malloc(THREAD_MIN_STACK);
     if(thread_stack == NULL) 		return THREAD_NOMEMORY;
@@ -205,15 +208,19 @@ Tid thread_create(void (*fn) (void *), void *parg){
     threads[thread->id] = thread;
     add_to_queue(ready_queue, thread);
 
+    interrupts_set(enabled);
     return thread->id;
 }
 
-Tid thread_yield(Tid want_tid){      
+Tid thread_yield(Tid want_tid){     
+    int enabled = interrupts_off();
+ 
     Tid ready_id;
     Tid running_id = thread_id();
     
     if(threads[running_id]->killmepls == 1) {
         delete_from_queue(ready_queue, running_id);
+        interrupts_set(enabled);
         thread_exit();
     }
     
@@ -224,12 +231,21 @@ Tid thread_yield(Tid want_tid){
     int YIELD_SPECIFIC 	= (valid_id) && (threads[want_tid] != NULL) && (threads[want_tid]->status == READY); 
 
     // figure out which ready thread to yield to 
-    if (YIELD_SELF) 				return running_id;
+    if (YIELD_SELF) {
+        interrupts_set(enabled);
+        return running_id;
+    }
     else if (YIELD_ANY) 			ready_id = get_ready(ready_queue); 												  
     else if(YIELD_SPECIFIC) 		ready_id = want_tid;
-    else							return THREAD_INVALID;
+    else {
+        interrupts_set(enabled);
+        return THREAD_INVALID;
+    }
 
-    if(ready_id == THREAD_NONE)		return THREAD_NONE; // return from get_ready(ready_queue)					 
+    if(ready_id == THREAD_NONE) {
+        interrupts_set(enabled);
+        return THREAD_NONE; // return from get_ready(ready_queue)		
+    }			 
 
     struct thread* ready_thread = threads[ready_id];
     delete_from_queue(ready_queue, ready_id);			// delete thread from ready queue
@@ -240,6 +256,7 @@ Tid thread_yield(Tid want_tid){
     
     if(ready_thread->setcontext_called == 1) { 			// for setcontexts from other funcs like exit
         ready_thread->setcontext_called = 0;
+        interrupts_set(enabled);
         return ready_thread->id;
     }
     else {												// else, set context
@@ -249,7 +266,8 @@ Tid thread_yield(Tid want_tid){
         add_to_queue(ready_queue, threads[running_id]);
         assert( !setcontext(&(ready_thread->context)) );	
     }
-       
+    
+    interrupts_set(enabled);
     return THREAD_NONE;
 }
 /*----------------------------------------------------------------------------------------------*/
@@ -265,6 +283,9 @@ Tid free_exited() {
 /*----------------------------------------------------------------------------------------------*/
 
 void thread_exit() {
+    // interrupts_off();
+
+    assert(!interrupts_enabled());
     free_exited();
     
     Tid ready_id = get_ready(ready_queue); 					// get the first thread from ready queue to yield to
