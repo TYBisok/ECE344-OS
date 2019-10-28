@@ -515,7 +515,7 @@ out:
 	}
 
 	struct mallinfo minfo_end = mallinfo();
-	// assert(minfo_end.uordblks == minfo_start.uordblks);
+	assert(minfo_end.uordblks == minfo_start.uordblks);
 	assert(minfo_end.hblks == minfo_start.hblks);
 
 	unintr_printf("wakeup test done\n");
@@ -583,7 +583,7 @@ test_wait(void)
 	}
 
 	struct mallinfo minfo_end = mallinfo();
-	// assert(minfo_end.uordblks == minfo_start.uordblks);
+	assert(minfo_end.uordblks == minfo_start.uordblks);
 	assert(minfo_end.hblks == minfo_start.hblks);
 
 	unintr_printf("wait test done\n");

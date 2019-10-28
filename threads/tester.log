@@ -3696,3 +3696,998 @@ starting lock test
 thread.c:554: lock_create: please implement this functionality
 starting lock test
 thread.c:554: lock_create: please implement this functionality
+starting wait test
+initial thread returns from waiting on self
+initial thread returns from waiting on THREAD_SELF
+initial thread returns from waiting on 110
+id = 1
+id = 2
+id = 3
+id = 4
+id = 5
+id = 6
+id = 7
+id = 8
+id = 9
+id = 10
+id = 11
+id = 12
+id = 13
+id = 14
+id = 15
+id = 16
+id = 17
+id = 18
+id = 19
+id = 20
+id = 21
+id = 22
+id = 23
+id = 24
+id = 25
+id = 26
+id = 27
+id = 28
+id = 29
+id = 30
+id = 31
+id = 32
+id = 33
+id = 34
+id = 35
+id = 36
+id = 37
+id = 38
+id = 39
+id = 40
+id = 41
+id = 42
+id = 43
+id = 44
+id = 45
+id = 46
+id = 47
+id = 48
+id = 49
+id = 50
+id = 51
+id = 52
+id = 53
+id = 54
+id = 55
+id = 56
+id = 57
+id = 58
+id = 59
+id = 60
+id = 61
+id = 62
+id = 63
+id = 64
+id = 65
+id = 66
+id = 67
+id = 68
+id = 69
+id = 70
+id = 71
+id = 72
+id = 73
+id = 74
+id = 75
+id = 76
+id = 77
+id = 78
+id = 79
+id = 80
+id = 81
+id = 82
+id = 83
+id = 84
+id = 85
+id = 86
+id = 87
+id = 88
+id = 89
+id = 90
+id = 91
+id = 92
+id = 93
+id = 94
+id = 95
+id = 96
+id = 97
+id = 98
+id = 99
+id = 100
+id = 101
+id = 102
+id = 103
+id = 104
+id = 105
+id = 106
+id = 107
+id = 108
+id = 109
+id = 110
+id = 111
+id = 112
+id = 113
+id = 114
+id = 115
+id = 116
+id = 117
+id = 118
+id = 119
+id = 120
+id = 121
+id = 122
+id = 123
+id = 124
+id = 125
+id = 126
+id = 127
+wait test done
+starting wait_kill test
+deleted 0 from 1's wait queue
+its over
+starting wait_parent test
+deleted 104 from 0's wait queue
+104: thread killed
+deleted 71 from 0's wait queue
+71: thread killed
+deleted 106 from 0's wait queue
+106: thread killed
+deleted 116 from 0's wait queue
+116: thread killed
+deleted 82 from 0's wait queue
+82: thread killed
+deleted 128 from 0's wait queue
+128: thread killed
+deleted 75 from 0's wait queue
+75: thread killed
+deleted 109 from 0's wait queue
+109: thread killed
+deleted 42 from 0's wait queue
+42: thread killed
+deleted 78 from 0's wait queue
+78: thread killed
+deleted 59 from 0's wait queue
+59: thread killed
+deleted 44 from 0's wait queue
+44: thread killed
+deleted 115 from 0's wait queue
+115: thread killed
+deleted 124 from 0's wait queue
+124: thread killed
+deleted 100 from 0's wait queue
+100: thread killed
+deleted 125 from 0's wait queue
+125: thread killed
+deleted 67 from 0's wait queue
+67: thread killed
+deleted 85 from 0's wait queue
+85: thread killed
+deleted 121 from 0's wait queue
+121: thread killed
+deleted 28 from 0's wait queue
+28: thread killed
+deleted 105 from 0's wait queue
+105: thread killed
+deleted 14 from 0's wait queue
+14: thread killed
+deleted 119 from 0's wait queue
+119: thread killed
+deleted 91 from 0's wait queue
+91: thread killed
+deleted 47 from 0's wait queue
+47: thread killed
+deleted 52 from 0's wait queue
+52: thread killed
+deleted 32 from 0's wait queue
+32: thread killed
+deleted 74 from 0's wait queue
+74: thread killed
+deleted 27 from 0's wait queue
+27: thread killed
+deleted 103 from 0's wait queue
+103: thread killed
+deleted 51 from 0's wait queue
+51: thread killed
+deleted 56 from 0's wait queue
+56: thread killed
+deleted 50 from 0's wait queue
+50: thread killed
+deleted 89 from 0's wait queue
+89: thread killed
+deleted 36 from 0's wait queue
+36: thread killed
+deleted 38 from 0's wait queue
+38: thread killed
+deleted 94 from 0's wait queue
+94: thread killed
+deleted 6 from 0's wait queue
+6: thread killed
+deleted 24 from 0's wait queue
+24: thread killed
+deleted 95 from 0's wait queue
+95: thread killed
+deleted 53 from 0's wait queue
+53: thread killed
+deleted 18 from 0's wait queue
+18: thread killed
+deleted 15 from 0's wait queue
+15: thread killed
+deleted 3 from 0's wait queue
+3: thread killed
+deleted 117 from 0's wait queue
+117: thread killed
+deleted 66 from 0's wait queue
+66: thread killed
+deleted 34 from 0's wait queue
+34: thread killed
+deleted 62 from 0's wait queue
+62: thread killed
+deleted 93 from 0's wait queue
+93: thread killed
+deleted 8 from 0's wait queue
+8: thread killed
+1: thread woken
+2: thread woken
+4: thread woken
+5: thread woken
+7: thread woken
+9: thread woken
+10: thread woken
+11: thread woken
+12: thread woken
+13: thread woken
+16: thread woken
+17: thread woken
+19: thread woken
+20: thread woken
+21: thread woken
+22: thread woken
+23: thread woken
+25: thread woken
+26: thread woken
+29: thread woken
+30: thread woken
+31: thread woken
+33: thread woken
+35: thread woken
+37: thread woken
+39: thread woken
+40: thread woken
+41: thread woken
+43: thread woken
+46: thread woken
+48: thread woken
+49: thread woken
+54: thread woken
+55: thread woken
+57: thread woken
+58: thread woken
+60: thread woken
+61: thread woken
+63: thread woken
+64: thread woken
+65: thread woken
+68: thread woken
+69: thread woken
+70: thread woken
+72: thread woken
+73: thread woken
+76: thread woken
+77: thread woken
+80: thread woken
+81: thread woken
+83: thread woken
+84: thread woken
+86: thread woken
+87: thread woken
+88: thread woken
+90: thread woken
+92: thread woken
+96: thread woken
+97: thread woken
+98: thread woken
+99: thread woken
+101: thread woken
+102: thread woken
+107: thread woken
+108: thread woken
+110: thread woken
+111: thread woken
+112: thread woken
+113: thread woken
+114: thread woken
+118: thread woken
+120: thread woken
+123: thread woken
+126: thread woken
+127: thread woken
+122: thread woken
+45: thread woken
+79: thread woken
+wait_parent test done
+starting wait test
+initial thread returns from waiting on self
+initial thread returns from waiting on THREAD_SELF
+initial thread returns from waiting on 110
+id = 1
+id = 2
+id = 3
+id = 4
+id = 5
+id = 6
+id = 7
+id = 8
+id = 9
+id = 10
+id = 11
+id = 12
+id = 13
+id = 14
+id = 15
+id = 16
+id = 17
+id = 18
+id = 19
+id = 20
+id = 21
+id = 22
+id = 23
+id = 24
+id = 25
+id = 26
+id = 27
+id = 28
+id = 29
+id = 30
+id = 31
+id = 32
+id = 33
+id = 34
+id = 35
+id = 36
+id = 37
+id = 38
+id = 39
+id = 40
+id = 41
+id = 42
+id = 43
+id = 44
+id = 45
+id = 46
+id = 47
+id = 48
+id = 49
+id = 50
+id = 51
+id = 52
+id = 53
+id = 54
+id = 55
+id = 56
+id = 57
+id = 58
+id = 59
+id = 60
+id = 61
+id = 62
+id = 63
+id = 64
+id = 65
+id = 66
+id = 67
+id = 68
+id = 69
+id = 70
+id = 71
+id = 72
+id = 73
+id = 74
+id = 75
+id = 76
+id = 77
+id = 78
+id = 79
+id = 80
+id = 81
+id = 82
+id = 83
+id = 84
+id = 85
+id = 86
+id = 87
+id = 88
+id = 89
+id = 90
+id = 91
+id = 92
+id = 93
+id = 94
+id = 95
+id = 96
+id = 97
+id = 98
+id = 99
+id = 100
+id = 101
+id = 102
+id = 103
+id = 104
+id = 105
+id = 106
+id = 107
+id = 108
+id = 109
+id = 110
+id = 111
+id = 112
+id = 113
+id = 114
+id = 115
+id = 116
+id = 117
+id = 118
+id = 119
+id = 120
+id = 121
+id = 122
+id = 123
+id = 124
+id = 125
+id = 126
+id = 127
+wait test done
+starting wait_kill test
+deleted 0 from 1's wait queue
+its over
+starting wait_parent test
+deleted 104 from 0's wait queue
+104: thread killed
+deleted 71 from 0's wait queue
+71: thread killed
+deleted 106 from 0's wait queue
+106: thread killed
+deleted 116 from 0's wait queue
+116: thread killed
+deleted 82 from 0's wait queue
+82: thread killed
+deleted 128 from 0's wait queue
+128: thread killed
+deleted 75 from 0's wait queue
+75: thread killed
+deleted 109 from 0's wait queue
+109: thread killed
+deleted 42 from 0's wait queue
+42: thread killed
+deleted 78 from 0's wait queue
+78: thread killed
+deleted 59 from 0's wait queue
+59: thread killed
+deleted 44 from 0's wait queue
+44: thread killed
+115: thread killed
+deleted 124 from 0's wait queue
+124: thread killed
+deleted 100 from 0's wait queue
+100: thread killed
+deleted 125 from 0's wait queue
+125: thread killed
+deleted 67 from 0's wait queue
+67: thread killed
+deleted 85 from 0's wait queue
+85: thread killed
+deleted 121 from 0's wait queue
+121: thread killed
+deleted 28 from 0's wait queue
+28: thread killed
+deleted 105 from 0's wait queue
+105: thread killed
+deleted 14 from 0's wait queue
+14: thread killed
+deleted 119 from 0's wait queue
+119: thread killed
+deleted 91 from 0's wait queue
+91: thread killed
+deleted 47 from 0's wait queue
+47: thread killed
+deleted 52 from 0's wait queue
+52: thread killed
+deleted 32 from 0's wait queue
+32: thread killed
+deleted 74 from 0's wait queue
+74: thread killed
+deleted 27 from 0's wait queue
+27: thread killed
+deleted 103 from 0's wait queue
+103: thread killed
+deleted 51 from 0's wait queue
+51: thread killed
+deleted 56 from 0's wait queue
+56: thread killed
+deleted 50 from 0's wait queue
+50: thread killed
+deleted 89 from 0's wait queue
+89: thread killed
+deleted 36 from 0's wait queue
+36: thread killed
+deleted 38 from 0's wait queue
+38: thread killed
+deleted 94 from 0's wait queue
+94: thread killed
+deleted 6 from 0's wait queue
+6: thread killed
+deleted 24 from 0's wait queue
+24: thread killed
+deleted 95 from 0's wait queue
+95: thread killed
+deleted 53 from 0's wait queue
+53: thread killed
+deleted 18 from 0's wait queue
+18: thread killed
+deleted 15 from 0's wait queue
+15: thread killed
+deleted 3 from 0's wait queue
+3: thread killed
+deleted 117 from 0's wait queue
+117: thread killed
+deleted 66 from 0's wait queue
+66: thread killed
+deleted 34 from 0's wait queue
+34: thread killed
+deleted 62 from 0's wait queue
+62: thread killed
+deleted 93 from 0's wait queue
+93: thread killed
+deleted 8 from 0's wait queue
+8: thread killed
+1: thread woken
+2: thread woken
+4: thread woken
+5: thread woken
+7: thread woken
+9: thread woken
+10: thread woken
+11: thread woken
+12: thread woken
+13: thread woken
+16: thread woken
+17: thread woken
+19: thread woken
+20: thread woken
+21: thread woken
+22: thread woken
+23: thread woken
+25: thread woken
+26: thread woken
+29: thread woken
+30: thread woken
+31: thread woken
+33: thread woken
+35: thread woken
+37: thread woken
+39: thread woken
+40: thread woken
+43: thread woken
+45: thread woken
+46: thread woken
+48: thread woken
+49: thread woken
+54: thread woken
+55: thread woken
+57: thread woken
+58: thread woken
+60: thread woken
+61: thread woken
+63: thread woken
+64: thread woken
+65: thread woken
+68: thread woken
+69: thread woken
+70: thread woken
+72: thread woken
+73: thread woken
+76: thread woken
+77: thread woken
+79: thread woken
+80: thread woken
+81: thread woken
+83: thread woken
+84: thread woken
+86: thread woken
+87: thread woken
+88: thread woken
+90: thread woken
+92: thread woken
+96: thread woken
+97: thread woken
+98: thread woken
+99: thread woken
+101: thread woken
+102: thread woken
+107: thread woken
+108: thread woken
+110: thread woken
+111: thread woken
+112: thread woken
+113: thread woken
+114: thread woken
+118: thread woken
+120: thread woken
+122: thread woken
+123: thread woken
+126: thread woken
+127: thread woken
+41: thread woken
+wait_parent test done
+starting wait test
+initial thread returns from waiting on self
+initial thread returns from waiting on THREAD_SELF
+initial thread returns from waiting on 110
+id = 1
+id = 2
+id = 3
+id = 4
+id = 5
+id = 6
+id = 7
+id = 8
+id = 9
+id = 10
+id = 11
+id = 12
+id = 13
+id = 14
+id = 15
+id = 16
+id = 17
+id = 18
+id = 19
+id = 20
+id = 21
+id = 22
+id = 23
+id = 24
+id = 25
+id = 26
+id = 27
+id = 28
+id = 29
+id = 30
+id = 31
+id = 32
+id = 33
+id = 34
+id = 35
+id = 36
+id = 37
+id = 38
+id = 39
+id = 40
+id = 41
+id = 42
+id = 43
+id = 44
+id = 45
+id = 46
+id = 47
+id = 48
+id = 49
+id = 50
+id = 51
+id = 52
+id = 53
+id = 54
+id = 55
+id = 56
+id = 57
+id = 58
+id = 59
+id = 60
+id = 61
+id = 62
+id = 63
+id = 64
+id = 65
+id = 66
+id = 67
+id = 68
+id = 69
+id = 70
+id = 71
+id = 72
+id = 73
+id = 74
+id = 75
+id = 76
+id = 77
+id = 78
+id = 79
+id = 80
+id = 81
+id = 82
+id = 83
+id = 84
+id = 85
+id = 86
+id = 87
+id = 88
+id = 89
+id = 90
+id = 91
+id = 92
+id = 93
+id = 94
+id = 95
+id = 96
+id = 97
+id = 98
+id = 99
+id = 100
+id = 101
+id = 102
+id = 103
+id = 104
+id = 105
+id = 106
+id = 107
+id = 108
+id = 109
+id = 110
+id = 111
+id = 112
+id = 113
+id = 114
+id = 115
+id = 116
+id = 117
+id = 118
+id = 119
+id = 120
+id = 121
+id = 122
+id = 123
+id = 124
+id = 125
+id = 126
+id = 127
+wait test done
+starting wait_kill test
+its over
+starting wait_parent test
+104: thread killed
+71: thread killed
+106: thread killed
+116: thread killed
+82: thread killed
+128: thread killed
+75: thread killed
+109: thread killed
+42: thread killed
+78: thread killed
+59: thread killed
+44: thread killed
+115: thread killed
+124: thread killed
+100: thread killed
+125: thread killed
+67: thread killed
+85: thread killed
+121: thread killed
+28: thread killed
+105: thread killed
+14: thread killed
+119: thread killed
+91: thread killed
+47: thread killed
+52: thread killed
+32: thread killed
+74: thread killed
+27: thread killed
+103: thread killed
+51: thread killed
+56: thread killed
+50: thread killed
+89: thread killed
+36: thread killed
+38: thread killed
+94: thread killed
+6: thread killed
+24: thread killed
+95: thread killed
+53: thread killed
+18: thread killed
+15: thread killed
+3: thread killed
+117: thread killed
+66: thread killed
+34: thread killed
+62: thread killed
+93: thread killed
+8: thread killed
+1: thread woken
+2: thread woken
+4: thread woken
+5: thread woken
+7: thread woken
+9: thread woken
+10: thread woken
+11: thread woken
+12: thread woken
+13: thread woken
+16: thread woken
+17: thread woken
+20: thread woken
+21: thread woken
+22: thread woken
+23: thread woken
+25: thread woken
+26: thread woken
+29: thread woken
+30: thread woken
+31: thread woken
+33: thread woken
+35: thread woken
+37: thread woken
+39: thread woken
+40: thread woken
+41: thread woken
+43: thread woken
+45: thread woken
+46: thread woken
+48: thread woken
+49: thread woken
+55: thread woken
+57: thread woken
+58: thread woken
+60: thread woken
+61: thread woken
+63: thread woken
+64: thread woken
+65: thread woken
+68: thread woken
+69: thread woken
+70: thread woken
+72: thread woken
+73: thread woken
+76: thread woken
+77: thread woken
+79: thread woken
+80: thread woken
+81: thread woken
+83: thread woken
+84: thread woken
+86: thread woken
+87: thread woken
+88: thread woken
+90: thread woken
+92: thread woken
+96: thread woken
+97: thread woken
+98: thread woken
+99: thread woken
+101: thread woken
+102: thread woken
+107: thread woken
+108: thread woken
+110: thread woken
+111: thread woken
+112: thread woken
+113: thread woken
+114: thread woken
+120: thread woken
+122: thread woken
+123: thread woken
+126: thread woken
+127: thread woken
+19: thread woken
+54: thread woken
+118: thread woken
+wait_parent test done
+starting wait test
+initial thread returns from waiting on self
+initial thread returns from waiting on THREAD_SELF
+initial thread returns from waiting on 110
+id = 1
+id = 2
+id = 3
+id = 4
+id = 5
+id = 6
+id = 7
+id = 8
+id = 9
+id = 10
+id = 11
+id = 12
+id = 13
+id = 14
+id = 15
+id = 16
+id = 17
+id = 18
+id = 19
+id = 20
+id = 21
+id = 22
+id = 23
+id = 24
+id = 25
+id = 26
+id = 27
+id = 28
+id = 29
+id = 30
+id = 31
+id = 32
+id = 33
+id = 34
+id = 35
+id = 36
+id = 37
+id = 38
+id = 39
+id = 40
+id = 41
+id = 42
+id = 43
+id = 44
+id = 45
+id = 46
+id = 47
+id = 48
+id = 49
+id = 50
+id = 51
+id = 52
+id = 53
+id = 54
+id = 55
+id = 56
+id = 57
+id = 58
+id = 59
+id = 60
+id = 61
+id = 62
+id = 63
+id = 64
+id = 65
+id = 66
+id = 67
+id = 68
+id = 69
+id = 70
+id = 71
+id = 72
+id = 73
+id = 74
+id = 75
+id = 76
+id = 77
+id = 78
+id = 79
+id = 80
+id = 81
+id = 82
+id = 83
+id = 84
+id = 85
+id = 86
+id = 87
+id = 88
+id = 89
+id = 90
+id = 91
+id = 92
+id = 93
+id = 94
+id = 95
+id = 96
+id = 97
+id = 98

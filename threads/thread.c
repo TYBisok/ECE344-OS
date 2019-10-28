@@ -20,6 +20,7 @@ int count_stack = 0;
 int count_thread = 0;
 int count_queue = 0;
 struct queue* 	ready_queue;
+struct wait_queue* wait_queue_copy;
 Tid to_exit = 0;
 int should_free = 0;
 
@@ -161,7 +162,8 @@ void delete_from_all_queues(Tid id) {
             }
             
             while(curr != NULL) {
-                if(curr->thread != NULL && curr->thread->id == id) {      
+                if(curr->thread != NULL && curr->thread->id == id) {  
+                    // printf("deleted %d from %d's wait queue\n", id, i);    
                     delete_from_queue(threads[i]->queue->wait, id);
                 }
                 
@@ -192,10 +194,12 @@ void print_queue(struct queue* queue) {
 void free_thread(Tid id) {
     free(threads[id]->stack);	
     threads[id]->stack = NULL;
-    free(threads[id]->queue->wait);	
-    free(threads[id]->queue);			
+    // free(threads[id]->queue->wait);	
+    wait_queue_destroy(threads[id]->queue);			
     free(threads[id]);
     threads[id] = NULL;
+
+    // wait_queue_destroy(wait_queue_copy);
 }
 
 /*-----------------------------------------START THREAD LIBRARY FUNCTIONS----------------------------------------------------------*/
@@ -342,8 +346,8 @@ Tid free_exited() {
             delete_from_queue(ready_queue, i);
 
             // just for safe measure
-            delete_from_all_queues(i);
-            thread_wakeup(threads[i]->queue, 1);
+            // delete_from_all_queues(i);
+            // thread_wakeup(threads[i]->queue, 1);
 
             free_thread(i);
             return i;
@@ -356,18 +360,12 @@ void thread_exit() {
     int enabled = interrupts_off();
     free_exited();                                  // delete any threads waiting to be killed
     threads[thread_id()]->killmepls = 1;            // mark curr thread as to be killed
-    delete_from_all_queues(thread_id());
-    // printf("** exit %d. %d's wait queue\n", thread_id(), thread_id());
-    // print_queue(threads[thread_id()]->queue->wait);
 
     delete_from_all_queues(thread_id());
     thread_wakeup(threads[thread_id()]->queue, 1);
-
     threads[thread_id()]->status = EXITED;
 
-    // yield to a ready thread 
     if(yeet() == THREAD_NONE) {
-        // printf("oh no, no threads to yield to\n");
         exit(0);         
     }                     
     interrupts_set(enabled);
@@ -422,25 +420,24 @@ struct wait_queue * wait_queue_create() {
 	//TBD();
     wq->wait = (struct queue*)malloc(sizeof(struct queue));
     wq->wait->next = NULL; 
+
+    wait_queue_copy = wq;
     
     interrupts_set(enabled);
 	return wq;
 }
 
 void wait_queue_destroy(struct wait_queue *wq) {
-    free_exited();
+    // free_exited();
     while(get_first(wq->wait) != THREAD_NONE) {
         Tid killme = get_first(wq->wait);
         delete_from_queue(wq->wait, killme);
-        free_thread(killme);
+        // free_thread(killme);
     }
 
-    free(ready_queue);
-    ready_queue = NULL;
     free(wq->wait);
     wq->wait = NULL;
 	free(wq);
-    free(ready_queue);
     wq = NULL;
 }
 
@@ -470,6 +467,7 @@ Tid thread_sleep(struct wait_queue *queue) {
     
     if(set) { 		
         set = 0;	
+        free_exited();
         interrupts_set(enabled);
         return ready_id;
     }
@@ -504,7 +502,7 @@ int thread_wakeup(struct wait_queue *queue, int all) {
             count++;
             // printf("WAKE %d\n", wake_id);
             delete_from_queue(queue->wait, wake_id); // take it out of the wait queue
-            add_to_queue(ready_queue, threads[wake_id]);
+            add_to_queue(ready_queue, threads[wake_id]);            
             threads[wake_id]->status = READY;
             wake_id = get_first(queue->wait);
         }
@@ -540,46 +538,59 @@ Tid thread_wait(Tid tid) {
 }
 
 struct lock {
-	/* ... Fill this in ... */
+	struct wait_queue* queue;
+    struct thread* thread;
+    int acquired;
 };
 
-struct lock *
-lock_create()
-{
+struct lock * lock_create() {
 	struct lock *lock;
 
 	lock = malloc(sizeof(struct lock));
 	assert(lock);
 
-	TBD();
+    lock->queue = malloc(sizeof(struct wait_queue));
+    lock->queue->wait = (struct queue*)malloc(sizeof(struct queue));
+    lock->queue->wait->next = NULL; 
+    lock->acquired = 0;
 
 	return lock;
 }
 
-void
-lock_destroy(struct lock *lock)
-{
+void lock_destroy(struct lock *lock) {
 	assert(lock != NULL);
 
-	TBD();
-
-	free(lock);
+	if(lock->acquired == 0) {
+        free(lock->queue->wait);
+        free(lock->queue);
+        free(lock);
+    }
 }
 
-void
-lock_acquire(struct lock *lock)
-{
+void lock_acquire(struct lock *lock) {
 	assert(lock != NULL);
 
-	TBD();
+    if(lock->acquired == 1) {
+        thread_sleep(lock->queue);
+    }
+    else {
+        lock->acquired = 0;
+        lock->thread = threads[thread_id()];
+    }
 }
 
-void
-lock_release(struct lock *lock)
-{
+void lock_release(struct lock *lock) {
 	assert(lock != NULL);
 
-	TBD();
+	// TBD();
+    if(lock->acquired && thread_id() == lock->thread->id) {
+        lock->acquired = 0;
+        lock->thread = NULL;
+        thread_wakeup(lock->queue, 1);
+    }
+    else {
+
+    }
 }
 
 struct cv {

@@ -6,3 +6,7 @@ lock test, 0, 14
 cv signal test, 0, 14
 cv broadcast test, 0, 12
 lock test, 0, 14
+wait test, 7, 14
+wait test, 7, 14
+wait test, 14, 14
+wait test, 1, 14
