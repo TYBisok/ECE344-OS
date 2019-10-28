@@ -1,6 +1,76 @@
-remote: fatal: no such ref: Lab2-end        
-remote: git upload-archive: archiver died with error
-fatal: sent error to the client: git upload-archive: archiver died with error
-tar: This does not look like a tar archive
-tar: Exiting with failure status due to previous errors
-git checkout was not successful
+cc -MM *.c > .depend
+cc -g -Wall -Werror -D_GNU_SOURCE   -c -o test_thread.o test_thread.c
+cc -g -Wall -Werror -D_GNU_SOURCE   -c -o thread.o thread.c
+cc -g -Wall -Werror -D_GNU_SOURCE   -c -o interrupt.o interrupt.c
+cc -g -Wall -Werror -D_GNU_SOURCE    show_ucontext.c test_thread.o thread.o interrupt.o   -o show_ucontext
+cc -g -Wall -Werror -D_GNU_SOURCE    show_handler.c test_thread.o thread.o interrupt.o   -o show_handler
+cc -g -Wall -Werror -D_GNU_SOURCE    test_basic.c test_thread.o thread.o interrupt.o   -o test_basic
+cc -g -Wall -Werror -D_GNU_SOURCE    test_preemptive.c test_thread.o thread.o interrupt.o   -o test_preemptive
+cc -g -Wall -Werror -D_GNU_SOURCE    test_wakeup.c test_thread.o thread.o interrupt.o   -o test_wakeup
+cc -g -Wall -Werror -D_GNU_SOURCE    test_wakeup_all.c test_thread.o thread.o interrupt.o   -o test_wakeup_all
+cc -g -Wall -Werror -D_GNU_SOURCE    test_wait.c test_thread.o thread.o interrupt.o   -o test_wait
+cc -g -Wall -Werror -D_GNU_SOURCE    test_wait_kill.c test_thread.o thread.o interrupt.o   -o test_wait_kill
+cc -g -Wall -Werror -D_GNU_SOURCE    test_wait_parent.c test_thread.o thread.o interrupt.o   -o test_wait_parent
+cc -g -Wall -Werror -D_GNU_SOURCE    test_lock.c test_thread.o thread.o interrupt.o   -o test_lock
+cc -g -Wall -Werror -D_GNU_SOURCE    test_cv_signal.c test_thread.o thread.o interrupt.o   -o test_cv_signal
+cc -g -Wall -Werror -D_GNU_SOURCE    test_cv_broadcast.c test_thread.o thread.o interrupt.o   -o test_cv_broadcast
+Running: /cad2/ece344f/tester/scripts/lab3-01-preemptive.py 
+preemptive test
+running 3 times
+Mark for preemptive test is 20 out of 20
+PASS
+
+Running: /cad2/ece344f/tester/scripts/lab3-02-wakeup.py 
+wakeup test
+running 3 times
+Mark for wakeup test is 10 out of 10
+PASS
+
+Running: /cad2/ece344f/tester/scripts/lab3-03-wakeupall.py 
+wakeup all test
+running 3 times
+Mark for wakeup all test is 6 out of 6
+PASS
+
+Running: /cad2/ece344f/tester/scripts/lab3-04-wait.py 
+wait test
+Mark for wait test is 14 out of 14
+PASS
+
+Running: /cad2/ece344f/tester/scripts/lab3-05-lock.py 
+lock test
+running 3 times
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^lock test done\r\n']
+ERROR: program was killed with signal = 6
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^lock test done\r\n']
+ERROR: program was killed with signal = 6
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^lock test done\r\n']
+ERROR: program was killed with signal = 6
+Mark for lock test is 0 out of 14
+FAIL
+
+Running: /cad2/ece344f/tester/scripts/lab3-06-cv-signal.py 
+cv signal test
+running 3 times
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv signal test done\r\n']
+ERROR: program exited with status = 1
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv signal test done\r\n']
+ERROR: program exited with status = 1
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv signal test done\r\n']
+ERROR: program exited with status = 1
+Mark for cv signal test is 0 out of 14
+FAIL
+
+Running: /cad2/ece344f/tester/scripts/lab3-07-cv-broadcast.py 
+cv broadcast test
+running 3 times
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv broadcast test done\r\n']
+ERROR: program exited with status = 1
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv broadcast test done\r\n']
+ERROR: program exited with status = 1
+ERROR: EOF: not found: ['^(\\d+): thread\\s+(\\d+) passes\r\n', '^cv broadcast test done\r\n']
+ERROR: program exited with status = 1
+Mark for cv broadcast test is 0 out of 12
+FAIL
+
+You have received 50 marks out of a total of 90 marks.

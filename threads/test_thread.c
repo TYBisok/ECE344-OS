@@ -737,9 +737,7 @@ test_lock_thread(unsigned long num)
 	}
 }
 
-void
-test_lock()
-{
+void test_lock() {
 	long i;
 	Tid result[NTHREADS];
 

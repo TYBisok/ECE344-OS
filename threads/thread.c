@@ -20,7 +20,6 @@ int count_stack = 0;
 int count_thread = 0;
 int count_queue = 0;
 struct queue* 	ready_queue;
-struct wait_queue* wait_queue_copy;
 Tid to_exit = 0;
 int should_free = 0;
 
@@ -416,23 +415,17 @@ struct wait_queue * wait_queue_create() {
 
 	wq = malloc(sizeof(struct wait_queue));
 	assert(wq);
-
-	//TBD();
     wq->wait = (struct queue*)malloc(sizeof(struct queue));
     wq->wait->next = NULL; 
-
-    wait_queue_copy = wq;
     
     interrupts_set(enabled);
 	return wq;
 }
 
 void wait_queue_destroy(struct wait_queue *wq) {
-    // free_exited();
     while(get_first(wq->wait) != THREAD_NONE) {
         Tid killme = get_first(wq->wait);
         delete_from_queue(wq->wait, killme);
-        // free_thread(killme);
     }
 
     free(wq->wait);
@@ -539,58 +532,58 @@ Tid thread_wait(Tid tid) {
 
 struct lock {
 	struct wait_queue* queue;
-    struct thread* thread;
+    Tid thread;
     int acquired;
 };
 
-struct lock * lock_create() {
+struct lock* lock_create() {
+    int enabled = interrupts_off();
 	struct lock *lock;
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 	lock = malloc(sizeof(struct lock));
 	assert(lock);
 
-    lock->queue = malloc(sizeof(struct wait_queue));
-    lock->queue->wait = (struct queue*)malloc(sizeof(struct queue));
-    lock->queue->wait->next = NULL; 
+    lock->queue = wait_queue_create();
     lock->acquired = 0;
 
+    interrupts_set(enabled);
 	return lock;
 }
 
 void lock_destroy(struct lock *lock) {
+    int enabled = interrupts_off();
 	assert(lock != NULL);
 
 	if(lock->acquired == 0) {
-        free(lock->queue->wait);
-        free(lock->queue);
+        wait_queue_destroy(lock->queue);
         free(lock);
     }
+    interrupts_set(enabled);
 }
 
 void lock_acquire(struct lock *lock) {
+    int enabled = interrupts_off();
 	assert(lock != NULL);
 
-    if(lock->acquired == 1) {
+    while(lock->acquired == 1) {
         thread_sleep(lock->queue);
     }
-    else {
-        lock->acquired = 0;
-        lock->thread = threads[thread_id()];
-    }
+
+    lock->acquired = 1;
+    lock->thread = thread_id();
+    
+    interrupts_set(enabled);
 }
 
 void lock_release(struct lock *lock) {
+    int enabled = interrupts_off();
 	assert(lock != NULL);
-
-	// TBD();
-    if(lock->acquired && thread_id() == lock->thread->id) {
+    
+    if(lock->acquired == 1 && thread_id() == lock->thread) {
         lock->acquired = 0;
-        lock->thread = NULL;
         thread_wakeup(lock->queue, 1);
     }
-    else {
-
-    }
+    interrupts_set(enabled);
 }
 
 struct cv {
