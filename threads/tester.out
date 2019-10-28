@@ -10,3 +10,5 @@ wait test, 7, 14
 wait test, 7, 14
 wait test, 14, 14
 wait test, 1, 14
+cv broadcast test, 12, 12
+lock test, 14, 14

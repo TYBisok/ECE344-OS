@@ -1,423 +1,3711 @@
-main: setcontext_called = 0
-start = 0x559b9fe87000
-end = 0x559b9fe8f000
-ucontext_t size = 936 bytes
-memory address of main() = 0x559b9fe87eaf
-memory address of the program counter (RIP) saved in mycontext = 0x559b9fe87ed1
-argc = 1
-argv = 0x7ffe81c43cd8
-memory address of the variable setcontext_called = 0x7ffe81c43bdc
-memory address of the variable err = 0x7ffe81c43bd8
-number of bytes pushed to the stack between setcontext_called and err = 4
-stack pointer register (RSP) stored in mycontext = 0x7ffe81c43bc0
-number of bytes between err and the saved stack in mycontext = 24
-value of uc_stack.ss_sp = 0x0
-main: setcontext_called = 1
-interrupt is disabled = 0
-interrupt is disabled = 1
-starting basic test
-initial thread returns from yield(SELF)
-initial thread returns from yield(0)
-initial thread returns from yield(ANY)
-initial thread returns from yield(INVALID)
-initial thread returns from yield(INVALID2)
-my id is 0
-message: hello from first thread
-thread returns from  first yield
-thread returns from second yield
-my id is 0
-message: hello from thread   0
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   1
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   2
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   3
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   4
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   5
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   6
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   7
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   8
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread   9
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  10
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  11
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  12
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  13
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  14
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  15
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  16
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  17
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  18
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  19
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  20
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  21
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  22
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  23
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  24
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  25
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  26
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  27
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  28
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  29
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  30
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  31
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  32
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  33
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  34
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  35
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  36
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  37
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  38
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  39
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  40
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  41
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  42
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  43
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  44
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  45
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  46
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  47
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  48
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  49
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  50
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  51
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  52
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  53
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  54
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  55
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  56
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  57
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  58
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  59
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  60
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  61
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  62
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  63
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  64
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  65
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  66
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  67
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  68
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  69
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  70
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  71
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  72
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  73
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  74
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  75
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  76
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  77
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  78
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  79
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  80
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  81
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  82
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  83
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  84
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  85
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  86
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  87
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  88
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  89
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  90
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  91
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  92
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  93
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  94
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  95
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  96
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  97
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  98
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread  99
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 100
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 101
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 102
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 103
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 104
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 105
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 106
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 107
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 108
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 109
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 110
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 111
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 112
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 113
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 114
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 115
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 116
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 117
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 118
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 119
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 120
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 121
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 122
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 123
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 124
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 125
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 126
-thread returns from  first yield
-thread returns from second yield
-message: hello from thread 127
-thread returns from  first yield
-thread returns from second yield
-destroying all threads
-creating  1023 threads
-running   1023 threads
-creating  1023 threads
-destroying 512 threads
-testing some destroys even though I'm the only thread
-testing destroy self
-for my grand finale, I will destroy myself
-while my talented assistant prints "basic test done"
-finale running
-basic test done
+starting preemptive test
+this test will take 60 seconds
+interrupt_handler: context at 0x7fffc75281c0, time diff = 0 us
+interrupt_handler: context at 0x7fffc75281c0, time diff = 207 us
+interrupt_handler: context at 0x7fffc7528200, time diff = 205 us
+interrupt_handler: context at 0x7fffc75281c0, time diff = 203 us
+interrupt_handler: context at 0x7fffc7528200, time diff = 203 us
+0: thread   0 made it to do_potato
+1: thread   0 passes potato at time =  0.001214
+0: thread   1 made it to do_potato
+1: thread   1 passes potato at time =  0.001415
+0: thread   2 made it to do_potato
+1: thread   2 passes potato at time =  0.001617
+0: thread   3 made it to do_potato
+1: thread   3 passes potato at time =  0.001819
+0: thread   4 made it to do_potato
+1: thread   4 passes potato at time =  0.002019
+0: thread   5 made it to do_potato
+1: thread   5 passes potato at time =  0.002221
+0: thread   6 made it to do_potato
+1: thread   6 passes potato at time =  0.002233
+0: thread   7 made it to do_potato
+1: thread   7 passes potato at time =  0.002246
+0: thread   8 made it to do_potato
+1: thread   8 passes potato at time =  0.002257
+0: thread   9 made it to do_potato
+1: thread   9 passes potato at time =  0.002268
+0: thread  10 made it to do_potato
+1: thread  10 passes potato at time =  0.002280
+0: thread  11 made it to do_potato
+1: thread  11 passes potato at time =  0.002292
+0: thread  12 made it to do_potato
+1: thread  12 passes potato at time =  0.002303
+0: thread  13 made it to do_potato
+1: thread  13 passes potato at time =  0.002314
+0: thread  14 made it to do_potato
+1: thread  14 passes potato at time =  0.002327
+0: thread  15 made it to do_potato
+1: thread  15 passes potato at time =  0.002349
+0: thread  16 made it to do_potato
+1: thread  16 passes potato at time =  0.002361
+0: thread  17 made it to do_potato
+1: thread  17 passes potato at time =  0.002374
+0: thread  18 made it to do_potato
+1: thread  18 passes potato at time =  0.002387
+0: thread  19 made it to do_potato
+1: thread  19 passes potato at time =  0.002399
+0: thread  20 made it to do_potato
+1: thread  20 passes potato at time =  0.002412
+0: thread  21 made it to do_potato
+0: thread  22 made it to do_potato
+0: thread  23 made it to do_potato
+0: thread  24 made it to do_potato
+0: thread  25 made it to do_potato
+0: thread  26 made it to do_potato
+0: thread  27 made it to do_potato
+0: thread  28 made it to do_potato
+0: thread  29 made it to do_potato
+0: thread  30 made it to do_potato
+0: thread  31 made it to do_potato
+0: thread  32 made it to do_potato
+0: thread  33 made it to do_potato
+0: thread  34 made it to do_potato
+0: thread  35 made it to do_potato
+0: thread  36 made it to do_potato
+0: thread  37 made it to do_potato
+0: thread  38 made it to do_potato
+0: thread  39 made it to do_potato
+0: thread  40 made it to do_potato
+0: thread  41 made it to do_potato
+0: thread  42 made it to do_potato
+0: thread  43 made it to do_potato
+0: thread  44 made it to do_potato
+0: thread  45 made it to do_potato
+0: thread  46 made it to do_potato
+0: thread  47 made it to do_potato
+0: thread  48 made it to do_potato
+0: thread  49 made it to do_potato
+0: thread  50 made it to do_potato
+0: thread  51 made it to do_potato
+0: thread  52 made it to do_potato
+0: thread  53 made it to do_potato
+0: thread  54 made it to do_potato
+0: thread  55 made it to do_potato
+0: thread  56 made it to do_potato
+0: thread  57 made it to do_potato
+0: thread  58 made it to do_potato
+0: thread  59 made it to do_potato
+0: thread  60 made it to do_potato
+0: thread  61 made it to do_potato
+0: thread  62 made it to do_potato
+0: thread  63 made it to do_potato
+0: thread  65 made it to do_potato
+0: thread  66 made it to do_potato
+0: thread  67 made it to do_potato
+0: thread  68 made it to do_potato
+0: thread  69 made it to do_potato
+0: thread  70 made it to do_potato
+0: thread  71 made it to do_potato
+0: thread  72 made it to do_potato
+0: thread  73 made it to do_potato
+0: thread  74 made it to do_potato
+0: thread  75 made it to do_potato
+0: thread  76 made it to do_potato
+0: thread  77 made it to do_potato
+0: thread  78 made it to do_potato
+0: thread  79 made it to do_potato
+0: thread  80 made it to do_potato
+0: thread  81 made it to do_potato
+0: thread  82 made it to do_potato
+0: thread  83 made it to do_potato
+0: thread  84 made it to do_potato
+0: thread  85 made it to do_potato
+0: thread  86 made it to do_potato
+0: thread  87 made it to do_potato
+0: thread  88 made it to do_potato
+0: thread  89 made it to do_potato
+0: thread  90 made it to do_potato
+0: thread  91 made it to do_potato
+0: thread  92 made it to do_potato
+0: thread  93 made it to do_potato
+0: thread  94 made it to do_potato
+0: thread  95 made it to do_potato
+0: thread  96 made it to do_potato
+0: thread  97 made it to do_potato
+0: thread  98 made it to do_potato
+0: thread  99 made it to do_potato
+0: thread 100 made it to do_potato
+0: thread 101 made it to do_potato
+0: thread 102 made it to do_potato
+0: thread 103 made it to do_potato
+0: thread 104 made it to do_potato
+0: thread 105 made it to do_potato
+0: thread 106 made it to do_potato
+0: thread 107 made it to do_potato
+0: thread 108 made it to do_potato
+0: thread 109 made it to do_potato
+0: thread 110 made it to do_potato
+0: thread 111 made it to do_potato
+0: thread 112 made it to do_potato
+0: thread 113 made it to do_potato
+0: thread  64 made it to do_potato
+0: thread 114 made it to do_potato
+0: thread 115 made it to do_potato
+0: thread 116 made it to do_potato
+0: thread 117 made it to do_potato
+0: thread 118 made it to do_potato
+0: thread 119 made it to do_potato
+0: thread 120 made it to do_potato
+0: thread 122 made it to do_potato
+0: thread 123 made it to do_potato
+0: thread 124 made it to do_potato
+0: thread 125 made it to do_potato
+0: thread 126 made it to do_potato
+0: thread 127 made it to do_potato
+0: thread 121 made it to do_potato
+1: thread  21 passes potato at time =  0.034562
+1: thread  22 passes potato at time =  0.036596
+1: thread  23 passes potato at time =  0.038630
+1: thread  24 passes potato at time =  0.040671
+1: thread  25 passes potato at time =  0.042700
+1: thread  26 passes potato at time =  0.046761
+1: thread  27 passes potato at time =  0.046772
+1: thread  28 passes potato at time =  0.048819
+1: thread  29 passes potato at time =  0.050859
+1: thread  30 passes potato at time =  0.056750
+1: thread  31 passes potato at time =  0.062864
+1: thread  32 passes potato at time =  0.167108
+1: thread  33 passes potato at time =  0.174622
+1: thread  34 passes potato at time =  0.193281
+1: thread  35 passes potato at time =  0.397641
+1: thread  36 passes potato at time =  0.414275
+1: thread  37 passes potato at time =  0.434558
+1: thread  38 passes potato at time =  0.447741
+1: thread  39 passes potato at time =  0.462754
+1: thread  40 passes potato at time =  0.474104
+1: thread  41 passes potato at time =  0.487481
+1: thread  42 passes potato at time =  0.500675
+1: thread  43 passes potato at time =  0.513854
+1: thread  44 passes potato at time =  0.527034
+1: thread  45 passes potato at time =  0.540008
+1: thread  46 passes potato at time =  0.553397
+1: thread  47 passes potato at time =  0.566385
+1: thread  48 passes potato at time =  0.579388
+1: thread  49 passes potato at time =  0.592555
+1: thread  50 passes potato at time =  0.605539
+1: thread  51 passes potato at time =  0.620348
+1: thread  52 passes potato at time =  0.633523
+1: thread  53 passes potato at time =  0.644879
+1: thread  54 passes potato at time =  0.658059
+1: thread  55 passes potato at time =  0.672865
+1: thread  56 passes potato at time =  0.686047
+1: thread  57 passes potato at time =  0.700852
+1: thread  58 passes potato at time =  0.712015
+1: thread  59 passes potato at time =  0.725009
+1: thread  60 passes potato at time =  0.738002
+1: thread  61 passes potato at time =  0.754831
+1: thread  62 passes potato at time =  0.808354
+1: thread  63 passes potato at time =  0.907682
+1: thread  64 passes potato at time =  0.917033
+1: thread  65 passes potato at time =  0.965089
+1: thread  66 passes potato at time =  1.220552
+1: thread  67 passes potato at time =  1.330431
+1: thread  68 passes potato at time =  1.435016
+1: thread  69 passes potato at time =  1.457927
+1: thread  70 passes potato at time =  1.602063
+1: thread  71 passes potato at time =  1.626191
+1: thread  72 passes potato at time =  1.650527
+1: thread  73 passes potato at time =  1.674864
+1: thread  74 passes potato at time =  1.698998
+1: thread  75 passes potato at time =  1.723133
+1: thread  76 passes potato at time =  1.749069
+1: thread  77 passes potato at time =  1.771582
+1: thread  78 passes potato at time =  1.798335
+1: thread  79 passes potato at time =  1.822262
+1: thread  80 passes potato at time =  1.844362
+1: thread  81 passes potato at time =  1.868690
+1: thread  82 passes potato at time =  1.896894
+1: thread  83 passes potato at time =  1.921033
+1: thread  84 passes potato at time =  1.941716
+1: thread  85 passes potato at time =  1.967475
+1: thread  86 passes potato at time =  1.995072
+1: thread  87 passes potato at time =  2.019406
+1: thread  88 passes potato at time =  2.043537
+1: thread  89 passes potato at time =  2.064185
+1: thread  90 passes potato at time =  2.089633
+1: thread  91 passes potato at time =  2.119607
+1: thread  92 passes potato at time =  2.149308
+1: thread  93 passes potato at time =  2.238495
+1: thread  94 passes potato at time =  2.255316
+1: thread  95 passes potato at time =  2.408535
+1: thread  96 passes potato at time =  2.565421
+1: thread  97 passes potato at time =  2.589747
+1: thread  98 passes potato at time =  2.742816
+1: thread  99 passes potato at time =  2.832819
+1: thread 100 passes potato at time =  2.860583
+1: thread 101 passes potato at time =  2.892027
+1: thread 102 passes potato at time =  2.921626
+1: thread 103 passes potato at time =  2.949598
+1: thread 104 passes potato at time =  2.979198
+1: thread 105 passes potato at time =  3.012437
+1: thread 106 passes potato at time =  3.038603
+1: thread 107 passes potato at time =  3.071553
+1: thread 108 passes potato at time =  3.102961
+1: thread 109 passes potato at time =  3.130969
+1: thread 110 passes potato at time =  3.160559
+1: thread 111 passes potato at time =  3.192192
+1: thread 112 passes potato at time =  3.220185
+1: thread 113 passes potato at time =  3.253228
+1: thread 114 passes potato at time =  3.285681
+1: thread 115 passes potato at time =  3.319151
+1: thread 116 passes potato at time =  3.344900
+1: thread 117 passes potato at time =  3.381801
+1: thread 118 passes potato at time =  3.404304
+1: thread 119 passes potato at time =  3.441016
+1: thread 120 passes potato at time =  3.467075
+1: thread 121 passes potato at time =  3.496574
+1: thread 122 passes potato at time =  3.552133
+1: thread 123 passes potato at time =  3.589250
+1: thread 124 passes potato at time =  3.698714
+1: thread 125 passes potato at time =  3.919918
+1: thread 126 passes potato at time =  3.923782
+1: thread 127 passes potato at time =  4.158117
+2: thread   0 passes potato at time =  4.158261
+2: thread   1 passes potato at time =  4.158462
+2: thread   2 passes potato at time =  4.158663
+2: thread   3 passes potato at time =  4.158865
+2: thread   4 passes potato at time =  4.159066
+2: thread   5 passes potato at time =  4.159268
+2: thread   6 passes potato at time =  4.159279
+2: thread   7 passes potato at time =  4.161317
+2: thread   8 passes potato at time =  4.163354
+2: thread   9 passes potato at time =  4.170861
+2: thread  10 passes potato at time =  4.178375
+2: thread  11 passes potato at time =  4.184064
+2: thread  12 passes potato at time =  4.186099
+2: thread  13 passes potato at time =  4.189957
+2: thread  14 passes potato at time =  4.189968
+2: thread  15 passes potato at time =  4.199295
+2: thread  16 passes potato at time =  4.201332
+2: thread  17 passes potato at time =  4.212482
+2: thread  18 passes potato at time =  4.223638
+2: thread  19 passes potato at time =  4.245947
+2: thread  20 passes potato at time =  4.262776
+2: thread  21 passes potato at time =  4.275767
+2: thread  22 passes potato at time =  4.290999
+2: thread  23 passes potato at time =  4.316942
+2: thread  24 passes potato at time =  4.322625
+2: thread  25 passes potato at time =  4.341086
+2: thread  26 passes potato at time =  4.387518
+2: thread  27 passes potato at time =  4.411445
+2: thread  28 passes potato at time =  4.424436
+2: thread  29 passes potato at time =  4.433768
+2: thread  30 passes potato at time =  4.476960
+2: thread  31 passes potato at time =  4.522991
+2: thread  32 passes potato at time =  4.568033
+2: thread  33 passes potato at time =  4.664961
+2: thread  34 passes potato at time =  4.723950
+2: thread  35 passes potato at time =  4.919367
+2: thread  36 passes potato at time =  4.983637
+2: thread  37 passes potato at time =  5.033923
+2: thread  38 passes potato at time =  5.059679
+2: thread  39 passes potato at time =  5.081217
+2: thread  40 passes potato at time =  5.090759
+2: thread  41 passes potato at time =  5.094813
+2: thread  42 passes potato at time =  5.161534
+2: thread  43 passes potato at time =  5.223986
+2: thread  44 passes potato at time =  5.283201
+2: thread  45 passes potato at time =  5.339363
+2: thread  46 passes potato at time =  5.391066
+2: thread  47 passes potato at time =  5.438904
+2: thread  48 passes potato at time =  5.485736
+2: thread  49 passes potato at time =  5.524466
+2: thread  50 passes potato at time =  5.561566
+2: thread  51 passes potato at time =  5.597644
+2: thread  52 passes potato at time =  5.632916
+2: thread  53 passes potato at time =  5.653204
+2: thread  54 passes potato at time =  5.677352
+2: thread  55 passes potato at time =  5.697829
+2: thread  56 passes potato at time =  5.718301
+2: thread  57 passes potato at time =  5.725816
+2: thread  58 passes potato at time =  5.729679
+2: thread  59 passes potato at time =  5.740828
+2: thread  60 passes potato at time =  5.755839
+2: thread  61 passes potato at time =  5.755851
+2: thread  62 passes potato at time =  5.834104
+2: thread  63 passes potato at time =  5.887641
+2: thread  64 passes potato at time =  5.985564
+2: thread  65 passes potato at time =  6.022679
+2: thread  66 passes potato at time =  6.414018
+2: thread  67 passes potato at time =  6.493887
+2: thread  68 passes potato at time =  6.547833
+2: thread  69 passes potato at time =  6.649010
+2: thread  70 passes potato at time =  6.750768
+2: thread  71 passes potato at time =  6.851919
+2: thread  72 passes potato at time =  6.953291
+2: thread  73 passes potato at time =  7.054865
+2: thread  74 passes potato at time =  7.157978
+2: thread  75 passes potato at time =  7.262985
+2: thread  76 passes potato at time =  7.366380
+2: thread  77 passes potato at time =  7.462659
+2: thread  78 passes potato at time =  7.565860
+2: thread  79 passes potato at time =  7.673294
+2: thread  80 passes potato at time =  7.770216
+2: thread  81 passes potato at time =  7.869786
+2: thread  82 passes potato at time =  7.976394
+2: thread  83 passes potato at time =  8.082899
+2: thread  84 passes potato at time =  8.185928
+2: thread  85 passes potato at time =  8.285286
+2: thread  86 passes potato at time =  8.393134
+2: thread  87 passes potato at time =  8.491031
+2: thread  88 passes potato at time =  8.607195
+2: thread  89 passes potato at time =  8.699043
+2: thread  90 passes potato at time =  8.801835
+2: thread  91 passes potato at time =  8.921261
+2: thread  92 passes potato at time =  9.038871
+2: thread  93 passes potato at time =  9.121667
+2: thread  94 passes potato at time =  9.178845
+2: thread  95 passes potato at time =  9.245154
+2: thread  96 passes potato at time =  9.383620
+2: thread  97 passes potato at time =  9.442406
+2: thread  98 passes potato at time =  9.613564
+2: thread  99 passes potato at time =  9.702758
+2: thread 100 passes potato at time =  9.799878
+2: thread 101 passes potato at time =  9.904902
+2: thread 102 passes potato at time = 10.004458
+2: thread 103 passes potato at time = 10.105093
+2: thread 104 passes potato at time = 10.209359
+2: thread 105 passes potato at time = 10.317043
+2: thread 106 passes potato at time = 10.416179
+2: thread 107 passes potato at time = 10.517564
+2: thread 108 passes potato at time = 10.621985
+2: thread 109 passes potato at time = 10.719084
+2: thread 110 passes potato at time = 10.820053
+2: thread 111 passes potato at time = 10.922847
+2: thread 112 passes potato at time = 11.027481
+2: thread 113 passes potato at time = 11.134382
+2: thread 114 passes potato at time = 11.443790
+2: thread 115 passes potato at time = 11.556339
+2: thread 116 passes potato at time = 11.642697
+2: thread 117 passes potato at time = 11.757057
+2: thread 118 passes potato at time = 11.858034
+2: thread 119 passes potato at time = 11.968231
+2: thread 120 passes potato at time = 12.077541
+2: thread 121 passes potato at time = 12.178976
+2: thread 122 passes potato at time = 12.338745
+2: thread 123 passes potato at time = 12.478014
+2: thread 124 passes potato at time = 12.538823
+2: thread 125 passes potato at time = 12.572491
+2: thread 126 passes potato at time = 12.600070
+2: thread 127 passes potato at time = 12.780064
+3: thread   0 passes potato at time = 12.782104
+3: thread   1 passes potato at time = 12.782307
+3: thread   2 passes potato at time = 12.782508
+3: thread   3 passes potato at time = 12.782710
+3: thread   4 passes potato at time = 12.782912
+3: thread   5 passes potato at time = 12.783113
+3: thread   6 passes potato at time = 12.783122
+3: thread   7 passes potato at time = 12.785158
+3: thread   8 passes potato at time = 12.790839
+3: thread   9 passes potato at time = 12.790860
+3: thread  10 passes potato at time = 12.790871
+3: thread  11 passes potato at time = 12.794715
+3: thread  12 passes potato at time = 12.798578
+3: thread  13 passes potato at time = 12.813376
+3: thread  14 passes potato at time = 12.828186
+3: thread  15 passes potato at time = 12.846629
+3: thread  16 passes potato at time = 12.857780
+3: thread  17 passes potato at time = 12.868931
+3: thread  18 passes potato at time = 12.872793
+3: thread  19 passes potato at time = 12.876654
+3: thread  20 passes potato at time = 12.904630
+3: thread  21 passes potato at time = 12.923283
+3: thread  22 passes potato at time = 12.947417
+3: thread  23 passes potato at time = 12.964043
+3: thread  24 passes potato at time = 12.978851
+3: thread  25 passes potato at time = 13.004610
+3: thread  26 passes potato at time = 13.016159
+3: thread  27 passes potato at time = 13.051031
+3: thread  28 passes potato at time = 13.091840
+3: thread  29 passes potato at time = 13.099375
+3: thread  30 passes potato at time = 13.105276
+3: thread  31 passes potato at time = 13.110972
+3: thread  32 passes potato at time = 13.138772
+3: thread  33 passes potato at time = 13.138784
+3: thread  34 passes potato at time = 13.192107
+3: thread  35 passes potato at time = 13.238564
+3: thread  36 passes potato at time = 13.292308
+3: thread  37 passes potato at time = 13.338339
+3: thread  38 passes potato at time = 13.364490
+3: thread  39 passes potato at time = 13.370178
+3: thread  40 passes potato at time = 13.416208
+3: thread  41 passes potato at time = 13.445616
+3: thread  42 passes potato at time = 13.456773
+3: thread  43 passes potato at time = 13.521660
+3: thread  44 passes potato at time = 13.572341
+3: thread  45 passes potato at time = 13.607823
+3: thread  46 passes potato at time = 13.628113
+3: thread  47 passes potato at time = 13.633799
+3: thread  48 passes potato at time = 13.709414
+3: thread  49 passes potato at time = 13.768010
+3: thread  50 passes potato at time = 13.820335
+3: thread  51 passes potato at time = 13.857228
+3: thread  52 passes potato at time = 13.896758
+3: thread  53 passes potato at time = 13.904461
+3: thread  54 passes potato at time = 13.912037
+3: thread  55 passes potato at time = 14.002255
+3: thread  56 passes potato at time = 14.090135
+3: thread  57 passes potato at time = 14.169686
+3: thread  58 passes potato at time = 14.230298
+3: thread  59 passes potato at time = 14.315274
+3: thread  60 passes potato at time = 14.390520
+3: thread  61 passes potato at time = 14.436536
+3: thread  62 passes potato at time = 14.490505
+3: thread  63 passes potato at time = 14.581151
+3: thread  64 passes potato at time = 14.638558
+3: thread  65 passes potato at time = 14.734490
+3: thread  66 passes potato at time = 15.055582
+3: thread  67 passes potato at time = 15.086462
+3: thread  68 passes potato at time = 15.192509
+3: thread  69 passes potato at time = 15.309266
+3: thread  70 passes potato at time = 15.421761
+3: thread  71 passes potato at time = 15.530254
+3: thread  72 passes potato at time = 15.636275
+3: thread  73 passes potato at time = 15.738859
+3: thread  74 passes potato at time = 15.840040
+3: thread  75 passes potato at time = 15.936342
+3: thread  76 passes potato at time = 16.024719
+3: thread  77 passes potato at time = 16.242357
+3: thread  78 passes potato at time = 16.332783
+3: thread  79 passes potato at time = 16.415878
+3: thread  80 passes potato at time = 16.488045
+3: thread  81 passes potato at time = 16.561644
+3: thread  82 passes potato at time = 16.640705
+3: thread  83 passes potato at time = 16.709007
+3: thread  84 passes potato at time = 16.773672
+3: thread  85 passes potato at time = 16.827190
+3: thread  86 passes potato at time = 16.895317
+3: thread  87 passes potato at time = 16.937687
+3: thread  88 passes potato at time = 17.004025
+3: thread  89 passes potato at time = 17.046814
+3: thread  90 passes potato at time = 17.088223
+3: thread  91 passes potato at time = 17.181091
+3: thread  92 passes potato at time = 17.235224
+3: thread  93 passes potato at time = 17.305790
+3: thread  94 passes potato at time = 17.313313
+3: thread  95 passes potato at time = 17.434547
+3: thread  96 passes potato at time = 17.512007
+3: thread  97 passes potato at time = 17.696726
+3: thread  98 passes potato at time = 17.798340
+3: thread  99 passes potato at time = 17.965551
+3: thread 100 passes potato at time = 17.974880
+3: thread 101 passes potato at time = 17.986250
+3: thread 102 passes potato at time = 17.988279
+3: thread 103 passes potato at time = 18.172503
+3: thread 104 passes potato at time = 18.352922
+3: thread 105 passes potato at time = 18.358599
+3: thread 106 passes potato at time = 18.534771
+3: thread 107 passes potato at time = 18.717009
+3: thread 108 passes potato at time = 18.895437
+3: thread 109 passes potato at time = 19.071611
+3: thread 110 passes potato at time = 19.256569
+3: thread 111 passes potato at time = 19.437225
+3: thread 112 passes potato at time = 19.621910
+3: thread 113 passes potato at time = 19.813925
+3: thread 114 passes potato at time = 20.006126
+3: thread 115 passes potato at time = 20.196823
+3: thread 116 passes potato at time = 20.357206
+3: thread 117 passes potato at time = 20.552032
+3: thread 118 passes potato at time = 20.727200
+3: thread 119 passes potato at time = 20.924662
+3: thread 120 passes potato at time = 21.126047
+3: thread 121 passes potato at time = 21.294510
+3: thread 122 passes potato at time = 21.348461
+3: thread 123 passes potato at time = 21.390638
+3: thread 124 passes potato at time = 21.609606
+3: thread 125 passes potato at time = 21.720108
+3: thread 126 passes potato at time = 21.729448
+3: thread 127 passes potato at time = 21.847815
+4: thread   0 passes potato at time = 21.849854
+4: thread   1 passes potato at time = 21.850058
+4: thread   2 passes potato at time = 21.850258
+4: thread   3 passes potato at time = 21.850460
+4: thread   4 passes potato at time = 21.850662
+4: thread   5 passes potato at time = 21.850863
+4: thread   6 passes potato at time = 21.850872
+4: thread   7 passes potato at time = 21.854729
+4: thread   8 passes potato at time = 21.854740
+4: thread   9 passes potato at time = 21.862246
+4: thread  10 passes potato at time = 21.866110
+4: thread  11 passes potato at time = 21.866119
+4: thread  12 passes potato at time = 21.877476
+4: thread  13 passes potato at time = 21.877487
+4: thread  14 passes potato at time = 21.881340
+4: thread  15 passes potato at time = 21.888855
+4: thread  16 passes potato at time = 21.900215
+4: thread  17 passes potato at time = 21.918892
+4: thread  18 passes potato at time = 21.918903
+4: thread  19 passes potato at time = 21.930063
+4: thread  20 passes potato at time = 21.941221
+4: thread  21 passes potato at time = 21.956234
+4: thread  22 passes potato at time = 22.017052
+4: thread  23 passes potato at time = 22.039356
+4: thread  24 passes potato at time = 22.050526
+4: thread  25 passes potato at time = 22.067413
+4: thread  26 passes potato at time = 22.102308
+4: thread  27 passes potato at time = 22.131161
+4: thread  28 passes potato at time = 22.163408
+4: thread  29 passes potato at time = 22.191189
+4: thread  30 passes potato at time = 22.220596
+4: thread  31 passes potato at time = 22.258299
+4: thread  32 passes potato at time = 22.297653
+4: thread  33 passes potato at time = 22.325436
+4: thread  34 passes potato at time = 22.329302
+4: thread  35 passes potato at time = 22.613325
+4: thread  36 passes potato at time = 22.631996
+4: thread  37 passes potato at time = 22.687740
+4: thread  38 passes potato at time = 22.745522
+4: thread  39 passes potato at time = 22.767632
+4: thread  40 passes potato at time = 22.815693
+4: thread  41 passes potato at time = 22.832727
+4: thread  42 passes potato at time = 22.886442
+4: thread  43 passes potato at time = 22.912603
+4: thread  44 passes potato at time = 22.978891
+4: thread  45 passes potato at time = 23.021477
+4: thread  46 passes potato at time = 23.038113
+4: thread  47 passes potato at time = 23.110569
+4: thread  48 passes potato at time = 23.162901
+4: thread  49 passes potato at time = 23.187038
+4: thread  50 passes potato at time = 23.196379
+4: thread  51 passes potato at time = 23.268768
+4: thread  52 passes potato at time = 23.328205
+4: thread  53 passes potato at time = 23.344837
+4: thread  54 passes potato at time = 23.363689
+4: thread  55 passes potato at time = 23.449661
+4: thread  56 passes potato at time = 23.528559
+4: thread  57 passes potato at time = 23.595276
+4: thread  58 passes potato at time = 23.637459
+4: thread  59 passes potato at time = 23.690998
+4: thread  60 passes potato at time = 23.755287
+4: thread  61 passes potato at time = 23.855242
+4: thread  62 passes potato at time = 23.918110
+4: thread  63 passes potato at time = 23.951399
+4: thread  64 passes potato at time = 23.955250
+4: thread  65 passes potato at time = 24.043854
+4: thread  66 passes potato at time = 24.526041
+4: thread  67 passes potato at time = 24.649733
+4: thread  68 passes potato at time = 24.670013
+4: thread  69 passes potato at time = 24.694544
+4: thread  70 passes potato at time = 24.707531
+4: thread  71 passes potato at time = 24.709560
+4: thread  72 passes potato at time = 24.826769
+4: thread  73 passes potato at time = 24.936235
+4: thread  74 passes potato at time = 25.040873
+4: thread  75 passes potato at time = 25.144512
+4: thread  76 passes potato at time = 25.225624
+4: thread  77 passes potato at time = 25.298836
+4: thread  78 passes potato at time = 25.376265
+4: thread  79 passes potato at time = 25.443993
+4: thread  80 passes potato at time = 25.494081
+4: thread  81 passes potato at time = 25.547997
+4: thread  82 passes potato at time = 25.600300
+4: thread  83 passes potato at time = 25.642490
+4: thread  84 passes potato at time = 25.673933
+4: thread  85 passes potato at time = 25.681440
+4: thread  86 passes potato at time = 25.714930
+4: thread  87 passes potato at time = 25.859886
+4: thread  88 passes potato at time = 25.880169
+4: thread  89 passes potato at time = 26.035120
+4: thread  90 passes potato at time = 26.183489
+4: thread  91 passes potato at time = 26.227697
+4: thread  92 passes potato at time = 26.235201
+4: thread  93 passes potato at time = 26.342262
+4: thread  94 passes potato at time = 26.454380
+4: thread  95 passes potato at time = 26.478710
+4: thread  96 passes potato at time = 26.539722
+4: thread  97 passes potato at time = 27.226807
+4: thread  98 passes potato at time = 27.252779
+4: thread  99 passes potato at time = 27.287867
+4: thread 100 passes potato at time = 27.396563
+4: thread 101 passes potato at time = 27.504835
+4: thread 102 passes potato at time = 27.604187
+4: thread 103 passes potato at time = 27.698061
+4: thread 104 passes potato at time = 27.790115
+4: thread 105 passes potato at time = 27.890278
+4: thread 106 passes potato at time = 27.978493
+4: thread 107 passes potato at time = 28.057957
+4: thread 108 passes potato at time = 28.139822
+4: thread 109 passes potato at time = 28.211199
+4: thread 110 passes potato at time = 28.284611
+4: thread 111 passes potato at time = 28.354383
+4: thread 112 passes potato at time = 28.427580
+4: thread 113 passes potato at time = 28.499544
+4: thread 114 passes potato at time = 28.564026
+4: thread 115 passes potato at time = 28.632547
+4: thread 116 passes potato at time = 28.652815
+4: thread 117 passes potato at time = 28.711628
+4: thread 118 passes potato at time = 28.761110
+4: thread 119 passes potato at time = 28.810787
+4: thread 120 passes potato at time = 28.869591
+4: thread 121 passes potato at time = 28.891699
+4: thread 122 passes potato at time = 29.020864
+4: thread 123 passes potato at time = 29.181547
+4: thread 124 passes potato at time = 29.346601
+4: thread 125 passes potato at time = 29.440100
+4: thread 126 passes potato at time = 29.468138
+4: thread 127 passes potato at time = 29.518188
+5: thread   0 passes potato at time = 29.520227
+5: thread   1 passes potato at time = 29.520430
+5: thread   2 passes potato at time = 29.520632
+5: thread   3 passes potato at time = 29.520832
+5: thread   4 passes potato at time = 29.521034
+5: thread   5 passes potato at time = 29.521236
+5: thread   6 passes potato at time = 29.521244
+5: thread   7 passes potato at time = 29.523275
+5: thread   8 passes potato at time = 29.525311
+5: thread   9 passes potato at time = 29.525322
+5: thread  10 passes potato at time = 29.529182
+5: thread  11 passes potato at time = 29.536692
+5: thread  12 passes potato at time = 29.548063
+5: thread  13 passes potato at time = 29.557396
+5: thread  14 passes potato at time = 29.563074
+5: thread  15 passes potato at time = 29.565107
+5: thread  16 passes potato at time = 29.585796
+5: thread  17 passes potato at time = 29.595123
+5: thread  18 passes potato at time = 29.615404
+5: thread  19 passes potato at time = 29.621090
+5: thread  20 passes potato at time = 29.641375
+5: thread  21 passes potato at time = 29.667128
+5: thread  22 passes potato at time = 29.680517
+5: thread  23 passes potato at time = 29.706274
+5: thread  24 passes potato at time = 29.715811
+5: thread  25 passes potato at time = 29.767321
+5: thread  26 passes potato at time = 29.796923
+5: thread  27 passes potato at time = 29.802603
+5: thread  28 passes potato at time = 29.804646
+5: thread  29 passes potato at time = 29.827148
+5: thread  30 passes potato at time = 29.834667
+5: thread  31 passes potato at time = 29.844019
+5: thread  32 passes potato at time = 29.877487
+5: thread  33 passes potato at time = 29.877501
+5: thread  34 passes potato at time = 29.885027
+5: thread  35 passes potato at time = 30.116678
+5: thread  36 passes potato at time = 30.173077
+5: thread  37 passes potato at time = 30.201054
+5: thread  38 passes potato at time = 30.234119
+5: thread  39 passes potato at time = 30.281775
+5: thread  40 passes potato at time = 30.344036
+5: thread  41 passes potato at time = 30.364315
+5: thread  42 passes potato at time = 30.410334
+5: thread  43 passes potato at time = 30.417839
+5: thread  44 passes potato at time = 30.454559
+5: thread  45 passes potato at time = 30.456593
+5: thread  46 passes potato at time = 30.498981
+5: thread  47 passes potato at time = 30.508303
+5: thread  48 passes potato at time = 30.571379
+5: thread  49 passes potato at time = 30.595901
+5: thread  50 passes potato at time = 30.601582
+5: thread  51 passes potato at time = 30.662210
+5: thread  52 passes potato at time = 30.700939
+5: thread  53 passes potato at time = 30.781864
+5: thread  54 passes potato at time = 30.855469
+5: thread  55 passes potato at time = 30.903522
+5: thread  56 passes potato at time = 30.936779
+5: thread  57 passes potato at time = 30.953615
+5: thread  58 passes potato at time = 31.037947
+5: thread  59 passes potato at time = 31.128462
+5: thread  60 passes potato at time = 31.134352
+5: thread  61 passes potato at time = 31.158304
+5: thread  62 passes potato at time = 31.200705
+5: thread  63 passes potato at time = 31.208220
+5: thread  64 passes potato at time = 31.239872
+5: thread  65 passes potato at time = 31.314466
+5: thread  66 passes potato at time = 31.470186
+5: thread  67 passes potato at time = 31.548239
+5: thread  68 passes potato at time = 31.654467
+5: thread  69 passes potato at time = 31.667456
+5: thread  70 passes potato at time = 31.787273
+5: thread  71 passes potato at time = 31.895630
+5: thread  72 passes potato at time = 31.994499
+5: thread  73 passes potato at time = 32.081062
+5: thread  74 passes potato at time = 32.162315
+5: thread  75 passes potato at time = 32.234474
+5: thread  76 passes potato at time = 32.285976
+5: thread  77 passes potato at time = 32.317211
+5: thread  78 passes potato at time = 32.356152
+5: thread  79 passes potato at time = 32.378460
+5: thread  80 passes potato at time = 32.380493
+5: thread  81 passes potato at time = 32.388000
+5: thread  82 passes potato at time = 32.525864
+5: thread  83 passes potato at time = 32.653004
+5: thread  84 passes potato at time = 32.774452
+5: thread  85 passes potato at time = 32.871571
+5: thread  86 passes potato at time = 32.994843
+5: thread  87 passes potato at time = 33.078995
+5: thread  88 passes potato at time = 33.183712
+5: thread  89 passes potato at time = 33.278046
+5: thread  90 passes potato at time = 33.359764
+5: thread  91 passes potato at time = 33.501286
+5: thread  92 passes potato at time = 33.586262
+5: thread  93 passes potato at time = 33.705868
+5: thread  94 passes potato at time = 33.856911
+5: thread  95 passes potato at time = 33.952854
+5: thread  96 passes potato at time = 34.077957
+5: thread  97 passes potato at time = 34.105747
+5: thread  98 passes potato at time = 34.107815
+5: thread  99 passes potato at time = 34.140091
+5: thread 100 passes potato at time = 34.144169
+5: thread 101 passes potato at time = 34.320740
+5: thread 102 passes potato at time = 34.490440
+5: thread 103 passes potato at time = 34.653858
+5: thread 104 passes potato at time = 34.817657
+5: thread 105 passes potato at time = 34.984901
+5: thread 106 passes potato at time = 35.144905
+5: thread 107 passes potato at time = 35.298286
+5: thread 108 passes potato at time = 35.445599
+5: thread 109 passes potato at time = 35.588127
+5: thread 110 passes potato at time = 35.729233
+5: thread 111 passes potato at time = 35.868904
+5: thread 112 passes potato at time = 36.018749
+5: thread 113 passes potato at time = 36.163055
+5: thread 114 passes potato at time = 36.298672
+5: thread 115 passes potato at time = 36.438152
+5: thread 116 passes potato at time = 36.531612
+5: thread 117 passes potato at time = 36.662575
+5: thread 118 passes potato at time = 36.772476
+5: thread 119 passes potato at time = 36.903404
+5: thread 120 passes potato at time = 37.039463
+5: thread 121 passes potato at time = 37.129559
+5: thread 122 passes potato at time = 37.139107
+5: thread 123 passes potato at time = 37.183098
+5: thread 124 passes potato at time = 37.281033
+5: thread 125 passes potato at time = 37.368031
+5: thread 126 passes potato at time = 37.426632
+5: thread 127 passes potato at time = 37.550892
+6: thread   0 passes potato at time = 37.552933
+6: thread   1 passes potato at time = 37.553135
+6: thread   2 passes potato at time = 37.553337
+6: thread   3 passes potato at time = 37.553539
+6: thread   4 passes potato at time = 37.553741
+6: thread   5 passes potato at time = 37.553940
+6: thread   6 passes potato at time = 37.555775
+6: thread   7 passes potato at time = 37.555782
+6: thread   8 passes potato at time = 37.559639
+6: thread   9 passes potato at time = 37.563499
+6: thread  10 passes potato at time = 37.567360
+6: thread  11 passes potato at time = 37.569389
+6: thread  12 passes potato at time = 37.575081
+6: thread  13 passes potato at time = 37.590096
+6: thread  14 passes potato at time = 37.601246
+6: thread  15 passes potato at time = 37.614231
+6: thread  16 passes potato at time = 37.634514
+6: thread  17 passes potato at time = 37.642017
+6: thread  18 passes potato at time = 37.660473
+6: thread  19 passes potato at time = 37.686646
+6: thread  20 passes potato at time = 37.714638
+6: thread  21 passes potato at time = 37.742416
+6: thread  22 passes potato at time = 37.766342
+6: thread  23 passes potato at time = 37.783375
+6: thread  24 passes potato at time = 37.809322
+6: thread  25 passes potato at time = 37.838734
+6: thread  26 passes potato at time = 37.848068
+6: thread  27 passes potato at time = 37.885365
+6: thread  28 passes potato at time = 37.926357
+6: thread  29 passes potato at time = 37.963268
+6: thread  30 passes potato at time = 37.970783
+6: thread  31 passes potato at time = 38.019035
+6: thread  32 passes potato at time = 38.026566
+6: thread  33 passes potato at time = 38.052338
+6: thread  34 passes potato at time = 38.073235
+6: thread  35 passes potato at time = 38.301991
+6: thread  36 passes potato at time = 38.360996
+6: thread  37 passes potato at time = 38.370537
+6: thread  38 passes potato at time = 38.399937
+6: thread  39 passes potato at time = 38.429337
+6: thread  40 passes potato at time = 38.458946
+6: thread  41 passes potato at time = 38.499496
+6: thread  42 passes potato at time = 38.554653
+6: thread  43 passes potato at time = 38.560341
+6: thread  44 passes potato at time = 38.584469
+6: thread  45 passes potato at time = 38.637592
+6: thread  46 passes potato at time = 38.646931
+6: thread  47 passes potato at time = 38.693157
+6: thread  48 passes potato at time = 38.700874
+6: thread  49 passes potato at time = 38.743649
+6: thread  50 passes potato at time = 38.760681
+6: thread  51 passes potato at time = 38.826576
+6: thread  52 passes potato at time = 38.868958
+6: thread  53 passes potato at time = 38.933426
+6: thread  54 passes potato at time = 38.992424
+6: thread  55 passes potato at time = 39.010872
+6: thread  56 passes potato at time = 39.105560
+6: thread  57 passes potato at time = 39.186947
+6: thread  58 passes potato at time = 39.228088
+6: thread  59 passes potato at time = 39.267235
+6: thread  60 passes potato at time = 39.347321
+6: thread  61 passes potato at time = 39.411404
+6: thread  62 passes potato at time = 39.431885
+6: thread  63 passes potato at time = 39.433937
+6: thread  64 passes potato at time = 39.516903
+6: thread  65 passes potato at time = 39.562927
+6: thread  66 passes potato at time = 40.312141
+6: thread  67 passes potato at time = 40.319862
+6: thread  68 passes potato at time = 40.408260
+6: thread  69 passes potato at time = 40.437866
+6: thread  70 passes potato at time = 40.449024
+6: thread  71 passes potato at time = 40.564613
+6: thread  72 passes potato at time = 40.668461
+6: thread  73 passes potato at time = 40.755436
+6: thread  74 passes potato at time = 40.831253
+6: thread  75 passes potato at time = 40.897339
+6: thread  76 passes potato at time = 40.937904
+6: thread  77 passes potato at time = 40.952721
+6: thread  78 passes potato at time = 40.975021
+6: thread  79 passes potato at time = 41.111053
+6: thread  80 passes potato at time = 41.230545
+6: thread  81 passes potato at time = 41.358280
+6: thread  82 passes potato at time = 41.470802
+6: thread  83 passes potato at time = 41.568890
+6: thread  84 passes potato at time = 41.662369
+6: thread  85 passes potato at time = 41.710629
+6: thread  86 passes potato at time = 41.794140
+6: thread  87 passes potato at time = 41.832672
+6: thread  88 passes potato at time = 41.891460
+6: thread  89 passes potato at time = 41.932026
+6: thread  90 passes potato at time = 41.961433
+6: thread  91 passes potato at time = 42.066261
+6: thread  92 passes potato at time = 42.086536
+6: thread  93 passes potato at time = 42.218597
+6: thread  94 passes potato at time = 42.310654
+6: thread  95 passes potato at time = 42.458038
+6: thread  96 passes potato at time = 42.478519
+6: thread  97 passes potato at time = 43.102543
+6: thread  98 passes potato at time = 43.209076
+6: thread  99 passes potato at time = 43.268280
+6: thread 100 passes potato at time = 43.368439
+6: thread 101 passes potato at time = 43.640331
+6: thread 102 passes potato at time = 43.725479
+6: thread 103 passes potato at time = 43.800911
+6: thread 104 passes potato at time = 43.874519
+6: thread 105 passes potato at time = 43.944881
+6: thread 106 passes potato at time = 44.006107
+6: thread 107 passes potato at time = 44.053772
+6: thread 108 passes potato at time = 44.094746
+6: thread 109 passes potato at time = 44.131348
+6: thread 110 passes potato at time = 44.159523
+6: thread 111 passes potato at time = 44.185696
+6: thread 112 passes potato at time = 44.211643
+6: thread 113 passes potato at time = 44.228275
+6: thread 114 passes potato at time = 44.239429
+6: thread 115 passes potato at time = 44.250599
+6: thread 116 passes potato at time = 44.414410
+6: thread 117 passes potato at time = 44.604759
+6: thread 118 passes potato at time = 44.790482
+6: thread 119 passes potato at time = 44.992798
+6: thread 120 passes potato at time = 44.998489
+6: thread 121 passes potato at time = 45.156528
+6: thread 122 passes potato at time = 45.254471
+6: thread 123 passes potato at time = 45.386440
+6: thread 124 passes potato at time = 45.443222
+6: thread 125 passes potato at time = 45.563278
+6: thread 126 passes potato at time = 45.646618
+6: thread 127 passes potato at time = 45.856667
+7: thread   0 passes potato at time = 45.858707
+7: thread   1 passes potato at time = 45.858910
+7: thread   2 passes potato at time = 45.859112
+7: thread   3 passes potato at time = 45.859314
+7: thread   4 passes potato at time = 45.859516
+7: thread   5 passes potato at time = 45.859718
+7: thread   6 passes potato at time = 45.861748
+7: thread   7 passes potato at time = 45.865608
+7: thread   8 passes potato at time = 45.865620
+7: thread   9 passes potato at time = 45.865627
+7: thread  10 passes potato at time = 45.865650
+7: thread  11 passes potato at time = 45.865669
+7: thread  12 passes potato at time = 45.873150
+7: thread  13 passes potato at time = 45.877010
+7: thread  14 passes potato at time = 45.884521
+7: thread  15 passes potato at time = 45.892235
+7: thread  16 passes potato at time = 45.911110
+7: thread  17 passes potato at time = 45.911121
+7: thread  18 passes potato at time = 45.918705
+7: thread  19 passes potato at time = 45.924580
+7: thread  20 passes potato at time = 45.939583
+7: thread  21 passes potato at time = 45.947296
+7: thread  22 passes potato at time = 45.954803
+7: thread  23 passes potato at time = 45.971443
+7: thread  24 passes potato at time = 45.982796
+7: thread  25 passes potato at time = 45.995781
+7: thread  26 passes potato at time = 46.027412
+7: thread  27 passes potato at time = 46.053360
+7: thread  28 passes potato at time = 46.053371
+7: thread  29 passes potato at time = 46.075687
+7: thread  30 passes potato at time = 46.106934
+7: thread  31 passes potato at time = 46.155476
+7: thread  32 passes potato at time = 46.192764
+7: thread  33 passes potato at time = 46.196819
+7: thread  34 passes potato at time = 46.272633
+7: thread  35 passes potato at time = 46.578972
+7: thread  36 passes potato at time = 46.599869
+7: thread  37 passes potato at time = 46.609200
+7: thread  38 passes potato at time = 46.636772
+7: thread  39 passes potato at time = 46.649952
+7: thread  40 passes potato at time = 46.715069
+7: thread  41 passes potato at time = 46.779335
+7: thread  42 passes potato at time = 46.847469
+7: thread  43 passes potato at time = 46.854984
+7: thread  44 passes potato at time = 46.869789
+7: thread  45 passes potato at time = 46.902828
+7: thread  46 passes potato at time = 46.958202
+7: thread  47 passes potato at time = 46.963879
+7: thread  48 passes potato at time = 47.000576
+7: thread  49 passes potato at time = 47.067284
+7: thread  50 passes potato at time = 47.100754
+7: thread  51 passes potato at time = 47.172577
+7: thread  52 passes potato at time = 47.220856
+7: thread  53 passes potato at time = 47.277836
+7: thread  54 passes potato at time = 47.320419
+7: thread  55 passes potato at time = 47.408436
+7: thread  56 passes potato at time = 47.474525
+7: thread  57 passes potato at time = 47.522812
+7: thread  58 passes potato at time = 47.526680
+7: thread  59 passes potato at time = 47.615288
+7: thread  60 passes potato at time = 47.661320
+7: thread  61 passes potato at time = 47.761497
+7: thread  62 passes potato at time = 47.767185
+7: thread  63 passes potato at time = 47.767197
+7: thread  64 passes potato at time = 47.833508
+7: thread  65 passes potato at time = 47.844673
+7: thread  66 passes potato at time = 48.338226
+7: thread  67 passes potato at time = 48.470829
+7: thread  68 passes potato at time = 48.574623
+7: thread  69 passes potato at time = 48.611523
+7: thread  70 passes potato at time = 48.628162
+7: thread  71 passes potato at time = 48.741913
+7: thread  72 passes potato at time = 48.840649
+7: thread  73 passes potato at time = 48.919739
+7: thread  74 passes potato at time = 48.984203
+7: thread  75 passes potato at time = 49.035896
+7: thread  76 passes potato at time = 49.060226
+7: thread  77 passes potato at time = 49.187187
+7: thread  78 passes potato at time = 49.322220
+7: thread  79 passes potato at time = 49.432327
+7: thread  80 passes potato at time = 49.526604
+7: thread  81 passes potato at time = 49.616634
+7: thread  82 passes potato at time = 49.689838
+7: thread  83 passes potato at time = 49.754715
+7: thread  84 passes potato at time = 49.806225
+7: thread  85 passes potato at time = 49.950161
+7: thread  86 passes potato at time = 49.987293
+7: thread  87 passes potato at time = 50.122139
+7: thread  88 passes potato at time = 50.142273
+7: thread  89 passes potato at time = 50.272888
+7: thread  90 passes potato at time = 50.419865
+7: thread  91 passes potato at time = 50.464058
+7: thread  92 passes potato at time = 50.569080
+7: thread  93 passes potato at time = 50.731258
+7: thread  94 passes potato at time = 50.735104
+7: thread  95 passes potato at time = 50.772007
+7: thread  96 passes potato at time = 50.783161
+7: thread  97 passes potato at time = 51.527802
+7: thread  98 passes potato at time = 51.638103
+7: thread  99 passes potato at time = 51.704391
+7: thread 100 passes potato at time = 51.711895
+7: thread 101 passes potato at time = 51.715752
+7: thread 102 passes potato at time = 51.881161
+7: thread 103 passes potato at time = 52.039265
+7: thread 104 passes potato at time = 52.197727
+7: thread 105 passes potato at time = 52.350182
+7: thread 106 passes potato at time = 52.494102
+7: thread 107 passes potato at time = 52.626301
+7: thread 108 passes potato at time = 52.747322
+7: thread 109 passes potato at time = 52.865070
+7: thread 110 passes potato at time = 52.979000
+7: thread 111 passes potato at time = 53.090309
+7: thread 112 passes potato at time = 53.198662
+7: thread 113 passes potato at time = 53.302265
+7: thread 114 passes potato at time = 53.399971
+7: thread 115 passes potato at time = 53.492596
+7: thread 116 passes potato at time = 53.526035
+7: thread 117 passes potato at time = 53.597607
+7: thread 118 passes potato at time = 53.660233
+7: thread 119 passes potato at time = 53.728344
+7: thread 120 passes potato at time = 53.809231
+7: thread 121 passes potato at time = 53.829704
+7: thread 122 passes potato at time = 54.032539
+7: thread 123 passes potato at time = 54.250172
+7: thread 124 passes potato at time = 54.475182
+7: thread 125 passes potato at time = 54.630131
+7: thread 126 passes potato at time = 54.776932
+7: thread 127 passes potato at time = 54.893929
+8: thread   0 passes potato at time = 54.896172
+8: thread   1 passes potato at time = 54.896374
+8: thread   2 passes potato at time = 54.896576
+8: thread   3 passes potato at time = 54.896774
+8: thread   4 passes potato at time = 54.896976
+8: thread   5 passes potato at time = 54.897179
+8: thread   6 passes potato at time = 54.897190
+8: thread   7 passes potato at time = 54.899220
+8: thread   8 passes potato at time = 54.901257
+8: thread   9 passes potato at time = 54.905113
+8: thread  10 passes potato at time = 54.905125
+8: thread  11 passes potato at time = 54.911007
+8: thread  12 passes potato at time = 54.923992
+8: thread  13 passes potato at time = 54.927849
+8: thread  14 passes potato at time = 54.942654
+8: thread  15 passes potato at time = 54.961102
+8: thread  16 passes potato at time = 54.961113
+8: thread  17 passes potato at time = 54.970444
+8: thread  18 passes potato at time = 54.976131
+8: thread  19 passes potato at time = 54.991150
+8: thread  20 passes potato at time = 55.018944
+8: thread  21 passes potato at time = 55.032131
+8: thread  22 passes potato at time = 55.037819
+8: thread  23 passes potato at time = 55.069256
+8: thread  24 passes potato at time = 55.076965
+8: thread  25 passes potato at time = 55.082649
+8: thread  26 passes potato at time = 55.097645
+8: thread  27 passes potato at time = 55.112873
+8: thread  28 passes potato at time = 55.154102
+8: thread  29 passes potato at time = 55.191246
+8: thread  30 passes potato at time = 55.217842
+8: thread  31 passes potato at time = 55.236301
+8: thread  32 passes potato at time = 55.240185
+8: thread  33 passes potato at time = 55.242218
+8: thread  34 passes potato at time = 55.266361
+8: thread  35 passes potato at time = 55.343414
+8: thread  36 passes potato at time = 55.343426
+8: thread  37 passes potato at time = 55.392887
+8: thread  38 passes potato at time = 55.435268
+8: thread  39 passes potato at time = 55.448448
+8: thread  40 passes potato at time = 55.498138
+8: thread  41 passes potato at time = 55.533222
+8: thread  42 passes potato at time = 55.557369
+8: thread  43 passes potato at time = 55.649815
+8: thread  44 passes potato at time = 55.670494
+8: thread  45 passes potato at time = 55.694607
+8: thread  46 passes potato at time = 55.731926
+8: thread  47 passes potato at time = 55.788063
+8: thread  48 passes potato at time = 55.867336
+8: thread  49 passes potato at time = 55.886204
+8: thread  50 passes potato at time = 55.949322
+8: thread  51 passes potato at time = 55.949333
+8: thread  52 passes potato at time = 56.006294
+8: thread  53 passes potato at time = 56.066917
+8: thread  54 passes potato at time = 56.100178
+8: thread  55 passes potato at time = 56.181995
+8: thread  56 passes potato at time = 56.230274
+8: thread  57 passes potato at time = 56.248928
+8: thread  58 passes potato at time = 56.319462
+8: thread  59 passes potato at time = 56.372807
+8: thread  60 passes potato at time = 56.384167
+8: thread  61 passes potato at time = 56.452480
+8: thread  62 passes potato at time = 56.531170
+8: thread  63 passes potato at time = 56.551670
+8: thread  64 passes potato at time = 56.579479
+8: thread  65 passes potato at time = 56.603615
+8: thread  66 passes potato at time = 57.139687
+8: thread  67 passes potato at time = 57.245544
+8: thread  68 passes potato at time = 57.328281
+8: thread  69 passes potato at time = 57.382011
+8: thread  70 passes potato at time = 57.411423
+8: thread  71 passes potato at time = 57.411434
+8: thread  72 passes potato at time = 57.516071
+8: thread  73 passes potato at time = 57.595364
+8: thread  74 passes potato at time = 57.655987
+8: thread  75 passes potato at time = 57.829140
+8: thread  76 passes potato at time = 57.843952
+8: thread  77 passes potato at time = 57.955879
+8: thread  78 passes potato at time = 58.075706
+8: thread  79 passes potato at time = 58.167049
+8: thread  80 passes potato at time = 58.238808
+8: thread  81 passes potato at time = 58.301464
+8: thread  82 passes potato at time = 58.347713
+8: thread  83 passes potato at time = 58.380974
+8: thread  84 passes potato at time = 58.388493
+8: thread  85 passes potato at time = 58.489849
+8: thread  86 passes potato at time = 58.632816
+8: thread  87 passes potato at time = 58.726082
+8: thread  88 passes potato at time = 58.856441
+8: thread  89 passes potato at time = 58.919708
+8: thread  90 passes potato at time = 59.028606
+8: thread  91 passes potato at time = 59.186008
+8: thread  92 passes potato at time = 59.240162
+8: thread  93 passes potato at time = 59.391830
+8: thread  94 passes potato at time = 59.509434
+8: thread  95 passes potato at time = 59.599655
+8: thread  96 passes potato at time = 59.747272
+cleaning hot potato
+preemptive test done
+starting preemptive test
+this test will take 60 seconds
+interrupt_handler: context at 0x7ffe9763ef40, time diff = 0 us
+interrupt_handler: context at 0x7ffe9763ef80, time diff = 206 us
+interrupt_handler: context at 0x7ffe9763ef80, time diff = 203 us
+interrupt_handler: context at 0x7ffe9763ef80, time diff = 204 us
+interrupt_handler: context at 0x7ffe9763ef40, time diff = 203 us
+0: thread   0 made it to do_potato
+1: thread   0 passes potato at time =  0.001219
+0: thread   1 made it to do_potato
+0: thread   2 made it to do_potato
+0: thread   3 made it to do_potato
+0: thread   4 made it to do_potato
+0: thread   5 made it to do_potato
+0: thread   6 made it to do_potato
+0: thread   7 made it to do_potato
+0: thread   8 made it to do_potato
+0: thread   9 made it to do_potato
+0: thread  10 made it to do_potato
+0: thread  11 made it to do_potato
+0: thread  12 made it to do_potato
+0: thread  13 made it to do_potato
+0: thread  14 made it to do_potato
+0: thread  15 made it to do_potato
+0: thread  16 made it to do_potato
+0: thread  17 made it to do_potato
+0: thread  18 made it to do_potato
+0: thread  19 made it to do_potato
+0: thread  20 made it to do_potato
+0: thread  21 made it to do_potato
+0: thread  22 made it to do_potato
+0: thread  23 made it to do_potato
+0: thread  24 made it to do_potato
+0: thread  25 made it to do_potato
+0: thread  26 made it to do_potato
+0: thread  27 made it to do_potato
+0: thread  28 made it to do_potato
+0: thread  29 made it to do_potato
+0: thread  30 made it to do_potato
+0: thread  31 made it to do_potato
+0: thread  32 made it to do_potato
+0: thread  33 made it to do_potato
+0: thread  34 made it to do_potato
+0: thread  35 made it to do_potato
+0: thread  36 made it to do_potato
+0: thread  37 made it to do_potato
+0: thread  38 made it to do_potato
+0: thread  39 made it to do_potato
+0: thread  40 made it to do_potato
+0: thread  41 made it to do_potato
+0: thread  42 made it to do_potato
+0: thread  43 made it to do_potato
+0: thread  45 made it to do_potato
+0: thread  46 made it to do_potato
+0: thread  47 made it to do_potato
+0: thread  48 made it to do_potato
+0: thread  49 made it to do_potato
+0: thread  50 made it to do_potato
+0: thread  51 made it to do_potato
+0: thread  52 made it to do_potato
+0: thread  53 made it to do_potato
+0: thread  54 made it to do_potato
+0: thread  55 made it to do_potato
+0: thread  56 made it to do_potato
+0: thread  57 made it to do_potato
+0: thread  58 made it to do_potato
+0: thread  59 made it to do_potato
+0: thread  60 made it to do_potato
+0: thread  61 made it to do_potato
+0: thread  62 made it to do_potato
+1: thread   1 passes potato at time =  0.003037
+1: thread   2 passes potato at time =  0.003239
+1: thread   3 passes potato at time =  0.003441
+1: thread   4 passes potato at time =  0.003642
+1: thread   5 passes potato at time =  0.003843
+0: thread  44 made it to do_potato
+0: thread  63 made it to do_potato
+0: thread  65 made it to do_potato
+0: thread  66 made it to do_potato
+1: thread   6 passes potato at time =  0.005474
+0: thread  67 made it to do_potato
+0: thread  68 made it to do_potato
+0: thread  69 made it to do_potato
+0: thread  70 made it to do_potato
+0: thread  71 made it to do_potato
+0: thread  72 made it to do_potato
+0: thread  73 made it to do_potato
+0: thread  74 made it to do_potato
+0: thread  75 made it to do_potato
+0: thread  76 made it to do_potato
+0: thread  77 made it to do_potato
+0: thread  78 made it to do_potato
+0: thread  79 made it to do_potato
+0: thread  80 made it to do_potato
+0: thread  82 made it to do_potato
+0: thread  83 made it to do_potato
+0: thread  84 made it to do_potato
+0: thread  85 made it to do_potato
+0: thread  86 made it to do_potato
+0: thread  87 made it to do_potato
+0: thread  88 made it to do_potato
+0: thread  89 made it to do_potato
+0: thread  90 made it to do_potato
+0: thread  91 made it to do_potato
+0: thread  92 made it to do_potato
+0: thread  93 made it to do_potato
+0: thread  94 made it to do_potato
+0: thread  95 made it to do_potato
+0: thread  96 made it to do_potato
+0: thread  97 made it to do_potato
+0: thread  98 made it to do_potato
+0: thread 100 made it to do_potato
+0: thread 101 made it to do_potato
+0: thread 102 made it to do_potato
+0: thread 103 made it to do_potato
+0: thread 104 made it to do_potato
+0: thread 105 made it to do_potato
+0: thread 106 made it to do_potato
+0: thread 107 made it to do_potato
+1: thread   7 passes potato at time =  0.007511
+0: thread  64 made it to do_potato
+0: thread  81 made it to do_potato
+0: thread  99 made it to do_potato
+0: thread 108 made it to do_potato
+0: thread 109 made it to do_potato
+0: thread 110 made it to do_potato
+0: thread 111 made it to do_potato
+0: thread 112 made it to do_potato
+0: thread 113 made it to do_potato
+0: thread 114 made it to do_potato
+0: thread 116 made it to do_potato
+0: thread 117 made it to do_potato
+0: thread 118 made it to do_potato
+0: thread 119 made it to do_potato
+0: thread 120 made it to do_potato
+0: thread 121 made it to do_potato
+0: thread 122 made it to do_potato
+0: thread 123 made it to do_potato
+0: thread 124 made it to do_potato
+0: thread 125 made it to do_potato
+0: thread 126 made it to do_potato
+0: thread 127 made it to do_potato
+1: thread   8 passes potato at time =  0.009551
+0: thread 115 made it to do_potato
+1: thread   9 passes potato at time =  0.011621
+1: thread  10 passes potato at time =  0.013654
+1: thread  11 passes potato at time =  0.015694
+1: thread  12 passes potato at time =  0.017733
+1: thread  13 passes potato at time =  0.019796
+1: thread  14 passes potato at time =  0.021836
+1: thread  15 passes potato at time =  0.023887
+1: thread  16 passes potato at time =  0.025929
+1: thread  17 passes potato at time =  0.027961
+1: thread  18 passes potato at time =  0.029995
+1: thread  19 passes potato at time =  0.032029
+1: thread  20 passes potato at time =  0.034063
+1: thread  21 passes potato at time =  0.036093
+1: thread  22 passes potato at time =  0.039950
+1: thread  23 passes potato at time =  0.039961
+1: thread  24 passes potato at time =  0.045844
+1: thread  25 passes potato at time =  0.082756
+1: thread  26 passes potato at time =  0.088443
+1: thread  27 passes potato at time =  0.092510
+1: thread  28 passes potato at time =  0.096383
+1: thread  29 passes potato at time =  0.098419
+1: thread  30 passes potato at time =  0.104103
+1: thread  31 passes potato at time =  0.128053
+1: thread  32 passes potato at time =  0.170653
+1: thread  33 passes potato at time =  0.220373
+1: thread  34 passes potato at time =  0.242880
+1: thread  35 passes potato at time =  0.492724
+1: thread  36 passes potato at time =  0.522339
+1: thread  37 passes potato at time =  0.555606
+1: thread  38 passes potato at time =  0.572241
+1: thread  39 passes potato at time =  0.588886
+1: thread  40 passes potato at time =  0.605522
+1: thread  41 passes potato at time =  0.622153
+1: thread  42 passes potato at time =  0.638990
+1: thread  43 passes potato at time =  0.655625
+1: thread  44 passes potato at time =  0.674284
+1: thread  45 passes potato at time =  0.689108
+1: thread  46 passes potato at time =  0.705945
+1: thread  47 passes potato at time =  0.722576
+1: thread  48 passes potato at time =  0.739215
+1: thread  49 passes potato at time =  0.756443
+1: thread  50 passes potato at time =  0.773081
+1: thread  51 passes potato at time =  0.792351
+1: thread  52 passes potato at time =  0.811015
+1: thread  53 passes potato at time =  0.825834
+1: thread  54 passes potato at time =  0.842470
+1: thread  55 passes potato at time =  0.859300
+1: thread  56 passes potato at time =  0.874113
+1: thread  57 passes potato at time =  0.892569
+1: thread  58 passes potato at time =  0.907807
+1: thread  59 passes potato at time =  0.924838
+1: thread  60 passes potato at time =  0.943500
+1: thread  61 passes potato at time =  0.963786
+1: thread  62 passes potato at time =  1.042548
+1: thread  63 passes potato at time =  1.122456
+1: thread  64 passes potato at time =  1.141135
+1: thread  65 passes potato at time =  1.191018
+1: thread  66 passes potato at time =  1.770584
+1: thread  67 passes potato at time =  1.781753
+1: thread  68 passes potato at time =  1.787845
+1: thread  69 passes potato at time =  1.815480
+1: thread  70 passes potato at time =  1.843276
+1: thread  71 passes potato at time =  1.873085
+1: thread  72 passes potato at time =  1.899034
+1: thread  73 passes potato at time =  1.926823
+1: thread  74 passes potato at time =  1.954803
+1: thread  75 passes potato at time =  1.982800
+1: thread  76 passes potato at time =  2.011416
+1: thread  77 passes potato at time =  2.040458
+1: thread  78 passes potato at time =  2.068662
+1: thread  79 passes potato at time =  2.098275
+1: thread  80 passes potato at time =  2.124231
+1: thread  81 passes potato at time =  2.155871
+1: thread  82 passes potato at time =  2.183662
+1: thread  83 passes potato at time =  2.211668
+1: thread  84 passes potato at time =  2.237632
+1: thread  85 passes potato at time =  2.263599
+1: thread  86 passes potato at time =  2.291403
+1: thread  87 passes potato at time =  2.322638
+1: thread  88 passes potato at time =  2.348796
+1: thread  89 passes potato at time =  2.378207
+1: thread  90 passes potato at time =  2.410483
+1: thread  91 passes potato at time =  2.438256
+1: thread  92 passes potato at time =  2.471509
+1: thread  93 passes potato at time =  2.593995
+1: thread  94 passes potato at time =  2.721560
+1: thread  95 passes potato at time =  2.743671
+1: thread  96 passes potato at time =  2.862305
+1: thread  97 passes potato at time =  3.536026
+1: thread  98 passes potato at time =  3.595458
+1: thread  99 passes potato at time =  3.709212
+1: thread 100 passes potato at time =  3.747993
+1: thread 101 passes potato at time =  3.784662
+1: thread 102 passes potato at time =  3.823823
+1: thread 103 passes potato at time =  3.863373
+1: thread 104 passes potato at time =  3.902101
+1: thread 105 passes potato at time =  3.940902
+1: thread 106 passes potato at time =  3.979608
+1: thread 107 passes potato at time =  4.020043
+1: thread 108 passes potato at time =  4.065884
+1: thread 109 passes potato at time =  4.103391
+1: thread 110 passes potato at time =  4.140912
+1: thread 111 passes potato at time =  4.182265
+1: thread 112 passes potato at time =  4.223217
+1: thread 113 passes potato at time =  4.263994
+1: thread 114 passes potato at time =  4.310024
+1: thread 115 passes potato at time =  4.343285
+1: thread 116 passes potato at time =  4.375129
+1: thread 117 passes potato at time =  4.421371
+1: thread 118 passes potato at time =  4.458891
+1: thread 119 passes potato at time =  4.493982
+1: thread 120 passes potato at time =  4.549353
+1: thread 121 passes potato at time =  4.578774
+1: thread 122 passes potato at time =  4.627448
+1: thread 123 passes potato at time =  4.916012
+1: thread 124 passes potato at time =  5.050893
+1: thread 125 passes potato at time =  5.262795
+1: thread 126 passes potato at time =  5.292209
+1: thread 127 passes potato at time =  5.354861
+2: thread   0 passes potato at time =  5.356899
+2: thread   1 passes potato at time =  5.357101
+2: thread   2 passes potato at time =  5.357302
+2: thread   3 passes potato at time =  5.357504
+2: thread   4 passes potato at time =  5.357706
+2: thread   5 passes potato at time =  5.357907
+2: thread   6 passes potato at time =  5.357916
+2: thread   7 passes potato at time =  5.357925
+2: thread   8 passes potato at time =  5.361781
+2: thread   9 passes potato at time =  5.365642
+2: thread  10 passes potato at time =  5.369504
+2: thread  11 passes potato at time =  5.380667
+2: thread  12 passes potato at time =  5.391827
+2: thread  13 passes potato at time =  5.397705
+2: thread  14 passes potato at time =  5.403391
+2: thread  15 passes potato at time =  5.412933
+2: thread  16 passes potato at time =  5.414972
+2: thread  17 passes potato at time =  5.431807
+2: thread  18 passes potato at time =  5.433844
+2: thread  19 passes potato at time =  5.460622
+2: thread  20 passes potato at time =  5.468125
+2: thread  21 passes potato at time =  5.493884
+2: thread  22 passes potato at time =  5.518026
+2: thread  23 passes potato at time =  5.540141
+2: thread  24 passes potato at time =  5.540151
+2: thread  25 passes potato at time =  5.577262
+2: thread  26 passes potato at time =  5.599590
+2: thread  27 passes potato at time =  5.599601
+2: thread  28 passes potato at time =  5.620279
+2: thread  29 passes potato at time =  5.622325
+2: thread  30 passes potato at time =  5.664899
+2: thread  31 passes potato at time =  5.676261
+2: thread  32 passes potato at time =  5.691276
+2: thread  33 passes potato at time =  5.735291
+2: thread  34 passes potato at time =  5.763087
+2: thread  35 passes potato at time =  5.974802
+2: thread  36 passes potato at time =  5.989637
+2: thread  37 passes potato at time =  6.007103
+2: thread  38 passes potato at time =  6.064356
+2: thread  39 passes potato at time =  6.112632
+2: thread  40 passes potato at time =  6.153180
+2: thread  41 passes potato at time =  6.186461
+2: thread  42 passes potato at time =  6.214047
+2: thread  43 passes potato at time =  6.230876
+2: thread  44 passes potato at time =  6.245883
+2: thread  45 passes potato at time =  6.245894
+2: thread  46 passes potato at time =  6.319507
+2: thread  47 passes potato at time =  6.391081
+2: thread  48 passes potato at time =  6.455771
+2: thread  49 passes potato at time =  6.518235
+2: thread  50 passes potato at time =  6.662610
+2: thread  51 passes potato at time =  6.721417
+2: thread  52 passes potato at time =  6.778403
+2: thread  53 passes potato at time =  6.824835
+2: thread  54 passes potato at time =  6.872880
+2: thread  55 passes potato at time =  6.913440
+2: thread  56 passes potato at time =  6.956236
+2: thread  57 passes potato at time =  6.987480
+2: thread  58 passes potato at time =  7.023194
+2: thread  59 passes potato at time =  7.050821
+2: thread  60 passes potato at time =  7.086319
+2: thread  61 passes potato at time =  7.129322
+2: thread  62 passes potato at time =  7.142735
+2: thread  63 passes potato at time =  7.193061
+2: thread  64 passes potato at time =  7.220869
+2: thread  65 passes potato at time =  7.237512
+2: thread  66 passes potato at time =  7.366684
+2: thread  67 passes potato at time =  7.462407
+2: thread  68 passes potato at time =  7.490195
+2: thread  69 passes potato at time =  7.607427
+2: thread  70 passes potato at time =  7.723831
+2: thread  71 passes potato at time =  7.842664
+2: thread  72 passes potato at time =  7.957676
+2: thread  73 passes potato at time =  8.078229
+2: thread  74 passes potato at time =  8.194227
+2: thread  75 passes potato at time =  8.310026
+2: thread  76 passes potato at time =  8.424184
+2: thread  77 passes potato at time =  8.539978
+2: thread  78 passes potato at time =  8.657604
+2: thread  79 passes potato at time =  8.773771
+2: thread  80 passes potato at time =  8.889754
+2: thread  81 passes potato at time =  9.009390
+2: thread  82 passes potato at time =  9.138866
+2: thread  83 passes potato at time =  9.245720
+2: thread  84 passes potato at time =  9.358262
+2: thread  85 passes potato at time =  9.473659
+2: thread  86 passes potato at time =  9.589848
+2: thread  87 passes potato at time =  9.716395
+2: thread  88 passes potato at time =  9.827188
+2: thread  89 passes potato at time =  9.947227
+2: thread  90 passes potato at time = 10.084582
+2: thread  91 passes potato at time = 10.204659
+2: thread  92 passes potato at time = 10.333012
+2: thread  93 passes potato at time = 10.470080
+2: thread  94 passes potato at time = 10.523429
+2: thread  95 passes potato at time = 10.576755
+2: thread  96 passes potato at time = 10.666774
+2: thread  97 passes potato at time = 10.793600
+2: thread  98 passes potato at time = 10.850506
+2: thread  99 passes potato at time = 10.926131
+2: thread 100 passes potato at time = 11.042178
+2: thread 101 passes potato at time = 11.159438
+2: thread 102 passes potato at time = 11.272393
+2: thread 103 passes potato at time = 11.384329
+2: thread 104 passes potato at time = 11.502146
+2: thread 105 passes potato at time = 11.612675
+2: thread 106 passes potato at time = 11.728079
+2: thread 107 passes potato at time = 11.840428
+2: thread 108 passes potato at time = 11.960076
+2: thread 109 passes potato at time = 12.079657
+2: thread 110 passes potato at time = 12.189789
+2: thread 111 passes potato at time = 12.313480
+2: thread 112 passes potato at time = 12.427847
+2: thread 113 passes potato at time = 12.547704
+2: thread 114 passes potato at time = 12.667338
+2: thread 115 passes potato at time = 12.779471
+2: thread 116 passes potato at time = 12.878644
+2: thread 117 passes potato at time = 13.002325
+2: thread 118 passes potato at time = 13.123269
+2: thread 119 passes potato at time = 13.243075
+2: thread 120 passes potato at time = 13.376884
+2: thread 121 passes potato at time = 13.491045
+2: thread 122 passes potato at time = 13.616321
+2: thread 123 passes potato at time = 13.814801
+2: thread 124 passes potato at time = 13.883149
+2: thread 125 passes potato at time = 13.899597
+2: thread 126 passes potato at time = 13.951510
+2: thread 127 passes potato at time = 13.960835
+3: thread   0 passes potato at time = 13.962877
+3: thread   1 passes potato at time = 13.963079
+3: thread   2 passes potato at time = 13.963280
+3: thread   3 passes potato at time = 13.963482
+3: thread   4 passes potato at time = 13.963684
+3: thread   5 passes potato at time = 13.963885
+3: thread   6 passes potato at time = 13.965716
+3: thread   7 passes potato at time = 13.967747
+3: thread   8 passes potato at time = 13.969780
+3: thread   9 passes potato at time = 13.969791
+3: thread  10 passes potato at time = 13.973643
+3: thread  11 passes potato at time = 13.981357
+3: thread  12 passes potato at time = 13.992522
+3: thread  13 passes potato at time = 14.007757
+3: thread  14 passes potato at time = 14.007768
+3: thread  15 passes potato at time = 14.022763
+3: thread  16 passes potato at time = 14.030287
+3: thread  17 passes potato at time = 14.044514
+3: thread  18 passes potato at time = 14.063199
+3: thread  19 passes potato at time = 14.067261
+3: thread  20 passes potato at time = 14.083909
+3: thread  21 passes potato at time = 14.113530
+3: thread  22 passes potato at time = 14.113542
+3: thread  23 passes potato at time = 14.121058
+3: thread  24 passes potato at time = 14.128565
+3: thread  25 passes potato at time = 14.128577
+3: thread  26 passes potato at time = 14.156150
+3: thread  27 passes potato at time = 14.161837
+3: thread  28 passes potato at time = 14.200793
+3: thread  29 passes potato at time = 14.243393
+3: thread  30 passes potato at time = 14.283975
+3: thread  31 passes potato at time = 14.304268
+3: thread  32 passes potato at time = 14.326593
+3: thread  33 passes potato at time = 14.326604
+3: thread  34 passes potato at time = 14.347111
+3: thread  35 passes potato at time = 14.852730
+3: thread  36 passes potato at time = 14.922700
+3: thread  37 passes potato at time = 14.978376
+3: thread  38 passes potato at time = 14.991272
+3: thread  39 passes potato at time = 15.043843
+3: thread  40 passes potato at time = 15.073477
+3: thread  41 passes potato at time = 15.080989
+3: thread  42 passes potato at time = 15.138797
+3: thread  43 passes potato at time = 15.173883
+3: thread  44 passes potato at time = 15.196397
+3: thread  45 passes potato at time = 15.269822
+3: thread  46 passes potato at time = 15.328644
+3: thread  47 passes potato at time = 15.376714
+3: thread  48 passes potato at time = 15.408152
+3: thread  49 passes potato at time = 15.424990
+3: thread  50 passes potato at time = 15.427023
+3: thread  51 passes potato at time = 15.507549
+3: thread  52 passes potato at time = 15.572047
+3: thread  53 passes potato at time = 15.620103
+3: thread  54 passes potato at time = 15.665948
+3: thread  55 passes potato at time = 15.689883
+3: thread  56 passes potato at time = 15.713829
+3: thread  57 passes potato at time = 15.721346
+3: thread  58 passes potato at time = 15.819332
+3: thread  59 passes potato at time = 15.909593
+3: thread  60 passes potato at time = 15.917519
+3: thread  61 passes potato at time = 16.018131
+3: thread  62 passes potato at time = 16.127317
+3: thread  63 passes potato at time = 16.206791
+3: thread  64 passes potato at time = 16.284481
+3: thread  65 passes potato at time = 16.325233
+3: thread  66 passes potato at time = 16.747580
+3: thread  67 passes potato at time = 16.798899
+3: thread  68 passes potato at time = 16.837635
+3: thread  69 passes potato at time = 16.859943
+3: thread  70 passes potato at time = 16.874762
+3: thread  71 passes potato at time = 16.884090
+3: thread  72 passes potato at time = 17.010281
+3: thread  73 passes potato at time = 17.136093
+3: thread  74 passes potato at time = 17.257765
+3: thread  75 passes potato at time = 17.368498
+3: thread  76 passes potato at time = 17.478840
+3: thread  77 passes potato at time = 17.583822
+3: thread  78 passes potato at time = 17.689392
+3: thread  79 passes potato at time = 17.790798
+3: thread  80 passes potato at time = 17.890381
+3: thread  81 passes potato at time = 17.983892
+3: thread  82 passes potato at time = 18.087799
+3: thread  83 passes potato at time = 18.167114
+3: thread  84 passes potato at time = 18.247028
+3: thread  85 passes potato at time = 18.322475
+3: thread  86 passes potato at time = 18.396095
+3: thread  87 passes potato at time = 18.484941
+3: thread  88 passes potato at time = 18.549635
+3: thread  89 passes potato at time = 18.606621
+3: thread  90 passes potato at time = 18.702366
+3: thread  91 passes potato at time = 18.766869
+3: thread  92 passes potato at time = 18.833191
+3: thread  93 passes potato at time = 18.993420
+3: thread  94 passes potato at time = 19.130947
+3: thread  95 passes potato at time = 19.408974
+3: thread  96 passes potato at time = 19.433113
+3: thread  97 passes potato at time = 19.714577
+3: thread  98 passes potato at time = 19.819639
+3: thread  99 passes potato at time = 19.890200
+3: thread 100 passes potato at time = 19.921434
+3: thread 101 passes potato at time = 19.952869
+3: thread 102 passes potato at time = 19.973343
+3: thread 103 passes potato at time = 19.992231
+3: thread 104 passes potato at time = 20.015579
+3: thread 105 passes potato at time = 20.023096
+3: thread 106 passes potato at time = 20.034262
+3: thread 107 passes potato at time = 20.042505
+3: thread 108 passes potato at time = 20.046528
+3: thread 109 passes potato at time = 20.048555
+3: thread 110 passes potato at time = 20.235153
+3: thread 111 passes potato at time = 20.237183
+3: thread 112 passes potato at time = 20.427238
+3: thread 113 passes potato at time = 20.624985
+3: thread 114 passes potato at time = 20.823870
+3: thread 115 passes potato at time = 21.009417
+3: thread 116 passes potato at time = 21.174541
+3: thread 117 passes potato at time = 21.377071
+3: thread 118 passes potato at time = 21.570679
+3: thread 119 passes potato at time = 21.760258
+3: thread 120 passes potato at time = 21.981539
+3: thread 121 passes potato at time = 22.159883
+3: thread 122 passes potato at time = 22.182209
+3: thread 123 passes potato at time = 22.261932
+3: thread 124 passes potato at time = 22.269650
+3: thread 125 passes potato at time = 22.322994
+3: thread 126 passes potato at time = 22.379822
+3: thread 127 passes potato at time = 22.576504
+4: thread   0 passes potato at time = 22.578547
+4: thread   1 passes potato at time = 22.578749
+4: thread   2 passes potato at time = 22.578951
+4: thread   3 passes potato at time = 22.579151
+4: thread   4 passes potato at time = 22.579353
+4: thread   5 passes potato at time = 22.579556
+4: thread   6 passes potato at time = 22.581388
+4: thread   7 passes potato at time = 22.583422
+4: thread   8 passes potato at time = 22.585453
+4: thread   9 passes potato at time = 22.592974
+4: thread  10 passes potato at time = 22.600485
+4: thread  11 passes potato at time = 22.608200
+4: thread  12 passes potato at time = 22.608212
+4: thread  13 passes potato at time = 22.617537
+4: thread  14 passes potato at time = 22.630730
+4: thread  15 passes potato at time = 22.632765
+4: thread  16 passes potato at time = 22.645954
+4: thread  17 passes potato at time = 22.657108
+4: thread  18 passes potato at time = 22.662790
+4: thread  19 passes potato at time = 22.670303
+4: thread  20 passes potato at time = 22.697891
+4: thread  21 passes potato at time = 22.701752
+4: thread  22 passes potato at time = 22.705614
+4: thread  23 passes potato at time = 22.733194
+4: thread  24 passes potato at time = 22.753691
+4: thread  25 passes potato at time = 22.753702
+4: thread  26 passes potato at time = 22.787550
+4: thread  27 passes potato at time = 22.802786
+4: thread  28 passes potato at time = 22.823479
+4: thread  29 passes potato at time = 22.866106
+4: thread  30 passes potato at time = 22.873819
+4: thread  31 passes potato at time = 22.890463
+4: thread  32 passes potato at time = 22.905693
+4: thread  33 passes potato at time = 22.950373
+4: thread  34 passes potato at time = 22.970867
+4: thread  35 passes potato at time = 23.558804
+4: thread  36 passes potato at time = 23.580923
+4: thread  37 passes potato at time = 23.592484
+4: thread  38 passes potato at time = 23.614803
+4: thread  39 passes potato at time = 23.660660
+4: thread  40 passes potato at time = 23.670193
+4: thread  41 passes potato at time = 23.710772
+4: thread  42 passes potato at time = 23.720116
+4: thread  43 passes potato at time = 23.764135
+4: thread  44 passes potato at time = 23.784431
+4: thread  45 passes potato at time = 23.845112
+4: thread  46 passes potato at time = 23.880436
+4: thread  47 passes potato at time = 23.893429
+4: thread  48 passes potato at time = 23.961607
+4: thread  49 passes potato at time = 24.090528
+4: thread  50 passes potato at time = 24.116495
+4: thread  51 passes potato at time = 24.125828
+4: thread  52 passes potato at time = 24.197834
+4: thread  53 passes potato at time = 24.244062
+4: thread  54 passes potato at time = 24.279364
+4: thread  55 passes potato at time = 24.285051
+4: thread  56 passes potato at time = 24.287090
+4: thread  57 passes potato at time = 24.366791
+4: thread  58 passes potato at time = 24.429861
+4: thread  59 passes potato at time = 24.479963
+4: thread  60 passes potato at time = 24.550755
+4: thread  61 passes potato at time = 24.589502
+4: thread  62 passes potato at time = 24.693140
+4: thread  63 passes potato at time = 24.783014
+4: thread  64 passes potato at time = 24.808212
+4: thread  65 passes potato at time = 24.833984
+4: thread  66 passes potato at time = 25.014103
+4: thread  67 passes potato at time = 25.055763
+4: thread  68 passes potato at time = 25.135864
+4: thread  69 passes potato at time = 25.167488
+4: thread  70 passes potato at time = 25.188164
+4: thread  71 passes potato at time = 25.199728
+4: thread  72 passes potato at time = 25.320795
+4: thread  73 passes potato at time = 25.438990
+4: thread  74 passes potato at time = 25.551956
+4: thread  75 passes potato at time = 25.649134
+4: thread  76 passes potato at time = 25.744591
+4: thread  77 passes potato at time = 25.831179
+4: thread  78 passes potato at time = 25.908833
+4: thread  79 passes potato at time = 25.986105
+4: thread  80 passes potato at time = 26.053976
+4: thread  81 passes potato at time = 26.115818
+4: thread  82 passes potato at time = 26.184141
+4: thread  83 passes potato at time = 26.221270
+4: thread  84 passes potato at time = 26.247419
+4: thread  85 passes potato at time = 26.282495
+4: thread  86 passes potato at time = 26.293859
+4: thread  87 passes potato at time = 26.330778
+4: thread  88 passes potato at time = 26.336470
+4: thread  89 passes potato at time = 26.482042
+4: thread  90 passes potato at time = 26.517139
+4: thread  91 passes potato at time = 26.541265
+4: thread  92 passes potato at time = 26.682993
+4: thread  93 passes potato at time = 26.701445
+4: thread  94 passes potato at time = 26.736530
+4: thread  95 passes potato at time = 26.893068
+4: thread  96 passes potato at time = 26.970510
+4: thread  97 passes potato at time = 27.424337
+4: thread  98 passes potato at time = 27.448481
+4: thread  99 passes potato at time = 27.454157
+4: thread 100 passes potato at time = 27.564457
+4: thread 101 passes potato at time = 27.677238
+4: thread 102 passes potato at time = 27.775370
+4: thread 103 passes potato at time = 27.873569
+4: thread 104 passes potato at time = 27.980837
+4: thread 105 passes potato at time = 28.069569
+4: thread 106 passes potato at time = 28.342899
+4: thread 107 passes potato at time = 28.431087
+4: thread 108 passes potato at time = 28.515827
+4: thread 109 passes potato at time = 28.602415
+4: thread 110 passes potato at time = 28.673973
+4: thread 111 passes potato at time = 28.754854
+4: thread 112 passes potato at time = 28.834738
+4: thread 113 passes potato at time = 28.914598
+4: thread 114 passes potato at time = 28.977455
+4: thread 115 passes potato at time = 29.029367
+4: thread 116 passes potato at time = 29.060444
+4: thread 117 passes potato at time = 29.125589
+4: thread 118 passes potato at time = 29.181150
+4: thread 119 passes potato at time = 29.237923
+4: thread 120 passes potato at time = 29.291052
+4: thread 121 passes potato at time = 29.326136
+4: thread 122 passes potato at time = 29.430958
+4: thread 123 passes potato at time = 29.594969
+4: thread 124 passes potato at time = 29.789240
+4: thread 125 passes potato at time = 29.829823
+4: thread 126 passes potato at time = 29.899588
+4: thread 127 passes potato at time = 29.973005
+5: thread   0 passes potato at time = 29.973026
+5: thread   1 passes potato at time = 29.973228
+5: thread   2 passes potato at time = 29.973429
+5: thread   3 passes potato at time = 29.973631
+5: thread   4 passes potato at time = 29.973833
+5: thread   5 passes potato at time = 29.974033
+5: thread   6 passes potato at time = 29.974045
+5: thread   7 passes potato at time = 29.974052
+5: thread   8 passes potato at time = 29.974064
+5: thread   9 passes potato at time = 29.977915
+5: thread  10 passes potato at time = 29.985422
+5: thread  11 passes potato at time = 29.993132
+5: thread  12 passes potato at time = 29.997438
+5: thread  13 passes potato at time = 29.997459
+5: thread  14 passes potato at time = 29.997471
+5: thread  15 passes potato at time = 30.003332
+5: thread  16 passes potato at time = 30.020584
+5: thread  17 passes potato at time = 30.020596
+5: thread  18 passes potato at time = 30.022623
+5: thread  19 passes potato at time = 30.057350
+5: thread  20 passes potato at time = 30.074436
+5: thread  21 passes potato at time = 30.100611
+5: thread  22 passes potato at time = 30.104471
+5: thread  23 passes potato at time = 30.121323
+5: thread  24 passes potato at time = 30.129030
+5: thread  25 passes potato at time = 30.142031
+5: thread  26 passes potato at time = 30.162325
+5: thread  27 passes potato at time = 30.173491
+5: thread  28 passes potato at time = 30.201305
+5: thread  29 passes potato at time = 30.201319
+5: thread  30 passes potato at time = 30.212669
+5: thread  31 passes potato at time = 30.227686
+5: thread  32 passes potato at time = 30.275368
+5: thread  33 passes potato at time = 30.292027
+5: thread  34 passes potato at time = 30.345770
+5: thread  35 passes potato at time = 30.521807
+5: thread  36 passes potato at time = 30.567854
+5: thread  37 passes potato at time = 30.617352
+5: thread  38 passes potato at time = 30.663403
+5: thread  39 passes potato at time = 30.722225
+5: thread  40 passes potato at time = 30.733393
+5: thread  41 passes potato at time = 30.764635
+5: thread  42 passes potato at time = 30.824076
+5: thread  43 passes potato at time = 30.838900
+5: thread  44 passes potato at time = 30.892242
+5: thread  45 passes potato at time = 30.903614
+5: thread  46 passes potato at time = 30.956156
+5: thread  47 passes potato at time = 30.978867
+5: thread  48 passes potato at time = 31.049500
+5: thread  49 passes potato at time = 31.089705
+5: thread  50 passes potato at time = 31.099241
+5: thread  51 passes potato at time = 31.175104
+5: thread  52 passes potato at time = 31.225203
+5: thread  53 passes potato at time = 31.231277
+5: thread  54 passes potato at time = 31.317677
+5: thread  55 passes potato at time = 31.463095
+5: thread  56 passes potato at time = 31.508940
+5: thread  57 passes potato at time = 31.540188
+5: thread  58 passes potato at time = 31.637133
+5: thread  59 passes potato at time = 31.719883
+5: thread  60 passes potato at time = 31.732876
+5: thread  61 passes potato at time = 31.782370
+5: thread  62 passes potato at time = 31.832073
+5: thread  63 passes potato at time = 31.834120
+5: thread  64 passes potato at time = 31.858475
+5: thread  65 passes potato at time = 31.917307
+5: thread  66 passes potato at time = 32.061417
+5: thread  67 passes potato at time = 32.107891
+5: thread  68 passes potato at time = 32.122917
+5: thread  69 passes potato at time = 32.262856
+5: thread  70 passes potato at time = 32.270569
+5: thread  71 passes potato at time = 32.388401
+5: thread  72 passes potato at time = 32.491627
+5: thread  73 passes potato at time = 32.591244
+5: thread  74 passes potato at time = 32.674763
+5: thread  75 passes potato at time = 32.746361
+5: thread  76 passes potato at time = 32.805183
+5: thread  77 passes potato at time = 32.857292
+5: thread  78 passes potato at time = 32.894604
+5: thread  79 passes potato at time = 32.926044
+5: thread  80 passes potato at time = 32.943501
+5: thread  81 passes potato at time = 32.953030
+5: thread  82 passes potato at time = 32.971699
+5: thread  83 passes potato at time = 33.102474
+5: thread  84 passes potato at time = 33.210358
+5: thread  85 passes potato at time = 33.335312
+5: thread  86 passes potato at time = 33.436943
+5: thread  87 passes potato at time = 33.563740
+5: thread  88 passes potato at time = 33.658485
+5: thread  89 passes potato at time = 33.728649
+5: thread  90 passes potato at time = 34.013680
+5: thread  91 passes potato at time = 34.143761
+5: thread  92 passes potato at time = 34.206249
+5: thread  93 passes potato at time = 34.210125
+5: thread  94 passes potato at time = 34.351490
+5: thread  95 passes potato at time = 34.371780
+5: thread  96 passes potato at time = 34.523277
+5: thread  97 passes potato at time = 36.052299
+5: thread  98 passes potato at time = 36.231262
+5: thread  99 passes potato at time = 36.246090
+5: thread 100 passes potato at time = 36.273876
+5: thread 101 passes potato at time = 36.298016
+5: thread 102 passes potato at time = 36.301872
+5: thread 103 passes potato at time = 36.307564
+5: thread 104 passes potato at time = 36.315083
+5: thread 105 passes potato at time = 36.479012
+5: thread 106 passes potato at time = 36.648785
+5: thread 107 passes potato at time = 36.819920
+5: thread 108 passes potato at time = 36.988239
+5: thread 109 passes potato at time = 37.158905
+5: thread 110 passes potato at time = 37.312222
+5: thread 111 passes potato at time = 37.479321
+5: thread 112 passes potato at time = 37.637932
+5: thread 113 passes potato at time = 37.807510
+5: thread 114 passes potato at time = 37.946220
+5: thread 115 passes potato at time = 38.087898
+5: thread 116 passes potato at time = 38.184662
+5: thread 117 passes potato at time = 38.345070
+5: thread 118 passes potato at time = 38.476257
+5: thread 119 passes potato at time = 38.610111
+5: thread 120 passes potato at time = 38.746414
+5: thread 121 passes potato at time = 38.871780
+5: thread 122 passes potato at time = 38.883137
+5: thread 123 passes potato at time = 38.934875
+5: thread 124 passes potato at time = 39.076900
+5: thread 125 passes potato at time = 39.180775
+5: thread 126 passes potato at time = 39.271637
+5: thread 127 passes potato at time = 39.293755
+6: thread   0 passes potato at time = 39.295990
+6: thread   1 passes potato at time = 39.296192
+6: thread   2 passes potato at time = 39.296394
+6: thread   3 passes potato at time = 39.296597
+6: thread   4 passes potato at time = 39.296795
+6: thread   5 passes potato at time = 39.296997
+6: thread   6 passes potato at time = 39.297009
+6: thread   7 passes potato at time = 39.297016
+6: thread   8 passes potato at time = 39.300877
+6: thread   9 passes potato at time = 39.302914
+6: thread  10 passes potato at time = 39.308804
+6: thread  11 passes potato at time = 39.314686
+6: thread  12 passes potato at time = 39.316723
+6: thread  13 passes potato at time = 39.331528
+6: thread  14 passes potato at time = 39.331539
+6: thread  15 passes potato at time = 39.333565
+6: thread  16 passes potato at time = 39.353851
+6: thread  17 passes potato at time = 39.361366
+6: thread  18 passes potato at time = 39.381653
+6: thread  19 passes potato at time = 39.389164
+6: thread  20 passes potato at time = 39.405804
+6: thread  21 passes potato at time = 39.418991
+6: thread  22 passes potato at time = 39.435833
+6: thread  23 passes potato at time = 39.443542
+6: thread  24 passes potato at time = 39.460167
+6: thread  25 passes potato at time = 39.473351
+6: thread  26 passes potato at time = 39.491817
+6: thread  27 passes potato at time = 39.502979
+6: thread  28 passes potato at time = 39.539696
+6: thread  29 passes potato at time = 39.566441
+6: thread  30 passes potato at time = 39.573948
+6: thread  31 passes potato at time = 39.577816
+6: thread  32 passes potato at time = 39.598118
+6: thread  33 passes potato at time = 39.633430
+6: thread  34 passes potato at time = 39.673992
+6: thread  35 passes potato at time = 39.864388
+6: thread  36 passes potato at time = 39.895824
+6: thread  37 passes potato at time = 39.905167
+6: thread  38 passes potato at time = 39.918148
+6: thread  39 passes potato at time = 39.925659
+6: thread  40 passes potato at time = 39.933388
+6: thread  41 passes potato at time = 39.946568
+6: thread  42 passes potato at time = 39.972523
+6: thread  43 passes potato at time = 40.013157
+6: thread  44 passes potato at time = 40.081757
+6: thread  45 passes potato at time = 40.094975
+6: thread  46 passes potato at time = 40.137379
+6: thread  47 passes potato at time = 40.139412
+6: thread  48 passes potato at time = 40.177944
+6: thread  49 passes potato at time = 40.257236
+6: thread  50 passes potato at time = 40.303684
+6: thread  51 passes potato at time = 40.322151
+6: thread  52 passes potato at time = 40.384613
+6: thread  53 passes potato at time = 40.399433
+6: thread  54 passes potato at time = 40.487438
+6: thread  55 passes potato at time = 40.533287
+6: thread  56 passes potato at time = 40.570198
+6: thread  57 passes potato at time = 40.581371
+6: thread  58 passes potato at time = 40.649517
+6: thread  59 passes potato at time = 40.701431
+6: thread  60 passes potato at time = 40.784355
+6: thread  61 passes potato at time = 40.790039
+6: thread  62 passes potato at time = 40.851101
+6: thread  63 passes potato at time = 40.856796
+6: thread  64 passes potato at time = 40.862499
+6: thread  65 passes potato at time = 40.917877
+6: thread  66 passes potato at time = 41.310303
+6: thread  67 passes potato at time = 41.424446
+6: thread  68 passes potato at time = 41.490753
+6: thread  69 passes potato at time = 41.534775
+6: thread  70 passes potato at time = 41.562958
+6: thread  71 passes potato at time = 41.574120
+6: thread  72 passes potato at time = 41.688740
+6: thread  73 passes potato at time = 41.796211
+6: thread  74 passes potato at time = 41.884670
+6: thread  75 passes potato at time = 41.954449
+6: thread  76 passes potato at time = 42.013260
+6: thread  77 passes potato at time = 42.056271
+6: thread  78 passes potato at time = 42.085964
+6: thread  79 passes potato at time = 42.102798
+6: thread  80 passes potato at time = 42.241322
+6: thread  81 passes potato at time = 42.372517
+6: thread  82 passes potato at time = 42.378399
+6: thread  83 passes potato at time = 42.474331
+6: thread  84 passes potato at time = 42.557476
+6: thread  85 passes potato at time = 42.652378
+6: thread  86 passes potato at time = 42.715260
+6: thread  87 passes potato at time = 42.800022
+6: thread  88 passes potato at time = 42.850529
+6: thread  89 passes potato at time = 42.874474
+6: thread  90 passes potato at time = 42.952572
+6: thread  91 passes potato at time = 43.034122
+6: thread  92 passes potato at time = 43.040009
+6: thread  93 passes potato at time = 43.104572
+6: thread  94 passes potato at time = 43.175129
+6: thread  95 passes potato at time = 43.261925
+6: thread  96 passes potato at time = 43.366947
+6: thread  97 passes potato at time = 44.424934
+6: thread  98 passes potato at time = 44.590405
+6: thread  99 passes potato at time = 44.694042
+6: thread 100 passes potato at time = 44.810024
+6: thread 101 passes potato at time = 44.922405
+6: thread 102 passes potato at time = 45.015469
+6: thread 103 passes potato at time = 45.117565
+6: thread 104 passes potato at time = 45.210056
+6: thread 105 passes potato at time = 45.278214
+6: thread 106 passes potato at time = 45.342491
+6: thread 107 passes potato at time = 45.409023
+6: thread 108 passes potato at time = 45.469460
+6: thread 109 passes potato at time = 45.524822
+6: thread 110 passes potato at time = 45.565395
+6: thread 111 passes potato at time = 45.611633
+6: thread 112 passes potato at time = 45.652390
+6: thread 113 passes potato at time = 45.698223
+6: thread 114 passes potato at time = 45.703907
+6: thread 115 passes potato at time = 45.705940
+6: thread 116 passes potato at time = 45.868492
+6: thread 117 passes potato at time = 45.890991
+6: thread 118 passes potato at time = 46.098171
+6: thread 119 passes potato at time = 46.301594
+6: thread 120 passes potato at time = 46.498123
+6: thread 121 passes potato at time = 46.701534
+6: thread 122 passes potato at time = 46.791790
+6: thread 123 passes potato at time = 46.956486
+6: thread 124 passes potato at time = 47.052418
+6: thread 125 passes potato at time = 47.184727
+6: thread 126 passes potato at time = 47.295288
+6: thread 127 passes potato at time = 47.446388
+7: thread   0 passes potato at time = 47.448437
+7: thread   1 passes potato at time = 47.448639
+7: thread   2 passes potato at time = 47.448837
+7: thread   3 passes potato at time = 47.449039
+7: thread   4 passes potato at time = 47.449242
+7: thread   5 passes potato at time = 47.449444
+7: thread   6 passes potato at time = 47.451279
+7: thread   7 passes potato at time = 47.453316
+7: thread   8 passes potato at time = 47.455353
+7: thread   9 passes potato at time = 47.457386
+7: thread  10 passes potato at time = 47.459419
+7: thread  11 passes potato at time = 47.461456
+7: thread  12 passes potato at time = 47.470798
+7: thread  13 passes potato at time = 47.470810
+7: thread  14 passes potato at time = 47.485607
+7: thread  15 passes potato at time = 47.487637
+7: thread  16 passes potato at time = 47.493324
+7: thread  17 passes potato at time = 47.504478
+7: thread  18 passes potato at time = 47.528416
+7: thread  19 passes potato at time = 47.534103
+7: thread  20 passes potato at time = 47.560268
+7: thread  21 passes potato at time = 47.580544
+7: thread  22 passes potato at time = 47.608349
+7: thread  23 passes potato at time = 47.614037
+7: thread  24 passes potato at time = 47.616074
+7: thread  25 passes potato at time = 47.649338
+7: thread  26 passes potato at time = 47.687859
+7: thread  27 passes potato at time = 47.689892
+7: thread  28 passes potato at time = 47.730450
+7: thread  29 passes potato at time = 47.771229
+7: thread  30 passes potato at time = 47.786247
+7: thread  31 passes potato at time = 47.817722
+7: thread  32 passes potato at time = 47.842472
+7: thread  33 passes potato at time = 47.862755
+7: thread  34 passes potato at time = 47.866631
+7: thread  35 passes potato at time = 48.120052
+7: thread  36 passes potato at time = 48.122108
+7: thread  37 passes potato at time = 48.166512
+7: thread  38 passes potato at time = 48.177670
+7: thread  39 passes potato at time = 48.232647
+7: thread  40 passes potato at time = 48.276657
+7: thread  41 passes potato at time = 48.315392
+7: thread  42 passes potato at time = 48.355953
+7: thread  43 passes potato at time = 48.398560
+7: thread  44 passes potato at time = 48.457977
+7: thread  45 passes potato at time = 48.527756
+7: thread  46 passes potato at time = 48.542564
+7: thread  47 passes potato at time = 48.584953
+7: thread  48 passes potato at time = 48.656570
+7: thread  49 passes potato at time = 48.761417
+7: thread  50 passes potato at time = 48.825912
+7: thread  51 passes potato at time = 48.864666
+7: thread  52 passes potato at time = 48.929363
+7: thread  53 passes potato at time = 48.935253
+7: thread  54 passes potato at time = 49.012741
+7: thread  55 passes potato at time = 49.040535
+7: thread  56 passes potato at time = 49.057369
+7: thread  57 passes potato at time = 49.133095
+7: thread  58 passes potato at time = 49.163113
+7: thread  59 passes potato at time = 49.172447
+7: thread  60 passes potato at time = 49.209389
+7: thread  61 passes potato at time = 49.284439
+7: thread  62 passes potato at time = 49.304737
+7: thread  63 passes potato at time = 49.362350
+7: thread  64 passes potato at time = 49.433140
+7: thread  65 passes potato at time = 49.497623
+7: thread  66 passes potato at time = 49.860046
+7: thread  67 passes potato at time = 50.028618
+7: thread  68 passes potato at time = 50.147724
+7: thread  69 passes potato at time = 50.206959
+7: thread  70 passes potato at time = 50.245888
+7: thread  71 passes potato at time = 50.264553
+7: thread  72 passes potato at time = 50.382790
+7: thread  73 passes potato at time = 50.491089
+7: thread  74 passes potato at time = 50.575836
+7: thread  75 passes potato at time = 50.642151
+7: thread  76 passes potato at time = 50.688370
+7: thread  77 passes potato at time = 50.712303
+7: thread  78 passes potato at time = 50.723465
+7: thread  79 passes potato at time = 50.855511
+7: thread  80 passes potato at time = 50.971889
+7: thread  81 passes potato at time = 51.075356
+7: thread  82 passes potato at time = 51.209824
+7: thread  83 passes potato at time = 51.278168
+7: thread  84 passes potato at time = 51.314888
+7: thread  85 passes potato at time = 51.357059
+7: thread  86 passes potato at time = 51.381821
+7: thread  87 passes potato at time = 51.423244
+7: thread  88 passes potato at time = 51.576107
+7: thread  89 passes potato at time = 51.716030
+7: thread  90 passes potato at time = 51.732670
+7: thread  91 passes potato at time = 51.777081
+7: thread  92 passes potato at time = 51.900562
+7: thread  93 passes potato at time = 51.970543
+7: thread  94 passes potato at time = 52.145702
+7: thread  95 passes potato at time = 52.162548
+7: thread  96 passes potato at time = 52.199257
+7: thread  97 passes potato at time = 52.637936
+7: thread  98 passes potato at time = 52.773605
+7: thread  99 passes potato at time = 52.792065
+7: thread 100 passes potato at time = 52.814369
+7: thread 101 passes potato at time = 52.831009
+7: thread 102 passes potato at time = 53.007874
+7: thread 103 passes potato at time = 53.189472
+7: thread 104 passes potato at time = 53.362854
+7: thread 105 passes potato at time = 53.513908
+7: thread 106 passes potato at time = 53.657085
+7: thread 107 passes potato at time = 53.806175
+7: thread 108 passes potato at time = 53.945728
+7: thread 109 passes potato at time = 54.084961
+7: thread 110 passes potato at time = 54.207657
+7: thread 111 passes potato at time = 54.334805
+7: thread 112 passes potato at time = 54.469650
+7: thread 113 passes potato at time = 54.601036
+7: thread 114 passes potato at time = 54.683979
+7: thread 115 passes potato at time = 54.766708
+7: thread 116 passes potato at time = 54.803410
+7: thread 117 passes potato at time = 54.907658
+7: thread 118 passes potato at time = 54.972370
+7: thread 119 passes potato at time = 55.043976
+7: thread 120 passes potato at time = 55.121700
+7: thread 121 passes potato at time = 55.171402
+7: thread 122 passes potato at time = 55.370739
+7: thread 123 passes potato at time = 55.411526
+7: thread 124 passes potato at time = 55.482079
+7: thread 125 passes potato at time = 55.625065
+7: thread 126 passes potato at time = 55.745113
+7: thread 127 passes potato at time = 55.817123
+8: thread   0 passes potato at time = 55.819160
+8: thread   1 passes potato at time = 55.819363
+8: thread   2 passes potato at time = 55.819565
+8: thread   3 passes potato at time = 55.819767
+8: thread   4 passes potato at time = 55.819969
+8: thread   5 passes potato at time = 55.820171
+8: thread   6 passes potato at time = 55.820179
+8: thread   7 passes potato at time = 55.822212
+8: thread   8 passes potato at time = 55.827896
+8: thread   9 passes potato at time = 55.829933
+8: thread  10 passes potato at time = 55.839470
+8: thread  11 passes potato at time = 55.850636
+8: thread  12 passes potato at time = 55.858143
+8: thread  13 passes potato at time = 55.872948
+8: thread  14 passes potato at time = 55.876812
+8: thread  15 passes potato at time = 55.882694
+8: thread  16 passes potato at time = 55.895676
+8: thread  17 passes potato at time = 55.908665
+8: thread  18 passes potato at time = 55.930786
+8: thread  19 passes potato at time = 55.953285
+8: thread  20 passes potato at time = 55.977425
+8: thread  21 passes potato at time = 55.992249
+8: thread  22 passes potato at time = 56.016270
+8: thread  23 passes potato at time = 56.027386
+8: thread  24 passes potato at time = 56.027393
+8: thread  25 passes potato at time = 56.058823
+8: thread  26 passes potato at time = 56.091518
+8: thread  27 passes potato at time = 56.095581
+8: thread  28 passes potato at time = 56.138794
+8: thread  29 passes potato at time = 56.170246
+8: thread  30 passes potato at time = 56.183430
+8: thread  31 passes potato at time = 56.183437
+8: thread  32 passes potato at time = 56.189125
+8: thread  33 passes potato at time = 56.189137
+8: thread  34 passes potato at time = 56.247120
+8: thread  35 passes potato at time = 56.499222
+8: thread  36 passes potato at time = 56.546886
+8: thread  37 passes potato at time = 56.598595
+8: thread  38 passes potato at time = 56.613411
+8: thread  39 passes potato at time = 56.658253
+8: thread  40 passes potato at time = 56.677116
+8: thread  41 passes potato at time = 56.744015
+8: thread  42 passes potato at time = 56.801006
+8: thread  43 passes potato at time = 56.849697
+8: thread  44 passes potato at time = 56.903046
+8: thread  45 passes potato at time = 56.956799
+8: thread  46 passes potato at time = 57.021107
+8: thread  47 passes potato at time = 57.026993
+8: thread  48 passes potato at time = 57.051540
+8: thread  49 passes potato at time = 57.101501
+8: thread  50 passes potato at time = 57.179398
+8: thread  51 passes potato at time = 57.237228
+8: thread  52 passes potato at time = 57.303146
+8: thread  53 passes potato at time = 57.384480
+8: thread  54 passes potato at time = 57.448982
+8: thread  55 passes potato at time = 57.458317
+8: thread  56 passes potato at time = 57.539215
+8: thread  57 passes potato at time = 57.579781
+8: thread  58 passes potato at time = 57.674690
+8: thread  59 passes potato at time = 57.742428
+8: thread  60 passes potato at time = 57.751984
+8: thread  61 passes potato at time = 57.759495
+8: thread  62 passes potato at time = 57.776340
+8: thread  63 passes potato at time = 57.852936
+8: thread  64 passes potato at time = 57.864120
+8: thread  65 passes potato at time = 57.935516
+8: thread  66 passes potato at time = 58.025787
+8: thread  67 passes potato at time = 58.064529
+8: thread  68 passes potato at time = 58.093388
+8: thread  69 passes potato at time = 58.156879
+8: thread  70 passes potato at time = 58.195621
+8: thread  71 passes potato at time = 58.210632
+8: thread  72 passes potato at time = 58.321346
+8: thread  73 passes potato at time = 58.417175
+8: thread  74 passes potato at time = 58.491508
+8: thread  75 passes potato at time = 58.539371
+8: thread  76 passes potato at time = 58.559658
+8: thread  77 passes potato at time = 58.563526
+8: thread  78 passes potato at time = 58.675484
+8: thread  79 passes potato at time = 58.774666
+8: thread  80 passes potato at time = 58.855961
+8: thread  81 passes potato at time = 58.924515
+8: thread  82 passes potato at time = 59.018417
+8: thread  83 passes potato at time = 59.036880
+8: thread  84 passes potato at time = 59.175491
+8: thread  85 passes potato at time = 59.311768
+8: thread  86 passes potato at time = 59.439949
+8: thread  87 passes potato at time = 59.574608
+8: thread  88 passes potato at time = 59.830536
+8: thread  89 passes potato at time = 59.912079
+cleaning hot potato
+preemptive test done
+starting preemptive test
+this test will take 60 seconds
+interrupt_handler: context at 0x7ffda27c82c0, time diff = 0 us
+interrupt_handler: context at 0x7ffda27c8280, time diff = 206 us
+interrupt_handler: context at 0x7ffda27c8280, time diff = 204 us
+interrupt_handler: context at 0x7ffda27c8280, time diff = 203 us
+interrupt_handler: context at 0x7ffda27c8280, time diff = 203 us
+0: thread   0 made it to do_potato
+1: thread   0 passes potato at time =  0.001224
+0: thread   1 made it to do_potato
+1: thread   1 passes potato at time =  0.001424
+0: thread   2 made it to do_potato
+1: thread   2 passes potato at time =  0.001627
+0: thread   3 made it to do_potato
+1: thread   3 passes potato at time =  0.001828
+0: thread   4 made it to do_potato
+1: thread   4 passes potato at time =  0.002029
+0: thread   5 made it to do_potato
+1: thread   5 passes potato at time =  0.002230
+0: thread   6 made it to do_potato
+1: thread   6 passes potato at time =  0.002242
+0: thread   7 made it to do_potato
+1: thread   7 passes potato at time =  0.002253
+0: thread   8 made it to do_potato
+1: thread   8 passes potato at time =  0.002264
+0: thread   9 made it to do_potato
+1: thread   9 passes potato at time =  0.002275
+0: thread  10 made it to do_potato
+1: thread  10 passes potato at time =  0.002287
+0: thread  11 made it to do_potato
+1: thread  11 passes potato at time =  0.002298
+0: thread  12 made it to do_potato
+1: thread  12 passes potato at time =  0.002309
+0: thread  13 made it to do_potato
+1: thread  13 passes potato at time =  0.002321
+0: thread  14 made it to do_potato
+1: thread  14 passes potato at time =  0.002334
+0: thread  15 made it to do_potato
+1: thread  15 passes potato at time =  0.002345
+0: thread  16 made it to do_potato
+1: thread  16 passes potato at time =  0.002367
+0: thread  17 made it to do_potato
+1: thread  17 passes potato at time =  0.002380
+0: thread  18 made it to do_potato
+1: thread  18 passes potato at time =  0.002393
+0: thread  19 made it to do_potato
+1: thread  19 passes potato at time =  0.002405
+0: thread  20 made it to do_potato
+1: thread  20 passes potato at time =  0.002418
+0: thread  21 made it to do_potato
+1: thread  21 passes potato at time =  0.002434
+0: thread  22 made it to do_potato
+1: thread  22 passes potato at time =  0.002456
+0: thread  23 made it to do_potato
+1: thread  23 passes potato at time =  0.002467
+0: thread  24 made it to do_potato
+1: thread  24 passes potato at time =  0.002479
+0: thread  25 made it to do_potato
+1: thread  25 passes potato at time =  0.002492
+0: thread  26 made it to do_potato
+1: thread  26 passes potato at time =  0.002504
+0: thread  27 made it to do_potato
+1: thread  27 passes potato at time =  0.002515
+0: thread  28 made it to do_potato
+1: thread  28 passes potato at time =  0.002527
+0: thread  29 made it to do_potato
+1: thread  29 passes potato at time =  0.002540
+0: thread  30 made it to do_potato
+1: thread  30 passes potato at time =  0.002551
+0: thread  31 made it to do_potato
+1: thread  31 passes potato at time =  0.002563
+0: thread  32 made it to do_potato
+1: thread  32 passes potato at time =  0.002576
+0: thread  33 made it to do_potato
+1: thread  33 passes potato at time =  0.002598
+0: thread  34 made it to do_potato
+1: thread  34 passes potato at time =  0.002609
+0: thread  35 made it to do_potato
+1: thread  35 passes potato at time =  0.002622
+0: thread  36 made it to do_potato
+0: thread  37 made it to do_potato
+0: thread  38 made it to do_potato
+0: thread  39 made it to do_potato
+0: thread  40 made it to do_potato
+0: thread  41 made it to do_potato
+0: thread  42 made it to do_potato
+0: thread  43 made it to do_potato
+0: thread  44 made it to do_potato
+0: thread  45 made it to do_potato
+0: thread  46 made it to do_potato
+0: thread  47 made it to do_potato
+0: thread  48 made it to do_potato
+0: thread  49 made it to do_potato
+0: thread  50 made it to do_potato
+0: thread  51 made it to do_potato
+0: thread  52 made it to do_potato
+0: thread  53 made it to do_potato
+0: thread  54 made it to do_potato
+0: thread  55 made it to do_potato
+0: thread  56 made it to do_potato
+0: thread  57 made it to do_potato
+0: thread  58 made it to do_potato
+0: thread  59 made it to do_potato
+0: thread  60 made it to do_potato
+0: thread  61 made it to do_potato
+0: thread  62 made it to do_potato
+0: thread  63 made it to do_potato
+0: thread  65 made it to do_potato
+0: thread  66 made it to do_potato
+0: thread  67 made it to do_potato
+0: thread  68 made it to do_potato
+0: thread  69 made it to do_potato
+0: thread  70 made it to do_potato
+0: thread  71 made it to do_potato
+0: thread  72 made it to do_potato
+0: thread  73 made it to do_potato
+0: thread  74 made it to do_potato
+0: thread  75 made it to do_potato
+0: thread  76 made it to do_potato
+0: thread  77 made it to do_potato
+0: thread  78 made it to do_potato
+0: thread  79 made it to do_potato
+0: thread  80 made it to do_potato
+0: thread  81 made it to do_potato
+0: thread  82 made it to do_potato
+0: thread  84 made it to do_potato
+0: thread  85 made it to do_potato
+0: thread  86 made it to do_potato
+0: thread  87 made it to do_potato
+0: thread  88 made it to do_potato
+0: thread  89 made it to do_potato
+0: thread  90 made it to do_potato
+0: thread  91 made it to do_potato
+0: thread  92 made it to do_potato
+0: thread  93 made it to do_potato
+0: thread  94 made it to do_potato
+0: thread  95 made it to do_potato
+0: thread  96 made it to do_potato
+0: thread  97 made it to do_potato
+0: thread  98 made it to do_potato
+0: thread  99 made it to do_potato
+0: thread 100 made it to do_potato
+0: thread 101 made it to do_potato
+0: thread 102 made it to do_potato
+0: thread 103 made it to do_potato
+0: thread  64 made it to do_potato
+0: thread  83 made it to do_potato
+0: thread 104 made it to do_potato
+0: thread 105 made it to do_potato
+0: thread 106 made it to do_potato
+0: thread 107 made it to do_potato
+0: thread 108 made it to do_potato
+0: thread 109 made it to do_potato
+0: thread 110 made it to do_potato
+0: thread 111 made it to do_potato
+0: thread 113 made it to do_potato
+0: thread 114 made it to do_potato
+0: thread 115 made it to do_potato
+0: thread 116 made it to do_potato
+0: thread 117 made it to do_potato
+0: thread 118 made it to do_potato
+0: thread 119 made it to do_potato
+0: thread 120 made it to do_potato
+0: thread 121 made it to do_potato
+0: thread 122 made it to do_potato
+0: thread 123 made it to do_potato
+0: thread 124 made it to do_potato
+0: thread 125 made it to do_potato
+0: thread 126 made it to do_potato
+0: thread 127 made it to do_potato
+0: thread 112 made it to do_potato
+1: thread  36 passes potato at time =  0.062418
+1: thread  37 passes potato at time =  0.064454
+1: thread  38 passes potato at time =  0.066490
+1: thread  39 passes potato at time =  0.068524
+1: thread  40 passes potato at time =  0.070563
+1: thread  41 passes potato at time =  0.072598
+1: thread  42 passes potato at time =  0.074638
+1: thread  43 passes potato at time =  0.076674
+1: thread  44 passes potato at time =  0.078712
+1: thread  45 passes potato at time =  0.156588
+1: thread  46 passes potato at time =  0.160448
+1: thread  47 passes potato at time =  0.164300
+1: thread  48 passes potato at time =  0.168163
+1: thread  49 passes potato at time =  0.172020
+1: thread  50 passes potato at time =  0.175879
+1: thread  51 passes potato at time =  0.179734
+1: thread  52 passes potato at time =  0.183601
+1: thread  53 passes potato at time =  0.187462
+1: thread  54 passes potato at time =  0.191329
+1: thread  55 passes potato at time =  0.195188
+1: thread  56 passes potato at time =  0.200878
+1: thread  57 passes potato at time =  0.202905
+1: thread  58 passes potato at time =  0.206768
+1: thread  59 passes potato at time =  0.212459
+1: thread  60 passes potato at time =  0.214492
+1: thread  61 passes potato at time =  0.227692
+1: thread  62 passes potato at time =  0.252035
+1: thread  63 passes potato at time =  0.346720
+1: thread  64 passes potato at time =  0.352427
+1: thread  65 passes potato at time =  0.369068
+1: thread  66 passes potato at time =  0.840071
+1: thread  67 passes potato at time =  0.947331
+1: thread  68 passes potato at time =  0.956667
+1: thread  69 passes potato at time =  0.972316
+1: thread  70 passes potato at time =  0.988347
+1: thread  71 passes potato at time =  1.003357
+1: thread  72 passes potato at time =  1.018372
+1: thread  73 passes potato at time =  1.033795
+1: thread  74 passes potato at time =  1.048615
+1: thread  75 passes potato at time =  1.063621
+1: thread  76 passes potato at time =  1.078840
+1: thread  77 passes potato at time =  1.228920
+1: thread  78 passes potato at time =  1.245763
+1: thread  79 passes potato at time =  1.262811
+1: thread  80 passes potato at time =  1.279646
+1: thread  81 passes potato at time =  1.298319
+1: thread  82 passes potato at time =  1.315569
+1: thread  83 passes potato at time =  1.332403
+1: thread  84 passes potato at time =  1.347415
+1: thread  85 passes potato at time =  1.365882
+1: thread  86 passes potato at time =  1.382525
+1: thread  87 passes potato at time =  1.397729
+1: thread  88 passes potato at time =  1.414561
+1: thread  89 passes potato at time =  1.431207
+1: thread  90 passes potato at time =  1.455150
+1: thread  91 passes potato at time =  1.468350
+1: thread  92 passes potato at time =  1.505467
+1: thread  93 passes potato at time =  1.561639
+1: thread  94 passes potato at time =  1.713330
+1: thread  95 passes potato at time =  1.726930
+1: thread  96 passes potato at time =  1.837847
+1: thread  97 passes potato at time =  1.921056
+1: thread  98 passes potato at time =  1.963839
+1: thread  99 passes potato at time =  2.130190
+1: thread 100 passes potato at time =  2.154520
+1: thread 101 passes potato at time =  2.175201
+1: thread 102 passes potato at time =  2.199551
+1: thread 103 passes potato at time =  2.219812
+1: thread 104 passes potato at time =  2.246189
+1: thread 105 passes potato at time =  2.266673
+1: thread 106 passes potato at time =  2.289005
+1: thread 107 passes potato at time =  2.311317
+1: thread 108 passes potato at time =  2.333832
+1: thread 109 passes potato at time =  2.358370
+1: thread 110 passes potato at time =  2.378655
+1: thread 111 passes potato at time =  2.402599
+1: thread 112 passes potato at time =  2.427135
+1: thread 113 passes potato at time =  2.449241
+1: thread 114 passes potato at time =  2.467905
+1: thread 115 passes potato at time =  2.492273
+1: thread 116 passes potato at time =  2.518224
+1: thread 117 passes potato at time =  2.744136
+1: thread 118 passes potato at time =  2.771735
+1: thread 119 passes potato at time =  2.793841
+1: thread 120 passes potato at time =  2.817972
+1: thread 121 passes potato at time =  2.850459
+1: thread 122 passes potato at time =  2.884534
+1: thread 123 passes potato at time =  2.941933
+1: thread 124 passes potato at time =  3.019768
+1: thread 125 passes potato at time =  3.238207
+1: thread 126 passes potato at time =  3.451803
+1: thread 127 passes potato at time =  3.490746
+2: thread   0 passes potato at time =  3.494811
+2: thread   1 passes potato at time =  3.495013
+2: thread   2 passes potato at time =  3.495214
+2: thread   3 passes potato at time =  3.495416
+2: thread   4 passes potato at time =  3.495618
+2: thread   5 passes potato at time =  3.495819
+2: thread   6 passes potato at time =  3.495829
+2: thread   7 passes potato at time =  3.499680
+2: thread   8 passes potato at time =  3.503542
+2: thread   9 passes potato at time =  3.503553
+2: thread  10 passes potato at time =  3.511058
+2: thread  11 passes potato at time =  3.522420
+2: thread  12 passes potato at time =  3.533577
+2: thread  13 passes potato at time =  3.539252
+2: thread  14 passes potato at time =  3.541291
+2: thread  15 passes potato at time =  3.546975
+2: thread  16 passes potato at time =  3.556313
+2: thread  17 passes potato at time =  3.561997
+2: thread  18 passes potato at time =  3.575173
+2: thread  19 passes potato at time =  3.579244
+2: thread  20 passes potato at time =  3.581270
+2: thread  21 passes potato at time =  3.581281
+2: thread  22 passes potato at time =  3.590618
+2: thread  23 passes potato at time =  3.612932
+2: thread  24 passes potato at time =  3.616795
+2: thread  25 passes potato at time =  3.640949
+2: thread  26 passes potato at time =  3.650279
+2: thread  27 passes potato at time =  3.687613
+2: thread  28 passes potato at time =  3.713989
+2: thread  29 passes potato at time =  3.734488
+2: thread  30 passes potato at time =  3.746073
+2: thread  31 passes potato at time =  3.761691
+2: thread  32 passes potato at time =  3.780559
+2: thread  33 passes potato at time =  3.815667
+2: thread  34 passes potato at time =  3.841433
+2: thread  35 passes potato at time =  3.975721
+2: thread  36 passes potato at time =  4.010626
+2: thread  37 passes potato at time =  4.062555
+2: thread  38 passes potato at time =  4.122184
+2: thread  39 passes potato at time =  4.177752
+2: thread  40 passes potato at time =  4.230087
+2: thread  41 passes potato at time =  4.278147
+2: thread  42 passes potato at time =  4.323576
+2: thread  43 passes potato at time =  4.364144
+2: thread  44 passes potato at time =  4.401054
+2: thread  45 passes potato at time =  4.434505
+2: thread  46 passes potato at time =  4.463928
+2: thread  47 passes potato at time =  4.490302
+2: thread  48 passes potato at time =  4.512429
+2: thread  49 passes potato at time =  4.531288
+2: thread  50 passes potato at time =  4.546294
+2: thread  51 passes potato at time =  4.559292
+2: thread  52 passes potato at time =  4.568835
+2: thread  53 passes potato at time =  4.570872
+2: thread  54 passes potato at time =  4.660535
+2: thread  55 passes potato at time =  4.752841
+2: thread  56 passes potato at time =  4.756702
+2: thread  57 passes potato at time =  4.844110
+2: thread  58 passes potato at time =  4.941254
+2: thread  59 passes potato at time =  5.034223
+2: thread  60 passes potato at time =  5.130569
+2: thread  61 passes potato at time =  5.149241
+2: thread  62 passes potato at time =  5.177042
+2: thread  63 passes potato at time =  5.223290
+2: thread  64 passes potato at time =  5.334704
+2: thread  65 passes potato at time =  5.366345
+2: thread  66 passes potato at time =  5.565539
+2: thread  67 passes potato at time =  5.626400
+2: thread  68 passes potato at time =  5.724139
+2: thread  69 passes potato at time =  5.813784
+2: thread  70 passes potato at time =  5.904686
+2: thread  71 passes potato at time =  5.995369
+2: thread  72 passes potato at time =  6.084238
+2: thread  73 passes potato at time =  6.172649
+2: thread  74 passes potato at time =  6.263102
+2: thread  75 passes potato at time =  6.349718
+2: thread  76 passes potato at time =  6.441777
+2: thread  77 passes potato at time =  6.526966
+2: thread  78 passes potato at time =  6.617803
+2: thread  79 passes potato at time =  6.705201
+2: thread  80 passes potato at time =  6.796101
+2: thread  81 passes potato at time =  6.886548
+2: thread  82 passes potato at time =  6.979676
+2: thread  83 passes potato at time =  7.073399
+2: thread  84 passes potato at time =  7.156161
+2: thread  85 passes potato at time =  7.242953
+2: thread  86 passes potato at time =  7.335247
+2: thread  87 passes potato at time =  7.423676
+2: thread  88 passes potato at time =  7.518002
+2: thread  89 passes potato at time =  7.597087
+2: thread  90 passes potato at time =  7.695045
+2: thread  91 passes potato at time =  7.797073
+2: thread  92 passes potato at time =  7.930746
+2: thread  93 passes potato at time =  7.967696
+2: thread  94 passes potato at time =  8.017279
+2: thread  95 passes potato at time =  8.085834
+2: thread  96 passes potato at time =  8.198200
+2: thread  97 passes potato at time =  8.204091
+2: thread  98 passes potato at time =  8.294960
+2: thread  99 passes potato at time =  8.309985
+2: thread 100 passes potato at time =  8.400846
+2: thread 101 passes potato at time =  8.485632
+2: thread 102 passes potato at time =  8.572245
+2: thread 103 passes potato at time =  8.656612
+2: thread 104 passes potato at time =  8.749107
+2: thread 105 passes potato at time =  8.834471
+2: thread 106 passes potato at time =  9.111339
+2: thread 107 passes potato at time =  9.197934
+2: thread 108 passes potato at time =  9.287754
+2: thread 109 passes potato at time =  9.380044
+2: thread 110 passes potato at time =  9.466643
+2: thread 111 passes potato at time =  9.557280
+2: thread 112 passes potato at time =  9.656847
+2: thread 113 passes potato at time =  9.747911
+2: thread 114 passes potato at time =  9.834523
+2: thread 115 passes potato at time =  9.916478
+2: thread 116 passes potato at time = 10.012262
+2: thread 117 passes potato at time = 10.095030
+2: thread 118 passes potato at time = 10.411004
+2: thread 119 passes potato at time = 10.486631
+2: thread 120 passes potato at time = 10.582750
+2: thread 121 passes potato at time = 10.678670
+2: thread 122 passes potato at time = 10.808885
+2: thread 123 passes potato at time = 10.959760
+2: thread 124 passes potato at time = 11.012338
+2: thread 125 passes potato at time = 11.220792
+2: thread 126 passes potato at time = 11.278226
+2: thread 127 passes potato at time = 11.324682
+3: thread   0 passes potato at time = 11.326918
+3: thread   1 passes potato at time = 11.327121
+3: thread   2 passes potato at time = 11.327322
+3: thread   3 passes potato at time = 11.327524
+3: thread   4 passes potato at time = 11.327726
+3: thread   5 passes potato at time = 11.327927
+3: thread   6 passes potato at time = 11.329957
+3: thread   7 passes potato at time = 11.329969
+3: thread   8 passes potato at time = 11.329978
+3: thread   9 passes potato at time = 11.337685
+3: thread  10 passes potato at time = 11.341545
+3: thread  11 passes potato at time = 11.345407
+3: thread  12 passes potato at time = 11.345418
+3: thread  13 passes potato at time = 11.374823
+3: thread  14 passes potato at time = 11.374835
+3: thread  15 passes potato at time = 11.387810
+3: thread  16 passes potato at time = 11.397146
+3: thread  17 passes potato at time = 11.404652
+3: thread  18 passes potato at time = 11.423311
+3: thread  19 passes potato at time = 11.430824
+3: thread  20 passes potato at time = 11.451309
+3: thread  21 passes potato at time = 11.471604
+3: thread  22 passes potato at time = 11.475464
+3: thread  23 passes potato at time = 11.477495
+3: thread  24 passes potato at time = 11.492509
+3: thread  25 passes potato at time = 11.514624
+3: thread  26 passes potato at time = 11.535114
+3: thread  27 passes potato at time = 11.549930
+3: thread  28 passes potato at time = 11.556019
+3: thread  29 passes potato at time = 11.587274
+3: thread  30 passes potato at time = 11.587285
+3: thread  31 passes potato at time = 11.609793
+3: thread  32 passes potato at time = 11.657931
+3: thread  33 passes potato at time = 11.659964
+3: thread  34 passes potato at time = 11.715351
+3: thread  35 passes potato at time = 11.745183
+3: thread  36 passes potato at time = 11.778663
+3: thread  37 passes potato at time = 11.837681
+3: thread  38 passes potato at time = 11.880940
+3: thread  39 passes potato at time = 11.906092
+3: thread  40 passes potato at time = 11.911977
+3: thread  41 passes potato at time = 11.967330
+3: thread  42 passes potato at time = 12.013029
+3: thread  43 passes potato at time = 12.035559
+3: thread  44 passes potato at time = 12.046725
+3: thread  45 passes potato at time = 12.118514
+3: thread  46 passes potato at time = 12.179172
+3: thread  47 passes potato at time = 12.228883
+3: thread  48 passes potato at time = 12.268028
+3: thread  49 passes potato at time = 12.297639
+3: thread  50 passes potato at time = 12.318132
+3: thread  51 passes potato at time = 12.324022
+3: thread  52 passes potato at time = 12.410621
+3: thread  53 passes potato at time = 12.482025
+3: thread  54 passes potato at time = 12.548955
+3: thread  55 passes potato at time = 12.605940
+3: thread  56 passes potato at time = 12.670240
+3: thread  57 passes potato at time = 12.713265
+3: thread  58 passes potato at time = 12.759318
+3: thread  59 passes potato at time = 12.796236
+3: thread  60 passes potato at time = 12.830532
+3: thread  61 passes potato at time = 12.905580
+3: thread  62 passes potato at time = 12.991308
+3: thread  63 passes potato at time = 13.049292
+3: thread  64 passes potato at time = 13.118430
+3: thread  65 passes potato at time = 13.194081
+3: thread  66 passes potato at time = 13.326723
+3: thread  67 passes potato at time = 13.452089
+3: thread  68 passes potato at time = 13.558961
+3: thread  69 passes potato at time = 13.649421
+3: thread  70 passes potato at time = 13.736476
+3: thread  71 passes potato at time = 13.820239
+3: thread  72 passes potato at time = 13.902836
+3: thread  73 passes potato at time = 13.980119
+3: thread  74 passes potato at time = 14.058048
+3: thread  75 passes potato at time = 14.118896
+3: thread  76 passes potato at time = 14.190903
+3: thread  77 passes potato at time = 14.245062
+3: thread  78 passes potato at time = 14.304303
+3: thread  79 passes potato at time = 14.356410
+3: thread  80 passes potato at time = 14.409962
+3: thread  81 passes potato at time = 14.456392
+3: thread  82 passes potato at time = 14.513816
+3: thread  83 passes potato at time = 14.551153
+3: thread  84 passes potato at time = 14.584237
+3: thread  85 passes potato at time = 14.604533
+3: thread  86 passes potato at time = 14.643271
+3: thread  87 passes potato at time = 14.667596
+3: thread  88 passes potato at time = 14.693564
+3: thread  89 passes potato at time = 14.699252
+3: thread  90 passes potato at time = 14.728873
+3: thread  91 passes potato at time = 14.755054
+3: thread  92 passes potato at time = 14.842473
+3: thread  93 passes potato at time = 14.846531
+3: thread  94 passes potato at time = 14.954232
+3: thread  95 passes potato at time = 15.242517
+3: thread  96 passes potato at time = 15.404384
+3: thread  97 passes potato at time = 15.760353
+3: thread  98 passes potato at time = 15.810454
+3: thread  99 passes potato at time = 15.886939
+3: thread 100 passes potato at time = 16.060381
+3: thread 101 passes potato at time = 16.224440
+3: thread 102 passes potato at time = 16.388702
+3: thread 103 passes potato at time = 16.554770
+3: thread 104 passes potato at time = 16.733643
+3: thread 105 passes potato at time = 17.078356
+3: thread 106 passes potato at time = 17.245693
+3: thread 107 passes potato at time = 17.414389
+3: thread 108 passes potato at time = 17.580299
+3: thread 109 passes potato at time = 17.752792
+3: thread 110 passes potato at time = 17.921173
+3: thread 111 passes potato at time = 18.096455
+3: thread 112 passes potato at time = 18.285450
+3: thread 113 passes potato at time = 18.460648
+3: thread 114 passes potato at time = 18.622231
+3: thread 115 passes potato at time = 18.781244
+3: thread 116 passes potato at time = 18.944092
+3: thread 117 passes potato at time = 19.114433
+3: thread 118 passes potato at time = 19.297338
+3: thread 119 passes potato at time = 19.465483
+3: thread 120 passes potato at time = 19.634645
+3: thread 121 passes potato at time = 19.828098
+3: thread 122 passes potato at time = 20.038086
+3: thread 123 passes potato at time = 20.128950
+3: thread 124 passes potato at time = 20.327930
+3: thread 125 passes potato at time = 20.335459
+3: thread 126 passes potato at time = 20.436867
+3: thread 127 passes potato at time = 20.601772
+4: thread   0 passes potato at time = 20.603813
+4: thread   1 passes potato at time = 20.604015
+4: thread   2 passes potato at time = 20.604218
+4: thread   3 passes potato at time = 20.604420
+4: thread   4 passes potato at time = 20.604622
+4: thread   5 passes potato at time = 20.604822
+4: thread   6 passes potato at time = 20.604832
+4: thread   7 passes potato at time = 20.606861
+4: thread   8 passes potato at time = 20.612543
+4: thread   9 passes potato at time = 20.612555
+4: thread  10 passes potato at time = 20.612564
+4: thread  11 passes potato at time = 20.616411
+4: thread  12 passes potato at time = 20.620274
+4: thread  13 passes potato at time = 20.624140
+4: thread  14 passes potato at time = 20.631643
+4: thread  15 passes potato at time = 20.631655
+4: thread  16 passes potato at time = 20.635506
+4: thread  17 passes potato at time = 20.641188
+4: thread  18 passes potato at time = 20.643223
+4: thread  19 passes potato at time = 20.668985
+4: thread  20 passes potato at time = 20.683802
+4: thread  21 passes potato at time = 20.713434
+4: thread  22 passes potato at time = 20.724592
+4: thread  23 passes potato at time = 20.750542
+4: thread  24 passes potato at time = 20.770838
+4: thread  25 passes potato at time = 20.785662
+4: thread  26 passes potato at time = 20.804520
+4: thread  27 passes potato at time = 20.814064
+4: thread  28 passes potato at time = 20.836777
+4: thread  29 passes potato at time = 20.873890
+4: thread  30 passes potato at time = 20.873899
+4: thread  31 passes potato at time = 20.919537
+4: thread  32 passes potato at time = 20.934378
+4: thread  33 passes potato at time = 20.967857
+4: thread  34 passes potato at time = 20.992073
+4: thread  35 passes potato at time = 21.193283
+4: thread  36 passes potato at time = 21.238117
+4: thread  37 passes potato at time = 21.268528
+4: thread  38 passes potato at time = 21.281513
+4: thread  39 passes potato at time = 21.322491
+4: thread  40 passes potato at time = 21.330004
+4: thread  41 passes potato at time = 21.372576
+4: thread  42 passes potato at time = 21.389416
+4: thread  43 passes potato at time = 21.512945
+4: thread  44 passes potato at time = 21.544598
+4: thread  45 passes potato at time = 21.553934
+4: thread  46 passes potato at time = 21.609100
+4: thread  47 passes potato at time = 21.642563
+4: thread  48 passes potato at time = 21.655558
+4: thread  49 passes potato at time = 21.733128
+4: thread  50 passes potato at time = 21.792774
+4: thread  51 passes potato at time = 21.834970
+4: thread  52 passes potato at time = 21.855455
+4: thread  53 passes potato at time = 21.855467
+4: thread  54 passes potato at time = 21.927891
+4: thread  55 passes potato at time = 21.976570
+4: thread  56 passes potato at time = 22.048428
+4: thread  57 passes potato at time = 22.082087
+4: thread  58 passes potato at time = 22.087770
+4: thread  59 passes potato at time = 22.114344
+4: thread  60 passes potato at time = 22.202566
+4: thread  61 passes potato at time = 22.255917
+4: thread  62 passes potato at time = 22.311483
+4: thread  63 passes potato at time = 22.315334
+4: thread  64 passes potato at time = 22.355719
+4: thread  65 passes potato at time = 22.407625
+4: thread  66 passes potato at time = 22.848307
+4: thread  67 passes potato at time = 22.889477
+4: thread  68 passes potato at time = 22.943817
+4: thread  69 passes potato at time = 23.062296
+4: thread  70 passes potato at time = 23.171602
+4: thread  71 passes potato at time = 23.273212
+4: thread  72 passes potato at time = 23.371395
+4: thread  73 passes potato at time = 23.457804
+4: thread  74 passes potato at time = 23.544834
+4: thread  75 passes potato at time = 23.607697
+4: thread  76 passes potato at time = 23.681934
+4: thread  77 passes potato at time = 23.730011
+4: thread  78 passes potato at time = 23.780342
+4: thread  79 passes potato at time = 23.821518
+4: thread  80 passes potato at time = 23.864105
+4: thread  81 passes potato at time = 23.889715
+4: thread  82 passes potato at time = 23.928860
+4: thread  83 passes potato at time = 23.957058
+4: thread  84 passes potato at time = 23.959101
+4: thread  85 passes potato at time = 24.092436
+4: thread  86 passes potato at time = 24.092451
+4: thread  87 passes potato at time = 24.225878
+4: thread  88 passes potato at time = 24.225889
+4: thread  89 passes potato at time = 24.336807
+4: thread  90 passes potato at time = 24.338850
+4: thread  91 passes potato at time = 24.483864
+4: thread  92 passes potato at time = 24.529083
+4: thread  93 passes potato at time = 24.563974
+4: thread  94 passes potato at time = 24.639437
+4: thread  95 passes potato at time = 24.794771
+4: thread  96 passes potato at time = 24.949902
+4: thread  97 passes potato at time = 25.548595
+4: thread  98 passes potato at time = 25.633011
+4: thread  99 passes potato at time = 25.758755
+4: thread 100 passes potato at time = 25.858112
+4: thread 101 passes potato at time = 25.943546
+4: thread 102 passes potato at time = 26.030411
+4: thread 103 passes potato at time = 26.110191
+4: thread 104 passes potato at time = 26.199766
+4: thread 105 passes potato at time = 26.266722
+4: thread 106 passes potato at time = 26.334663
+4: thread 107 passes potato at time = 26.400784
+4: thread 108 passes potato at time = 26.459980
+4: thread 109 passes potato at time = 26.530546
+4: thread 110 passes potato at time = 26.582062
+4: thread 111 passes potato at time = 26.641068
+4: thread 112 passes potato at time = 26.706181
+4: thread 113 passes potato at time = 26.759920
+4: thread 114 passes potato at time = 26.808598
+4: thread 115 passes potato at time = 26.832735
+4: thread 116 passes potato at time = 26.860519
+4: thread 117 passes potato at time = 26.881002
+4: thread 118 passes potato at time = 26.916307
+4: thread 119 passes potato at time = 26.943901
+4: thread 120 passes potato at time = 26.970255
+4: thread 121 passes potato at time = 27.027304
+4: thread 122 passes potato at time = 27.094629
+4: thread 123 passes potato at time = 27.271660
+4: thread 124 passes potato at time = 27.399042
+4: thread 125 passes potato at time = 27.408592
+4: thread 126 passes potato at time = 27.546532
+4: thread 127 passes potato at time = 27.888750
+5: thread   0 passes potato at time = 27.888945
+5: thread   1 passes potato at time = 27.889147
+5: thread   2 passes potato at time = 27.889349
+5: thread   3 passes potato at time = 27.889549
+5: thread   4 passes potato at time = 27.889751
+5: thread   5 passes potato at time = 27.889954
+5: thread   6 passes potato at time = 27.891790
+5: thread   7 passes potato at time = 27.895653
+5: thread   8 passes potato at time = 27.895664
+5: thread   9 passes potato at time = 27.897690
+5: thread  10 passes potato at time = 27.907030
+5: thread  11 passes potato at time = 27.918190
+5: thread  12 passes potato at time = 27.925701
+5: thread  13 passes potato at time = 27.940710
+5: thread  14 passes potato at time = 27.944569
+5: thread  15 passes potato at time = 27.961205
+5: thread  16 passes potato at time = 27.963243
+5: thread  17 passes potato at time = 27.976221
+5: thread  18 passes potato at time = 27.996508
+5: thread  19 passes potato at time = 28.020706
+5: thread  20 passes potato at time = 28.020723
+5: thread  21 passes potato at time = 28.039410
+5: thread  22 passes potato at time = 28.043268
+5: thread  23 passes potato at time = 28.056255
+5: thread  24 passes potato at time = 28.087894
+5: thread  25 passes potato at time = 28.117525
+5: thread  26 passes potato at time = 28.121389
+5: thread  27 passes potato at time = 28.161959
+5: thread  28 passes potato at time = 28.193405
+5: thread  29 passes potato at time = 28.217346
+5: thread  30 passes potato at time = 28.243324
+5: thread  31 passes potato at time = 28.325668
+5: thread  32 passes potato at time = 28.357126
+5: thread  33 passes potato at time = 28.373789
+5: thread  34 passes potato at time = 28.392458
+5: thread  35 passes potato at time = 28.619165
+5: thread  36 passes potato at time = 28.652233
+5: thread  37 passes potato at time = 28.676178
+5: thread  38 passes potato at time = 28.724245
+5: thread  39 passes potato at time = 28.724257
+5: thread  40 passes potato at time = 28.742706
+5: thread  41 passes potato at time = 28.785702
+5: thread  42 passes potato at time = 28.793423
+5: thread  43 passes potato at time = 28.821428
+5: thread  44 passes potato at time = 28.892000
+5: thread  45 passes potato at time = 28.932777
+5: thread  46 passes potato at time = 28.934811
+5: thread  47 passes potato at time = 28.984716
+5: thread  48 passes potato at time = 29.003593
+5: thread  49 passes potato at time = 29.082937
+5: thread  50 passes potato at time = 29.134457
+5: thread  51 passes potato at time = 29.162251
+5: thread  52 passes potato at time = 29.167944
+5: thread  53 passes potato at time = 29.221275
+5: thread  54 passes potato at time = 29.260017
+5: thread  55 passes potato at time = 29.264093
+5: thread  56 passes potato at time = 29.288437
+5: thread  57 passes potato at time = 29.368788
+5: thread  58 passes potato at time = 29.401859
+5: thread  59 passes potato at time = 29.466562
+5: thread  60 passes potato at time = 29.498213
+5: thread  61 passes potato at time = 29.604086
+5: thread  62 passes potato at time = 29.703789
+5: thread  63 passes potato at time = 29.716995
+5: thread  64 passes potato at time = 29.778467
+5: thread  65 passes potato at time = 29.804832
+5: thread  66 passes potato at time = 30.434647
+5: thread  67 passes potato at time = 30.553938
+5: thread  68 passes potato at time = 30.660416
+5: thread  69 passes potato at time = 30.776863
+5: thread  70 passes potato at time = 30.882519
+5: thread  71 passes potato at time = 30.976639
+5: thread  72 passes potato at time = 31.067369
+5: thread  73 passes potato at time = 31.139364
+5: thread  74 passes potato at time = 31.334658
+5: thread  75 passes potato at time = 31.377249
+5: thread  76 passes potato at time = 31.427134
+5: thread  77 passes potato at time = 31.449652
+5: thread  78 passes potato at time = 31.468119
+5: thread  79 passes potato at time = 31.475630
+5: thread  80 passes potato at time = 31.479490
+5: thread  81 passes potato at time = 31.599567
+5: thread  82 passes potato at time = 31.599581
+5: thread  83 passes potato at time = 31.728836
+5: thread  84 passes potato at time = 31.821955
+5: thread  85 passes potato at time = 31.906345
+5: thread  86 passes potato at time = 32.005913
+5: thread  87 passes potato at time = 32.083054
+5: thread  88 passes potato at time = 32.179005
+5: thread  89 passes potato at time = 32.223232
+5: thread  90 passes potato at time = 32.341675
+5: thread  91 passes potato at time = 32.424622
+5: thread  92 passes potato at time = 32.576294
+5: thread  93 passes potato at time = 32.617062
+5: thread  94 passes potato at time = 32.762936
+5: thread  95 passes potato at time = 32.779533
+5: thread  96 passes potato at time = 32.832264
+5: thread  97 passes potato at time = 33.079967
+5: thread  98 passes potato at time = 33.135353
+5: thread  99 passes potato at time = 33.159702
+5: thread 100 passes potato at time = 33.159714
+5: thread 101 passes potato at time = 33.320950
+5: thread 102 passes potato at time = 33.481369
+5: thread 103 passes potato at time = 33.636726
+5: thread 104 passes potato at time = 33.805470
+5: thread 105 passes potato at time = 33.947018
+5: thread 106 passes potato at time = 34.094353
+5: thread 107 passes potato at time = 34.236111
+5: thread 108 passes potato at time = 34.370777
+5: thread 109 passes potato at time = 34.517826
+5: thread 110 passes potato at time = 34.642941
+5: thread 111 passes potato at time = 34.777630
+5: thread 112 passes potato at time = 34.919392
+5: thread 113 passes potato at time = 35.053310
+5: thread 114 passes potato at time = 35.182884
+5: thread 115 passes potato at time = 35.273540
+5: thread 116 passes potato at time = 35.387146
+5: thread 117 passes potato at time = 35.485069
+5: thread 118 passes potato at time = 35.590923
+5: thread 119 passes potato at time = 35.706135
+5: thread 120 passes potato at time = 35.809574
+5: thread 121 passes potato at time = 35.945312
+5: thread 122 passes potato at time = 36.118801
+5: thread 123 passes potato at time = 36.194256
+5: thread 124 passes potato at time = 36.264465
+5: thread 125 passes potato at time = 36.310909
+5: thread 126 passes potato at time = 36.460541
+5: thread 127 passes potato at time = 36.584251
+6: thread   0 passes potato at time = 36.586296
+6: thread   1 passes potato at time = 36.586498
+6: thread   2 passes potato at time = 36.586700
+6: thread   3 passes potato at time = 36.586903
+6: thread   4 passes potato at time = 36.587101
+6: thread   5 passes potato at time = 36.587303
+6: thread   6 passes potato at time = 36.589142
+6: thread   7 passes potato at time = 36.592999
+6: thread   8 passes potato at time = 36.593014
+6: thread   9 passes potato at time = 36.609840
+6: thread  10 passes potato at time = 36.615726
+6: thread  11 passes potato at time = 36.625053
+6: thread  12 passes potato at time = 36.630741
+6: thread  13 passes potato at time = 36.632774
+6: thread  14 passes potato at time = 36.638470
+6: thread  15 passes potato at time = 36.647804
+6: thread  16 passes potato at time = 36.660793
+6: thread  17 passes potato at time = 36.675804
+6: thread  18 passes potato at time = 36.690613
+6: thread  19 passes potato at time = 36.694504
+6: thread  20 passes potato at time = 36.709286
+6: thread  21 passes potato at time = 36.737080
+6: thread  22 passes potato at time = 36.750069
+6: thread  23 passes potato at time = 36.755951
+6: thread  24 passes potato at time = 36.763454
+6: thread  25 passes potato at time = 36.796722
+6: thread  26 passes potato at time = 36.807888
+6: thread  27 passes potato at time = 36.819252
+6: thread  28 passes potato at time = 36.826771
+6: thread  29 passes potato at time = 36.849304
+6: thread  30 passes potato at time = 36.888046
+6: thread  31 passes potato at time = 36.927208
+6: thread  32 passes potato at time = 36.960484
+6: thread  33 passes potato at time = 36.968212
+6: thread  34 passes potato at time = 37.021023
+6: thread  35 passes potato at time = 37.026913
+6: thread  36 passes potato at time = 37.053097
+6: thread  37 passes potato at time = 37.058784
+6: thread  38 passes potato at time = 37.109074
+6: thread  39 passes potato at time = 37.160603
+6: thread  40 passes potato at time = 37.219608
+6: thread  41 passes potato at time = 37.223469
+6: thread  42 passes potato at time = 37.248013
+6: thread  43 passes potato at time = 37.281475
+6: thread  44 passes potato at time = 37.346180
+6: thread  45 passes potato at time = 37.370518
+6: thread  46 passes potato at time = 37.424255
+6: thread  47 passes potato at time = 37.435429
+6: thread  48 passes potato at time = 37.486946
+6: thread  49 passes potato at time = 37.509060
+6: thread  50 passes potato at time = 37.577412
+6: thread  51 passes potato at time = 37.616158
+6: thread  52 passes potato at time = 37.625492
+6: thread  53 passes potato at time = 37.670261
+6: thread  54 passes potato at time = 37.698055
+6: thread  55 passes potato at time = 37.775730
+6: thread  56 passes potato at time = 37.870426
+6: thread  57 passes potato at time = 37.919357
+6: thread  58 passes potato at time = 37.919384
+6: thread  59 passes potato at time = 37.939659
+6: thread  60 passes potato at time = 38.037045
+6: thread  61 passes potato at time = 38.090805
+6: thread  62 passes potato at time = 38.092842
+6: thread  63 passes potato at time = 38.092854
+6: thread  64 passes potato at time = 38.114979
+6: thread  65 passes potato at time = 38.197929
+6: thread  66 passes potato at time = 38.716644
+6: thread  67 passes potato at time = 38.785408
+6: thread  68 passes potato at time = 38.844227
+6: thread  69 passes potato at time = 38.848091
+6: thread  70 passes potato at time = 38.956608
+6: thread  71 passes potato at time = 39.049126
+6: thread  72 passes potato at time = 39.132496
+6: thread  73 passes potato at time = 39.195148
+6: thread  74 passes potato at time = 39.249088
+6: thread  75 passes potato at time = 39.273441
+6: thread  76 passes potato at time = 39.305496
+6: thread  77 passes potato at time = 39.432251
+6: thread  78 passes potato at time = 39.559200
+6: thread  79 passes potato at time = 39.675667
+6: thread  80 passes potato at time = 39.788448
+6: thread  81 passes potato at time = 39.877228
+6: thread  82 passes potato at time = 39.989647
+6: thread  83 passes potato at time = 40.077919
+6: thread  84 passes potato at time = 40.135529
+6: thread  85 passes potato at time = 40.171021
+6: thread  86 passes potato at time = 40.219086
+6: thread  87 passes potato at time = 40.239777
+6: thread  88 passes potato at time = 40.284393
+6: thread  89 passes potato at time = 40.432835
+6: thread  90 passes potato at time = 40.488010
+6: thread  91 passes potato at time = 40.540363
+6: thread  92 passes potato at time = 40.600994
+6: thread  93 passes potato at time = 40.672802
+6: thread  94 passes potato at time = 40.724731
+6: thread  95 passes potato at time = 40.979488
+6: thread  96 passes potato at time = 41.047894
+6: thread  97 passes potato at time = 42.023144
+6: thread  98 passes potato at time = 42.083549
+6: thread  99 passes potato at time = 42.137310
+6: thread 100 passes potato at time = 42.231407
+6: thread 101 passes potato at time = 42.308899
+6: thread 102 passes potato at time = 42.379063
+6: thread 103 passes potato at time = 42.443550
+6: thread 104 passes potato at time = 42.513718
+6: thread 105 passes potato at time = 42.554482
+6: thread 106 passes potato at time = 42.596661
+6: thread 107 passes potato at time = 42.631760
+6: thread 108 passes potato at time = 42.655891
+6: thread 109 passes potato at time = 42.689148
+6: thread 110 passes potato at time = 42.698692
+6: thread 111 passes potato at time = 42.709846
+6: thread 112 passes potato at time = 42.731964
+6: thread 113 passes potato at time = 42.741302
+6: thread 114 passes potato at time = 42.745163
+6: thread 115 passes potato at time = 42.894241
+6: thread 116 passes potato at time = 43.076027
+6: thread 117 passes potato at time = 43.244335
+6: thread 118 passes potato at time = 43.435184
+6: thread 119 passes potato at time = 43.610008
+6: thread 120 passes potato at time = 43.785660
+6: thread 121 passes potato at time = 43.985676
+6: thread 122 passes potato at time = 44.052238
+6: thread 123 passes potato at time = 44.209202
+6: thread 124 passes potato at time = 44.237198
+6: thread 125 passes potato at time = 44.270683
+6: thread 126 passes potato at time = 44.465607
+6: thread 127 passes potato at time = 44.548744
+7: thread   0 passes potato at time = 44.550789
+7: thread   1 passes potato at time = 44.550991
+7: thread   2 passes potato at time = 44.551189
+7: thread   3 passes potato at time = 44.551392
+7: thread   4 passes potato at time = 44.551594
+7: thread   5 passes potato at time = 44.551796
+7: thread   6 passes potato at time = 44.553825
+7: thread   7 passes potato at time = 44.557880
+7: thread   8 passes potato at time = 44.557892
+7: thread   9 passes potato at time = 44.563770
+7: thread  10 passes potato at time = 44.569458
+7: thread  11 passes potato at time = 44.580616
+7: thread  12 passes potato at time = 44.580627
+7: thread  13 passes potato at time = 44.608208
+7: thread  14 passes potato at time = 44.610245
+7: thread  15 passes potato at time = 44.621407
+7: thread  16 passes potato at time = 44.625271
+7: thread  17 passes potato at time = 44.629128
+7: thread  18 passes potato at time = 44.632992
+7: thread  19 passes potato at time = 44.647804
+7: thread  20 passes potato at time = 44.660782
+7: thread  21 passes potato at time = 44.681271
+7: thread  22 passes potato at time = 44.692432
+7: thread  23 passes potato at time = 44.718407
+7: thread  24 passes potato at time = 44.735241
+7: thread  25 passes potato at time = 44.741127
+7: thread  26 passes potato at time = 44.763447
+7: thread  27 passes potato at time = 44.798954
+7: thread  28 passes potato at time = 44.806671
+7: thread  29 passes potato at time = 44.830814
+7: thread  30 passes potato at time = 44.854965
+7: thread  31 passes potato at time = 44.886406
+7: thread  32 passes potato at time = 44.892105
+7: thread  33 passes potato at time = 44.929249
+7: thread  34 passes potato at time = 44.999844
+7: thread  35 passes potato at time = 45.096603
+7: thread  36 passes potato at time = 45.170036
+7: thread  37 passes potato at time = 45.196007
+7: thread  38 passes potato at time = 45.240417
+7: thread  39 passes potato at time = 45.272068
+7: thread  40 passes potato at time = 45.296009
+7: thread  41 passes potato at time = 45.318920
+7: thread  42 passes potato at time = 45.351585
+7: thread  43 passes potato at time = 45.383430
+7: thread  44 passes potato at time = 45.431717
+7: thread  45 passes potato at time = 45.505119
+7: thread  46 passes potato at time = 45.523594
+7: thread  47 passes potato at time = 45.567596
+7: thread  48 passes potato at time = 45.644875
+7: thread  49 passes potato at time = 45.685844
+7: thread  50 passes potato at time = 45.767380
+7: thread  51 passes potato at time = 45.815464
+7: thread  52 passes potato at time = 45.817501
+7: thread  53 passes potato at time = 45.852806
+7: thread  54 passes potato at time = 45.858696
+7: thread  55 passes potato at time = 45.914589
+7: thread  56 passes potato at time = 45.980301
+7: thread  57 passes potato at time = 45.991653
+7: thread  58 passes potato at time = 46.043446
+7: thread  59 passes potato at time = 46.113834
+7: thread  60 passes potato at time = 46.167385
+7: thread  61 passes potato at time = 46.255634
+7: thread  62 passes potato at time = 46.270859
+7: thread  63 passes potato at time = 46.274731
+7: thread  64 passes potato at time = 46.337780
+7: thread  65 passes potato at time = 46.369034
+7: thread  66 passes potato at time = 46.954731
+7: thread  67 passes potato at time = 46.992043
+7: thread  68 passes potato at time = 47.033482
+7: thread  69 passes potato at time = 47.045616
+7: thread  70 passes potato at time = 47.158394
+7: thread  71 passes potato at time = 47.248642
+7: thread  72 passes potato at time = 47.327751
+7: thread  73 passes potato at time = 47.384548
+7: thread  74 passes potato at time = 47.428570
+7: thread  75 passes potato at time = 47.440136
+7: thread  76 passes potato at time = 47.449478
+7: thread  77 passes potato at time = 47.552929
+7: thread  78 passes potato at time = 47.654366
+7: thread  79 passes potato at time = 47.740978
+7: thread  80 passes potato at time = 47.820660
+7: thread  81 passes potato at time = 47.877205
+7: thread  82 passes potato at time = 47.946896
+7: thread  83 passes potato at time = 47.997021
+7: thread  84 passes potato at time = 48.006348
+7: thread  85 passes potato at time = 48.137634
+7: thread  86 passes potato at time = 48.283459
+7: thread  87 passes potato at time = 48.413677
+7: thread  88 passes potato at time = 48.552361
+7: thread  89 passes potato at time = 48.638573
+7: thread  90 passes potato at time = 48.795170
+7: thread  91 passes potato at time = 48.802658
+7: thread  92 passes potato at time = 48.804691
+7: thread  93 passes potato at time = 48.896572
+7: thread  94 passes potato at time = 49.034161
+7: thread  95 passes potato at time = 49.178947
+7: thread  96 passes potato at time = 49.202885
+7: thread  97 passes potato at time = 49.789036
+7: thread  98 passes potato at time = 49.950302
+7: thread  99 passes potato at time = 50.064365
+7: thread 100 passes potato at time = 50.064384
+7: thread 101 passes potato at time = 50.220963
+7: thread 102 passes potato at time = 50.556194
+7: thread 103 passes potato at time = 50.701221
+7: thread 104 passes potato at time = 50.855984
+7: thread 105 passes potato at time = 50.980911
+7: thread 106 passes potato at time = 51.110950
+7: thread 107 passes potato at time = 51.229401
+7: thread 108 passes potato at time = 51.334248
+7: thread 109 passes potato at time = 51.644974
+7: thread 110 passes potato at time = 51.935261
+7: thread 111 passes potato at time = 52.030815
+7: thread 112 passes potato at time = 52.145054
+7: thread 113 passes potato at time = 52.249912
+7: thread 114 passes potato at time = 52.336773
+7: thread 115 passes potato at time = 52.374298
+7: thread 116 passes potato at time = 52.427418
+7: thread 117 passes potato at time = 52.468380
+7: thread 118 passes potato at time = 52.533276
+7: thread 119 passes potato at time = 52.581772
+7: thread 120 passes potato at time = 52.627613
+7: thread 121 passes potato at time = 52.675476
+7: thread 122 passes potato at time = 52.859852
+7: thread 123 passes potato at time = 52.911575
+7: thread 124 passes potato at time = 53.112228
+7: thread 125 passes potato at time = 53.195190
+7: thread 126 passes potato at time = 53.408360
+7: thread 127 passes potato at time = 53.605282
+8: thread   0 passes potato at time = 53.609348
+8: thread   1 passes potato at time = 53.609550
+8: thread   2 passes potato at time = 53.609753
+8: thread   3 passes potato at time = 53.611782
+8: thread   4 passes potato at time = 53.611984
+8: thread   5 passes potato at time = 53.612186
+8: thread   6 passes potato at time = 53.614025
+8: thread   7 passes potato at time = 53.617886
+8: thread   8 passes potato at time = 53.621941
+8: thread   9 passes potato at time = 53.623978
+8: thread  10 passes potato at time = 53.629856
+8: thread  11 passes potato at time = 53.633911
+8: thread  12 passes potato at time = 53.637974
+8: thread  13 passes potato at time = 53.647312
+8: thread  14 passes potato at time = 53.653004
+8: thread  15 passes potato at time = 53.671856
+8: thread  16 passes potato at time = 53.675713
+8: thread  17 passes potato at time = 53.686871
+8: thread  18 passes potato at time = 53.686882
+8: thread  19 passes potato at time = 53.709190
+8: thread  20 passes potato at time = 53.733124
+8: thread  21 passes potato at time = 53.753426
+8: thread  22 passes potato at time = 53.766613
+8: thread  23 passes potato at time = 53.766624
+8: thread  24 passes potato at time = 53.778389
+8: thread  25 passes potato at time = 53.808216
+8: thread  26 passes potato at time = 53.815727
+8: thread  27 passes potato at time = 53.841492
+8: thread  28 passes potato at time = 53.880886
+8: thread  29 passes potato at time = 53.927120
+8: thread  30 passes potato at time = 53.934635
+8: thread  31 passes potato at time = 53.945812
+8: thread  32 passes potato at time = 54.015606
+8: thread  33 passes potato at time = 54.024940
+8: thread  34 passes potato at time = 54.041039
+8: thread  35 passes potato at time = 54.303875
+8: thread  36 passes potato at time = 54.328228
+8: thread  37 passes potato at time = 54.368595
+8: thread  38 passes potato at time = 54.376099
+8: thread  39 passes potato at time = 54.416653
+8: thread  40 passes potato at time = 54.435108
+8: thread  41 passes potato at time = 54.437145
+8: thread  42 passes potato at time = 54.503479
+8: thread  43 passes potato at time = 54.559265
+8: thread  44 passes potato at time = 54.619907
+8: thread  45 passes potato at time = 54.619919
+8: thread  46 passes potato at time = 54.627422
+8: thread  47 passes potato at time = 54.649540
+8: thread  48 passes potato at time = 54.699429
+8: thread  49 passes potato at time = 54.857002
+8: thread  50 passes potato at time = 54.888435
+8: thread  51 passes potato at time = 54.966335
+8: thread  52 passes potato at time = 54.981152
+8: thread  53 passes potato at time = 55.029224
+8: thread  54 passes potato at time = 55.031258
+8: thread  55 passes potato at time = 55.174496
+8: thread  56 passes potato at time = 55.229675
+8: thread  57 passes potato at time = 55.229687
+8: thread  58 passes potato at time = 55.257477
+8: thread  59 passes potato at time = 55.290958
+8: thread  60 passes potato at time = 55.324451
+8: thread  61 passes potato at time = 55.472713
+8: thread  62 passes potato at time = 55.498886
+8: thread  63 passes potato at time = 55.540672
+8: thread  64 passes potato at time = 55.596649
+8: thread  65 passes potato at time = 55.680035
+8: thread  66 passes potato at time = 55.718788
+8: thread  67 passes potato at time = 55.726513
+8: thread  68 passes potato at time = 55.811695
+8: thread  69 passes potato at time = 55.839493
+8: thread  70 passes potato at time = 55.843346
+8: thread  71 passes potato at time = 55.943211
+8: thread  72 passes potato at time = 56.027790
+8: thread  73 passes potato at time = 56.085224
+8: thread  74 passes potato at time = 56.128021
+8: thread  75 passes potato at time = 56.131878
+8: thread  76 passes potato at time = 56.262493
+8: thread  77 passes potato at time = 56.352962
+8: thread  78 passes potato at time = 56.436127
+8: thread  79 passes potato at time = 56.506275
+8: thread  80 passes potato at time = 56.562061
+8: thread  81 passes potato at time = 56.586407
+8: thread  82 passes potato at time = 56.633045
+8: thread  83 passes potato at time = 56.647873
+8: thread  84 passes potato at time = 56.763889
+8: thread  85 passes potato at time = 56.848675
+8: thread  86 passes potato at time = 56.953529
+8: thread  87 passes potato at time = 57.043224
+8: thread  88 passes potato at time = 57.283737
+8: thread  89 passes potato at time = 57.317200
+8: thread  90 passes potato at time = 57.425529
+8: thread  91 passes potato at time = 57.553108
+8: thread  92 passes potato at time = 57.665657
+8: thread  93 passes potato at time = 57.793407
+8: thread  94 passes potato at time = 57.871910
+8: thread  95 passes potato at time = 57.928925
+8: thread  96 passes potato at time = 58.089417
+8: thread  97 passes potato at time = 58.254917
+8: thread  98 passes potato at time = 58.552658
+8: thread  99 passes potato at time = 58.692776
+8: thread 100 passes potato at time = 58.784676
+8: thread 101 passes potato at time = 58.853230
+8: thread 102 passes potato at time = 58.912449
+8: thread 103 passes potato at time = 58.962337
+8: thread 104 passes potato at time = 59.013851
+8: thread 105 passes potato at time = 59.036461
+8: thread 106 passes potato at time = 59.054661
+8: thread 107 passes potato at time = 59.058517
+8: thread 108 passes potato at time = 59.243279
+8: thread 109 passes potato at time = 59.432903
+8: thread 110 passes potato at time = 59.600021
+8: thread 111 passes potato at time = 59.766136
+8: thread 112 passes potato at time = 59.959209
+cleaning hot potato
+preemptive test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wakeup test
+initial thread returns from sleep(NULL)
+initial thread returns from sleep(NONE)
+wakeup test done
+starting wait test
+initial thread returns from waiting on self
+initial thread returns from waiting on THREAD_SELF
+initial thread returns from waiting on 110
+id = 1
+id = 2
+id = 3
+id = 4
+id = 5
+id = 6
+id = 7
+id = 8
+id = 9
+id = 10
+id = 11
+id = 12
+id = 13
+id = 14
+id = 15
+id = 16
+id = 17
+id = 18
+id = 19
+id = 20
+id = 21
+id = 22
+id = 23
+id = 24
+id = 25
+id = 26
+id = 27
+id = 28
+id = 29
+id = 30
+id = 31
+id = 32
+id = 33
+id = 34
+id = 35
+id = 36
+id = 37
+id = 38
+id = 39
+id = 40
+id = 41
+id = 42
+id = 43
+id = 44
+id = 45
+id = 46
+id = 47
+id = 48
+id = 49
+id = 50
+id = 51
+id = 52
+id = 53
+id = 54
+id = 55
+id = 56
+id = 57
+id = 58
+id = 59
+id = 60
+id = 61
+id = 62
+id = 63
+id = 64
+id = 65
+id = 66
+id = 67
+id = 68
+id = 69
+id = 70
+id = 71
+id = 72
+id = 73
+id = 74
+id = 75
+id = 76
+id = 77
+id = 78
+id = 79
+id = 80
+id = 81
+id = 82
+id = 83
+id = 84
+id = 85
+id = 86
+id = 87
+id = 88
+id = 89
+id = 90
+id = 91
+id = 92
+id = 93
+id = 94
+id = 95
+id = 96
+id = 97
+id = 98
+id = 99
+id = 100
+id = 101
+id = 102
+id = 103
+id = 104
+id = 105
+id = 106
+id = 107
+id = 108
+id = 109
+id = 110
+id = 111
+id = 112
+id = 113
+id = 114
+id = 115
+id = 116
+id = 117
+id = 118
+id = 119
+id = 120
+id = 121
+id = 122
+id = 123
+id = 124
+id = 125
+id = 126
+id = 127
+wait test done
+starting wait_kill test
+its over
+starting wait_parent test
+104: thread killed
+71: thread killed
+106: thread killed
+116: thread killed
+82: thread killed
+128: thread killed
+75: thread killed
+109: thread killed
+42: thread killed
+78: thread killed
+59: thread killed
+44: thread killed
+115: thread killed
+124: thread killed
+100: thread killed
+125: thread killed
+67: thread killed
+85: thread killed
+121: thread killed
+28: thread killed
+105: thread killed
+14: thread killed
+119: thread killed
+91: thread killed
+47: thread killed
+52: thread killed
+32: thread killed
+74: thread killed
+27: thread killed
+103: thread killed
+51: thread killed
+56: thread killed
+50: thread killed
+89: thread killed
+36: thread killed
+38: thread killed
+94: thread killed
+6: thread killed
+24: thread killed
+95: thread killed
+53: thread killed
+18: thread killed
+15: thread killed
+3: thread killed
+117: thread killed
+66: thread killed
+34: thread killed
+62: thread killed
+93: thread killed
+8: thread killed
+1: thread woken
+2: thread woken
+4: thread woken
+5: thread woken
+7: thread woken
+9: thread woken
+10: thread woken
+11: thread woken
+12: thread woken
+13: thread woken
+16: thread woken
+17: thread woken
+19: thread woken
+21: thread woken
+22: thread woken
+23: thread woken
+25: thread woken
+26: thread woken
+29: thread woken
+30: thread woken
+31: thread woken
+33: thread woken
+35: thread woken
+37: thread woken
+39: thread woken
+40: thread woken
+41: thread woken
+43: thread woken
+45: thread woken
+46: thread woken
+48: thread woken
+49: thread woken
+54: thread woken
+57: thread woken
+58: thread woken
+60: thread woken
+61: thread woken
+63: thread woken
+64: thread woken
+65: thread woken
+68: thread woken
+69: thread woken
+70: thread woken
+72: thread woken
+73: thread woken
+76: thread woken
+77: thread woken
+79: thread woken
+80: thread woken
+81: thread woken
+83: thread woken
+84: thread woken
+86: thread woken
+88: thread woken
+90: thread woken
+92: thread woken
+96: thread woken
+97: thread woken
+98: thread woken
+99: thread woken
+101: thread woken
+102: thread woken
+107: thread woken
+108: thread woken
+110: thread woken
+111: thread woken
+112: thread woken
+113: thread woken
+114: thread woken
+118: thread woken
+120: thread woken
+122: thread woken
+123: thread woken
+127: thread woken
+20: thread woken
+55: thread woken
+87: thread woken
+126: thread woken
+wait_parent test done
+starting lock test
+test_lock: test_thread.c:727: test_lock_thread: Assertion `testval2 == testval1 * testval1' failed.
+starting lock test
+test_lock: test_thread.c:727: test_lock_thread: Assertion `testval2 == testval1 * testval1' failed.
+starting lock test
+test_lock: test_thread.c:727: test_lock_thread: Assertion `testval2 == testval1 * testval1' failed.
+starting cv signal test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality
+starting cv signal test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality
+starting cv signal test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality
+starting cv broadcast test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality
+starting cv broadcast test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality
+starting cv broadcast test
+threads should print out in reverse order
+thread.c:608: cv_create: please implement this functionality

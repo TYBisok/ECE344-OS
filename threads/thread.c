@@ -587,55 +587,81 @@ void lock_release(struct lock *lock) {
 }
 
 struct cv {
-	/* ... Fill this in ... */
+	struct wait_queue* queue;
 };
 
 struct cv *
 cv_create()
 {
+    int enabled = interrupts_off();
 	struct cv *cv;
 
 	cv = malloc(sizeof(struct cv));
 	assert(cv);
 
-	TBD();
+    cv->queue = wait_queue_create();
 
+	// TBD();
+    interrupts_set(enabled);
 	return cv;
 }
 
-void
-cv_destroy(struct cv *cv)
-{
+void cv_destroy(struct cv *cv){
+    int enabled = interrupts_off();
 	assert(cv != NULL);
-
-	TBD();
-
+    if(cv->queue->wait->next == NULL) {
+        wait_queue_destroy(cv->queue);
 	free(cv);
+    }
+    
+    interrupts_set(enabled);
 }
 
 void
 cv_wait(struct cv *cv, struct lock *lock)
 {
+    int enabled = interrupts_off();
 	assert(cv != NULL);
 	assert(lock != NULL);
 
-	TBD();
+    if(lock->thread == thread_id()) {
+        lock_release(lock);
+        thread_sleep(cv->queue);
+    }
+
+    lock_acquire(lock);
+    
+    interrupts_set(enabled);
+    // thread_sleep()
+	// TBD();
 }
 
 void
 cv_signal(struct cv *cv, struct lock *lock)
 {
+    int enabled = interrupts_off();
 	assert(cv != NULL);
 	assert(lock != NULL);
 
-	TBD();
+    if(lock->thread == thread_id()) {
+        thread_wakeup(cv->queue, 0);
+    }
+
+	// TBD();
+    interrupts_set(enabled);
 }
 
 void
 cv_broadcast(struct cv *cv, struct lock *lock)
 {
+	int enabled = interrupts_off();
 	assert(cv != NULL);
 	assert(lock != NULL);
 
-	TBD();
+    if(lock->thread == thread_id()) {
+        thread_wakeup(cv->queue, 1);
+    }
+
+	// TBD();
+    interrupts_set(enabled);
 }
