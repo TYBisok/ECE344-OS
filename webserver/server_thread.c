@@ -353,7 +353,6 @@ static void do_server_request(struct server *sv, int connfd) {
 		pthread_mutex_lock(&cache_lock);
 		struct file_struct *file = cache_lookup(sv, data->file_name); 		// is the file name in the cache
 		if(file != NULL) { // gotem
-			printf("**cache HIT**: %s\n", file->key);
 			data = file->data; // fetch data from file
 			request_set_data(rq, file->data); // update rq->data = data
 			if(file != NULL) file->active++;
@@ -369,7 +368,6 @@ static void do_server_request(struct server *sv, int connfd) {
 			goto out; // done, go to out
 		}
 		else if(file == NULL) { // not in cache
-			printf("**cache MISS**: %s\n", data->file_name);
 			pthread_mutex_unlock(&cache_lock);
 
 			ret = request_readfile(rq);
@@ -388,7 +386,7 @@ static void do_server_request(struct server *sv, int connfd) {
 
 			pthread_mutex_lock(&cache_lock);
 			if(file != NULL) file->active--;
-			pthread_mutex_unlock(&cache_lock);
+			pthread_mutex_unlock(&cache_lock); // TODO: pls help me
 
 			goto out;
 		}

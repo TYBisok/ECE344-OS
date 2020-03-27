@@ -1,0 +1,7 @@
+#!/bin/sh
+
+./mktestfs device
+
+echo "ls .
+create file1
+stat file1" | ./testfs -n device

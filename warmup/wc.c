@@ -15,7 +15,7 @@ unsigned long hash_array_size = 1;
 	
 struct wc {
     struct word_struct **hash_array;
-};
+}; 
 
 struct word_struct {
     char* key; 
@@ -39,22 +39,9 @@ void insert(struct wc* wc, char* word_string) {
 
     // get index (hash) of word in hash_array
     unsigned long index = get_index(word_string);
-         
-    //printf("testing start\n");
-    
-//    if(wc->hash_array != NULL)
-//        printf("1\n");
-    
-//    if(wc->hash_array[index] == NULL)
-//        printf("2\n");
-//    
-//    if(strcmp(wc->hash_array[index]->key, word_string) != 0)
-//        printf("3\n");
-    
     
     // avoiding collisions and repeated words
     while(wc->hash_array != NULL && wc->hash_array[index] != NULL && strcmp(wc->hash_array[index]->key, word_string) != 0) {
-        //printf("1\n");
         index++;
         index%=hash_array_size;
     }
@@ -69,33 +56,20 @@ void insert(struct wc* wc, char* word_string) {
         word_struct = (struct word_struct*)malloc(sizeof(struct word_struct));
         assert(word_struct);
 
-        word_struct->key = (char *)malloc((strlen(word_string) + 1) * sizeof(char)); // is strlen allowed to be in here
-        strcpy(word_struct->key, word_string); // not allowed to do direct string assignment
-        word_struct->key[strlen(word_string)] = '\0';
+        
         
         word_struct->occurences = 1;
 
         wc->hash_array[index] = word_struct;
     }
-    
-    //if(wc->hash_array[index] != NULL)
-        //printf("w:%s i:%ld c:%d\n", wc->hash_array[index]->key, index, wc->hash_array[index]->occurences);
 }
 
 struct wc *wc_init(char *word_array, long size) {
     long INT_MAX = 2147000;
-   
     struct wc *wc;
-    
-    //printf("69\n");
-    
+        
     wc = (struct wc *)malloc(sizeof(struct wc)); // this is the hash array 
     assert(wc);
-
-    // count size of words
-//    for(int i = 0; i < size; i++)
-//        if(isspace(word_array[i]))
-//                hash_array_size++;
 
     hash_array_size = INT_MAX; // for good measure
     
@@ -106,16 +80,12 @@ struct wc *wc_init(char *word_array, long size) {
     for(int i = 0; i < hash_array_size; i++)
         wc->hash_array[i] = NULL;     
     
-//    for(int i = 0; i < hash_array_size; i++)
-//        wc->hash_array = NULL;
-
     bool word_start = false;
     long start_index = 0;
     long end_index = 0;
     bool space_found = false;
     
     for(long i = 0; i < size; i++) {
-        
         if(isspace(word_array[i]) && space_found == false) { // space           
             // extract the word
             long word_length = (end_index - start_index) + 1; // word_length should at least be one
@@ -127,9 +97,7 @@ struct wc *wc_init(char *word_array, long size) {
             
             word_string[word_length] = '\0'; // null terminator
             
-            //
             insert(wc, word_string);
-            //printf("69\n");
               
             word_start = false;
             space_found = true;
